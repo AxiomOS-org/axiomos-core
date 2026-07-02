@@ -54,18 +54,22 @@ final class PostgresTestEnvironment
     public static function dropAndRecreateSchema(Capsule $capsule, string $schema): void
     {
         $connection = $capsule->getConnection();
+        $lockKey = 424242;
 
-        if ($schema !== 'public') {
-            // Prevent stale public.migrations from skipping module migrations in the isolated schema.
-            $connection->statement('DROP TABLE IF EXISTS public.migrations CASCADE');
-            $connection->statement(sprintf('DROP SCHEMA IF EXISTS "%s" CASCADE', $schema));
-            $connection->statement(sprintf('CREATE SCHEMA "%s"', $schema));
-            $connection->statement(sprintf('SET search_path TO "%s"', $schema));
+        $connection->statement(sprintf('SELECT pg_advisory_lock(%d)', $lockKey));
 
-            return;
-        }
+        try {
+            if ($schema !== 'public') {
+                // Prevent stale public.migrations from skipping module migrations in the isolated schema.
+                $connection->statement('DROP TABLE IF EXISTS public.migrations CASCADE');
+                $connection->statement(sprintf('DROP SCHEMA IF EXISTS "%s" CASCADE', $schema));
+                self::createSchema($connection, $schema);
+                $connection->statement(sprintf('SET search_path TO "%s"', $schema));
 
-        $connection->unprepared(<<<'SQL'
+                return;
+            }
+
+            $connection->unprepared(<<<'SQL'
 DO $$ DECLARE
     statement RECORD;
 BEGIN
@@ -86,7 +90,24 @@ BEGIN
     END LOOP;
 END $$;
 SQL);
-        $connection->statement('SET search_path TO public');
+            $connection->statement('SET search_path TO public');
+        } finally {
+            $connection->statement(sprintf('SELECT pg_advisory_unlock(%d)', $lockKey));
+        }
+    }
+
+    private static function createSchema(\Illuminate\Database\Connection $connection, string $schema): void
+    {
+        try {
+            $connection->statement(sprintf('CREATE SCHEMA "%s"', $schema));
+        } catch (\Throwable $exception) {
+            if (! str_contains($exception->getMessage(), 'already exists')) {
+                throw $exception;
+            }
+
+            $connection->statement(sprintf('DROP SCHEMA IF EXISTS "%s" CASCADE', $schema));
+            $connection->statement(sprintf('CREATE SCHEMA "%s"', $schema));
+        }
     }
 
     private static function schemaName(): string

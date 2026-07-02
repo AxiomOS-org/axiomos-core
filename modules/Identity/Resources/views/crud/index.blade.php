@@ -3,10 +3,10 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
-        <h1 class="h3 mb-1">{{ $entityLabel }}</h1>
-        <p class="text-muted mb-0">Administer {{ strtolower($entityLabel) }} through the Identity REST APIs.</p>
+        <h1 class="h3 mb-1">{{ $entityLabel ?? 'Entity' }}</h1>
+        <p class="text-muted mb-0">Administer {{ strtolower($entityLabel ?? 'entity') }} through the Identity REST APIs.</p>
     </div>
-    <button class="btn btn-primary" id="btn-create"><i class="bi bi-plus-lg me-1"></i> New {{ rtrim($entityLabel, 's') }}</button>
+    <button class="btn btn-primary" id="btn-create"><i class="bi bi-plus-lg me-1"></i> New {{ rtrim($entityLabel ?? 'Entity', 's') }}</button>
 </div>
 
 <div class="card mb-3">
@@ -32,7 +32,7 @@
                 <select class="form-select" name="sort">
                     <option value="created_at">Created</option>
                     <option value="updated_at">Updated</option>
-                    @foreach ($columns as $column)
+                    @foreach ($columns ?? [] as $column)
                         <option value="{{ $column }}">{{ $column }}</option>
                     @endforeach
                 </select>
@@ -57,7 +57,7 @@
             <table class="table table-hover align-middle mb-0" id="data-table">
                 <thead class="table-light">
                 <tr>
-                    @foreach ($columns as $column)
+                    @foreach ($columns ?? [] as $column)
                         <th>{{ ucwords(str_replace('_', ' ', $column)) }}</th>
                     @endforeach
                     <th class="text-end">Actions</th>
@@ -79,7 +79,7 @@
     <div class="modal-dialog modal-lg">
         <form class="modal-content" id="entity-form">
             <div class="modal-header">
-                <h5 class="modal-title" id="modal-title">{{ $entityLabel }}</h5>
+                <h5 class="modal-title" id="modal-title">{{ $entityLabel ?? 'Entity' }}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body row g-3" id="form-fields">
@@ -97,11 +97,11 @@
 @push('scripts')
 <script>
 (() => {
-    const apiBase = @json($apiBase);
-    const entityLabel = @json($entityLabel);
+    const apiBase = @json($apiBase ?? '');
+    const entityLabel = @json($entityLabel ?? 'Entity');
     const singularLabel = entityLabel.endsWith('s') ? entityLabel.slice(0, -1) : entityLabel;
-    const columns = @json($columns);
-    const fields = @json($fields);
+    const columns = @json($columns ?? []);
+    const fields = @json($fields ?? []);
     const boolFields = new Set(['is_primary', 'success']);
     const jsonFields = new Set(['scopes', 'metadata']);
     const state = { page: 1, search: '', status: '', sort: 'created_at', direction: 'desc' };

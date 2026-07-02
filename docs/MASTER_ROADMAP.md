@@ -43,11 +43,11 @@ No new 30-page documentation sprints. Each sprint delivers:
 | 5C.6 Enterprise QA Platform | ✅ COMPLETE |
 | 5D Platform Services | ⏸ DEFERRED (platform frozen) |
 | 5E AI Platform | ⏸ DEFERRED |
-| 6.A Accounting Foundation | 🔒 DESIGN LOCKED — implementation pending sign-off |
+| 6.A Accounting Foundation | ✅ IMPLEMENTED (Run 1) — `docs/reports/PHASE_6A_RELEASE_REPORT.md` |
 
 **Platform freeze (5.C.6):** Core + Platform + Identity + Security + QA are frozen — bug fixes only. See `docs/architecture/PLATFORM_FREEZE.md`.
 
-**Next run:** **6.A Accounting Foundation** — blueprint locked (`ACCOUNTING_BLUEPRINT_LOCK.md`). **No CRUD/UI until architect sign-off.** Implementation: Posting Engine first.
+**Next run:** Manual browser QA on Accounting (2–3h), sequential `composer quality:gate`, then **Run 2: 6.B + 6.C** (Sales + Purchase).
 
 **Accounting rule (LOCKED):** `NO ERP MODULE IS ALLOWED TO WRITE TO LEDGER TABLES DIRECTLY. ALL FINANCIAL POSTINGS MUST PASS THROUGH THE ACCOUNTING POSTING ENGINE. NO EXCEPTIONS.`
 
@@ -215,8 +215,9 @@ Freeze: `docs/architecture/PLATFORM_FREEZE.md`
 
 ## Phase 6A — Accounting Foundation
 
-**Authority:** `docs/architecture/ACCOUNTING_BLUEPRINT_LOCK.md` (ACC-BP-1.0)  
-**Design report:** `docs/reports/PHASE_6A_DESIGN_LOCK_REPORT.md`
+**Status:** ✅ IMPLEMENTED (Run 1)  
+**Release report:** `docs/reports/PHASE_6A_RELEASE_REPORT.md`  
+**Authority:** `docs/architecture/ACCOUNTING_BLUEPRINT_LOCK.md` (ACC-BP-1.0)
 
 | ID | Deliverable |
 |----|-------------|

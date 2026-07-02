@@ -54,16 +54,29 @@ final class ViewProbe
         $failures = [];
 
         foreach (self::discoverViewNames($basePath) as $viewName) {
-            try {
-                $factory->make($viewName, self::defaultViewData())->render();
-            } catch (ViewException $exception) {
-                $failures[] = $viewName . ': ' . $exception->getMessage();
-            } catch (\Throwable $exception) {
-                $failures[] = $viewName . ': ' . $exception->getMessage();
+            foreach ([self::defaultViewData(), self::strictViewData()] as $dataSet) {
+                try {
+                    $factory->make($viewName, $dataSet)->render();
+                } catch (ViewException $exception) {
+                    $failures[] = $viewName . ': ' . $exception->getMessage();
+                } catch (\Throwable $exception) {
+                    $failures[] = $viewName . ': ' . $exception->getMessage();
+                }
             }
         }
 
         return $failures;
+    }
+
+    /**
+     * Minimal view data for strict undefined-variable detection.
+     * Views must use null-coalescing defaults for optional variables.
+     *
+     * @return array<string, mixed>
+     */
+    public static function strictViewData(): array
+    {
+        return [];
     }
 
     /**

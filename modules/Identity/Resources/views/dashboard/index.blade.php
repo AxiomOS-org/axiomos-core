@@ -12,7 +12,7 @@
 </div>
 
 <div class="row g-3 mb-4">
-    @foreach ($cards as $card)
+    @foreach ($cards ?? [] as $card)
         <div class="col-md-6 col-xl-4">
             <a href="{{ $card['path'] }}" class="text-decoration-none">
                 <div class="card h-100">

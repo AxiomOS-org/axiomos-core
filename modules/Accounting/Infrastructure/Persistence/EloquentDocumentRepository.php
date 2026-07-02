@@ -1,0 +1,5 @@
+<?php
+declare(strict_types=1);
+namespace Modules\Accounting\Infrastructure\Persistence;
+use Illuminate\Support\Collection; use Modules\Accounting\Domain\Models\Document; use Modules\Accounting\Domain\Repositories\Contracts\DocumentRepositoryInterface; final class EloquentDocumentRepository implements DocumentRepositoryInterface { public function create(array $attributes): Document { return Document::query()->create($attributes); } public function update(Document $document,array $attributes): Document { $document->fill($attributes); $document->save(); return $document->refresh(); } public function find(string $id): ?Document { return Document::query()->find($id); } public function findBySource(string $module,string $type,string $sourceId): ?Document { return Document::query()->where('source_module',$module)->where('source_document_type',$type)->where('source_document_id',$sourceId)->first(); } public function byCompany(string $companyId): Collection { return Document::query()->where('company_id',$companyId)->latest('document_date')->get(); } }
+

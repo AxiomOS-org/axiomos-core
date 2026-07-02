@@ -44,6 +44,13 @@ final class RouteCatalog
             '/security/permissions',
             '/security/sessions',
             '/security/login-history',
+            '/accounting',
+            '/accounting/dashboard',
+            '/accounting/accounts',
+            '/accounting/documents',
+            '/accounting/journals',
+            '/accounting/fiscal-years',
+            '/accounting/periods',
         ];
     }
 
@@ -64,6 +71,27 @@ final class RouteCatalog
             \Modules\Membership\Application\Services\MembershipService::class,
             \Modules\Organization\Application\Services\OrganizationService::class,
             \Modules\Identity\Application\Services\IdentityService::class,
+            \Modules\Accounting\Application\Services\PostingEngine::class,
+            \Modules\Accounting\Application\Services\ReversalEngine::class,
+            \Modules\Accounting\Application\Services\JournalEngine::class,
+            \Modules\Accounting\Application\Services\LedgerEngine::class,
+            \Modules\Accounting\Application\Services\DocumentEngine::class,
+            \Modules\Accounting\Application\Services\VoucherEngine::class,
+            \Modules\Accounting\Application\Services\ChartOfAccountsService::class,
+            \Modules\Accounting\Application\Services\FiscalYearService::class,
+            \Modules\Accounting\Application\Services\AccountingPeriodService::class,
+            \Modules\Accounting\Application\Services\TrialBalanceService::class,
+            \Modules\Accounting\Application\Services\BalanceSheetService::class,
+            \Modules\Accounting\Application\Services\ProfitAndLossService::class,
+            \Modules\Accounting\Application\Services\CashFlowService::class,
+            \Modules\Accounting\Application\Services\MultiCurrencyService::class,
+            \Modules\Accounting\Application\Services\CostCenterService::class,
+            \Modules\Accounting\Application\Services\DocumentService::class,
+            \Modules\Accounting\Application\Services\AccountingPlatformHooks::class,
+            \Modules\Accounting\Domain\Services\Contracts\PostingEngineInterface::class,
+            \Modules\Accounting\Http\Controllers\Api\AccountingApiController::class,
+            \Modules\Accounting\Http\Controllers\Web\AccountingDashboardWebController::class,
+            \Modules\Accounting\Http\Controllers\Web\AccountingCrudWebController::class,
         ];
     }
 }

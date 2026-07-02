@@ -1,0 +1,9 @@
+<?php
+declare(strict_types=1);
+namespace Modules\Accounting\Application\Services;
+use Modules\Accounting\Application\Support\AccountingTime;
+use Modules\Accounting\Application\DTOs\PostingRequest;
+use Modules\Accounting\Domain\Models\Document;
+use Modules\Accounting\Domain\Repositories\Contracts\DocumentRepositoryInterface;
+final class DocumentEngine { public function __construct(private readonly DocumentRepositoryInterface $documents) {} public function ensureApprovedDocument(PostingRequest $request): Document { $d=$request->documentId!==null?$this->documents->find($request->documentId):$this->documents->findBySource($request->sourceModule,$request->sourceDocumentType,$request->sourceDocumentId); if($d===null){$d=$this->documents->create(['organization_id'=>$request->organizationId,'company_id'=>$request->companyId,'branch_id'=>$request->branchId,'department_id'=>$request->departmentId,'source_module'=>$request->sourceModule,'source_document_type'=>$request->sourceDocumentType,'source_document_id'=>$request->sourceDocumentId,'document_date'=>$request->postingDate,'posting_date'=>$request->postingDate,'currency'=>$request->currency,'exchange_rate'=>$request->exchangeRate,'status'=>Document::STATUS_APPROVED,'description'=>$request->description,'approved_at'=>AccountingTime::now()]);} if($d->status===Document::STATUS_DRAFT){$d=$this->documents->update($d,['status'=>Document::STATUS_PENDING_APPROVAL]);} if($d->status===Document::STATUS_PENDING_APPROVAL){$d=$this->documents->update($d,['status'=>Document::STATUS_APPROVED,'approved_at'=>AccountingTime::now()]);} return $d; } public function markPosted(Document $d,string $n): Document { return $this->documents->update($d,['status'=>Document::STATUS_POSTED,'document_number'=>$n,'posted_at'=>AccountingTime::now()]); } public function markReversed(Document $d): Document { return $this->documents->update($d,['status'=>Document::STATUS_REVERSED]); } }
+
