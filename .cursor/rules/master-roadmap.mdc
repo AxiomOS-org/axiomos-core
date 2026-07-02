@@ -1,5 +1,5 @@
 ---
-description: AxiomOS Enterprise Master Roadmap — code-first execution, no docs-only sprints
+description: AxiomOS Enterprise Master Roadmap — platform frozen, Accounting design locked
 alwaysApply: true
 ---
 
@@ -8,27 +8,28 @@ alwaysApply: true
 Follow `docs/MASTER_ROADMAP.md` as the single source of truth.
 
 ## Current Sprint Focus
-- **Completed:** Phase 5B Identity Platform
-- **Next:** Phase 5C Security Platform (5.C.1 Authentication)
-- **Frozen:** Phase 5A Platform — do not modify unless critical bug
+- **Frozen:** Platform (5.A–5.C.6) — bug fixes only
+- **Design locked:** Phase 6.A Accounting (`docs/architecture/ACCOUNTING_BLUEPRINT_LOCK.md`)
+- **Next (after sign-off):** 6.A implementation — Posting Engine, Ledger, COA (no premature UI)
 
-## Every Sprint Must Deliver
-Design → Code → Tests → Browser Demo → APIs → Doc Updates → Review → Next
+## Accounting Rules (NON-NEGOTIABLE)
+```
+NO ERP MODULE IS ALLOWED TO WRITE TO LEDGER TABLES DIRECTLY.
+ALL FINANCIAL POSTINGS MUST PASS THROUGH THE ACCOUNTING POSTING ENGINE.
+NO EXCEPTIONS.
+```
+See `.cursor/rules/accounting-posting-engine.mdc`
 
-## Do NOT
-- Create documentation-only sprints or new 30-page spec documents
-- Re-debate locked architecture (see ARCHITECTURE_FREEZE.md)
-- Skip simulation/approval for ADT generators (Rule 0)
-- Start Identity/business modules before ADT certification (5.A.6)
+## Do NOT (Phase 6.A design phase)
+- Build journal entry screens, voucher UI, or COA CRUD before implementation sprint
+- Write to `accounting_*` ledger tables from Sales/Inventory/Purchase/etc.
+- Skip Posting Engine for any financial transaction
 
-## Do
-- Ship working code with tests and browser demo every 2–4 days
-- Update module README/CHANGELOG only (no new doc frameworks)
-- Run `composer quality:gate` before closing a sprint
-- Reference ADRs only when core architecture changes
+## ERP Build Order
+6.A Accounting → 6.B Sales → 6.C Purchase → 6.D Inventory → 6.E CRM → 6.F HR → 6.G MRP → 6.H POS → 6.I Projects → 6.J Assets → 6.K Budgeting → 6.L Reporting
 
-## Existing Code
-`modules/Organization` already has Org/Company/Branch/Department — align in 5.B.4–5.B.7, do not duplicate.
+## Every Implementation Sprint Must Deliver
+Design → Code → Tests → Browser Demo → APIs → Doc Updates → `composer quality:gate`
 
 ## Human Architect Role
-User reviews, approves ADRs, solves blockers. AI implements per roadmap.
+User approves ACC-BP-1.0 sign-off before 6.A code sprint.

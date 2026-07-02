@@ -22,6 +22,7 @@
 - AI Orchestrator Architecture: `AI_ORCHESTRATOR_ARCHITECTURE.md`
 - ADT Simulation Mode: `../adt/ADT_SIMULATION_MODE.md`
 - Platform Production Freeze: `PLATFORM_PRODUCTION_FREEZE.md` (PF-1.0)
+- **Enterprise Accounting Blueprint:** `ACCOUNTING_BLUEPRINT_LOCK.md` (ACC-BP-1.0)
 
 ## Change Policy
 - No direct modifications to frozen components without an approved ADR.

@@ -43,11 +43,13 @@ No new 30-page documentation sprints. Each sprint delivers:
 | 5C.6 Enterprise QA Platform | ✅ COMPLETE |
 | 5D Platform Services | ⏸ DEFERRED (platform frozen) |
 | 5E AI Platform | ⏸ DEFERRED |
-| 6.A Accounting Foundation | ⏭ NEXT |
+| 6.A Accounting Foundation | 🔒 DESIGN LOCKED — implementation pending sign-off |
 
 **Platform freeze (5.C.6):** Core + Platform + Identity + Security + QA are frozen — bug fixes only. See `docs/architecture/PLATFORM_FREEZE.md`.
 
-**Next run:** **6.A Accounting Foundation** — General Ledger first; all ERP transactions post to GL.
+**Next run:** **6.A Accounting Foundation** — blueprint locked (`ACCOUNTING_BLUEPRINT_LOCK.md`). **No CRUD/UI until architect sign-off.** Implementation: Posting Engine first.
+
+**Accounting rule (LOCKED):** `NO ERP MODULE IS ALLOWED TO WRITE TO LEDGER TABLES DIRECTLY. ALL FINANCIAL POSTINGS MUST PASS THROUGH THE ACCOUNTING POSTING ENGINE. NO EXCEPTIONS.`
 
 **Quality gate rule (mandatory per business module):** `composer runtime:test`, `stability:test`, `browser:test`, `production:test`, `architecture:test`, `performance:test`, `security:test`, `quality:gate`. Any failure = not production ready.
 
@@ -211,57 +213,96 @@ Freeze: `docs/architecture/PLATFORM_FREEZE.md`
 
 ---
 
-## Phase 6A — Finance Foundation
+## Phase 6A — Accounting Foundation
 
-Chart Of Accounts · Fiscal Years · Financial Periods · Journals · Journal Entries · Ledger · Trial Balance · Balance Sheet · Profit & Loss · Cash Flow · Cost Centers · Budgets · Financial Reports · Closing Process · Finance Dashboard
+**Authority:** `docs/architecture/ACCOUNTING_BLUEPRINT_LOCK.md` (ACC-BP-1.0)  
+**Design report:** `docs/reports/PHASE_6A_DESIGN_LOCK_REPORT.md`
+
+| ID | Deliverable |
+|----|-------------|
+| 6.A.1 | Accounting Architecture |
+| 6.A.2 | Chart of Accounts |
+| 6.A.3 | Fiscal Years |
+| 6.A.4 | Accounting Periods |
+| 6.A.5 | Journals |
+| 6.A.6 | Voucher Types |
+| 6.A.7 | Posting Engine (single financial write path) |
+| 6.A.8 | Ledger Engine |
+| 6.A.9 | Trial Balance |
+| 6.A.10 | Balance Sheet |
+| 6.A.11 | Profit & Loss |
+| 6.A.12 | Cash Flow |
+| 6.A.13 | Multi-Currency |
+| 6.A.14 | Cost Centers |
+| 6.A.15 | Production Review |
+
+**Integration model:** Sales, Purchase, Inventory, POS, Payroll, Manufacturing, Assets → **Posting Engine** → Journal → Ledger.
 
 ---
 
 ## Phase 6B — Sales
 
-Customer · Quotation · Sales Order · Invoice · Delivery · Returns · Payments · Sales Analytics
+Customer · Quotation · Sales Order · Invoice · Delivery · Returns · Payments · Sales Analytics · **→ Posting Engine**
 
 ---
 
 ## Phase 6C — Purchase
 
-Vendor · Purchase RFQ · Purchase Order · GRN · Bills · Vendor Payments
+Vendor · Purchase RFQ · Purchase Order · GRN · Bills · Vendor Payments · **→ Posting Engine**
 
 ---
 
 ## Phase 6D — Inventory
 
-Warehouses · Locations · Stock · Transfers · Batch · Serial · Expiry · Barcode
+Warehouses · Locations · Stock · Transfers · Batch · Serial · Expiry · Barcode · **→ Posting Engine**
 
 ---
 
-## Phase 6E — Manufacturing
-
-BOM · Production · MRP · Work Orders · Machines · Maintenance · Quality
-
----
-
-## Phase 6F — HR
-
-Employees · Attendance · Leaves · Payroll · Recruitment · Performance
-
----
-
-## Phase 6G — CRM
+## Phase 6E — CRM
 
 Leads · Pipeline · Meetings · Activities · Campaigns
 
 ---
 
-## Phase 6H — Projects
+## Phase 6F — HR & Payroll
 
-Projects · Tasks · Kanban · Timesheets · Milestones
+Employees · Attendance · Leaves · Payroll · Recruitment · Performance · **→ Posting Engine**
 
 ---
 
-## Phase 6I — POS
+## Phase 6G — Manufacturing (MRP)
 
-POS · Shift · Cash Drawer · Kitchen · Receipt · Loyalty
+BOM · Production · MRP · Work Orders · Machines · Maintenance · Quality · **→ Posting Engine**
+
+---
+
+## Phase 6H — POS
+
+POS · Shift · Cash Drawer · Kitchen · Receipt · Loyalty · **→ Posting Engine**
+
+---
+
+## Phase 6I — Projects
+
+Projects · Tasks · Kanban · Timesheets · Milestones · **→ Posting Engine**
+
+---
+
+## Phase 6J — Fixed Assets
+
+Asset register · Depreciation · Disposal · **→ Posting Engine**
+
+---
+
+## Phase 6K — Budgeting
+
+Budget versions · variance · reads Accounting
+
+---
+
+## Phase 6L — Reporting & BI
+
+BI · Charts · Dashboards · KPI · Exports · **read-only from Accounting**
 
 ---
 
@@ -312,7 +353,9 @@ Multi Tenant SaaS · Subscriptions · Billing · Monitoring · Backups · Scalin
 - Do not add architecture docs unless an ADR is required
 - Do not skip tests or browser demo for "speed"
 - Do not bypass ADT Rule 0 for generated code
-- Do not start Phase 5B business modules before 5.A.6 certification
+- Do not write to `accounting_*` ledger tables outside `modules/Accounting/Infrastructure/`
+- Do not bypass Accounting Posting Engine for financial transactions (ACC-BP-1.0)
+- Do not build Accounting UI/CRUD before 6.A implementation sign-off
 
 ---
 

@@ -1,0 +1,42 @@
+---
+description: Accounting Posting Engine — no direct ledger writes from ERP modules
+alwaysApply: true
+---
+
+# Accounting Posting Engine Rule (LOCKED)
+
+Authority: `docs/architecture/ACCOUNTING_BLUEPRINT_LOCK.md` (ACC-BP-1.0)
+
+## Prime Rule
+
+```
+NO ERP MODULE IS ALLOWED TO WRITE TO LEDGER TABLES DIRECTLY.
+ALL FINANCIAL POSTINGS MUST PASS THROUGH THE ACCOUNTING POSTING ENGINE.
+NO EXCEPTIONS.
+```
+
+## When Working on Phase 6+ Business Modules
+
+- **Do not** build journal entry screens, voucher UI, or COA CRUD until 6.A implementation is authorized.
+- **Do not** `INSERT`/`UPDATE`/`DELETE` on `accounting_*` ledger tables outside `modules/Accounting/Infrastructure/`.
+- **Do not** import Accounting persistence classes from Sales, Purchase, Inventory, POS, HR, Manufacturing, or Assets.
+- **Do** submit financial events via `PostingEngineInterface::submit()` with idempotency keys.
+- **Do** use read-only Accounting APIs for balances and reports.
+
+## Forbidden Patterns (non-Accounting modules)
+
+```php
+// ❌ FORBIDDEN
+JournalLine::query()->create([...]);
+DB::table('accounting_journal_lines')->insert(...);
+DB::table('accounting_ledger_balances')->update(...);
+
+// ✅ REQUIRED
+$postingEngine->submit(new PostingRequest(...));
+```
+
+## Build Order
+
+6.A Accounting Foundation → 6.B Sales → 6.C Purchase → 6.D Inventory → … → 6.L Reporting
+
+Accounting is the financial kernel; all other modules are consumers.
