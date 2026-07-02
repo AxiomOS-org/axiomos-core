@@ -17,6 +17,11 @@
 - Platform Layer
 - Dependency Rules
 
+## Locked Design Specifications (Pre-Business Layer)
+- AxiomOS Manifest Specification (AMS): `AMS_SPECIFICATION.md`
+- AI Orchestrator Architecture: `AI_ORCHESTRATOR_ARCHITECTURE.md`
+- ADT Simulation Mode: `../adt/ADT_SIMULATION_MODE.md`
+
 ## Change Policy
 - No direct modifications to frozen components without an approved ADR.
 - ADR must include:
