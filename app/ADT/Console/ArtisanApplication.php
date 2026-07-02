@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\ADT\Console;
 
 use App\ADT\Commands\MakeModuleCommand;
+use App\ADT\Commands\ReleaseCheckCommand;
 
 /**
  * Lightweight artisan-style CLI router for AxiomOS ADT commands.
@@ -33,6 +34,10 @@ final class ArtisanApplication
             return (new MakeModuleCommand($this->basePath))->run(array_slice($argv, 1));
         }
 
+        if ($command === 'axiomos:release-check') {
+            return (new ReleaseCheckCommand($this->basePath))->run(array_slice($argv, 1));
+        }
+
         fwrite(STDERR, "Unknown command: {$command}" . PHP_EOL);
         $this->printHelp();
 
@@ -46,6 +51,7 @@ AxiomOS ADT
 
 Usage:
   php artisan axiomos:make-module <ModuleName> [--yes] [--simulation-only]
+  php artisan axiomos:release-check
 
 Options:
   --yes, -y            Approve generation without interactive prompt

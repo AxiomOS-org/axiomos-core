@@ -40,9 +40,18 @@ No new 30-page documentation sprints. Each sprint delivers:
 | 5.A.2 Engineering Standards | ✅ Done | |
 | 5.A.3 Architecture Freeze | ✅ Done | |
 | 5.A.4 ADT Specification | ✅ Done | |
-| 5.A.5 ADT Generator Engine | 🔄 In Progress | `axiomos:make-module` implemented |
-| 5.A.6 ADT Certification | ⏭ Next | Self-validate with `Demo` module |
-| 5.B.1 Identity | ⏳ Blocked | After 5.A.6 + 5.A.15 production freeze path |
+| 5.A.5 ADT Generator Engine | ✅ Done | `axiomos:make-module` |
+| 5.A.6 ADT Certification | ✅ Done | Demo module + release check |
+| 5.A.7 Marketplace SDK | ✅ Done | `app/ADT/Marketplace/` |
+| 5.A.8 Plugin SDK | ✅ Done | `app/ADT/Extension/` + SamplePlugin |
+| 5.A.9 Theme SDK | ✅ Done | `app/Platform/Theme/` |
+| 5.A.10 AI SDK | ✅ Done | `app/Platform/AI/AiSdk.php` |
+| 5.A.11 Workflow SDK | ✅ Done | `app/Platform/Workflow/` |
+| 5.A.12 Automation SDK | ✅ Done | `app/Platform/Automation/` |
+| 5.A.13 Integration SDK | ✅ Done | `app/Platform/Integration/` |
+| 5.A.14 Release Manager | ✅ Done | `axiomos:release-check` |
+| 5.A.15 Production Freeze | ✅ Done | `PLATFORM_PRODUCTION_FREEZE.md` |
+| 5.B.1 Identity | ⏭ Next | First business sprint |
 
 **Existing code note:** `Organization` module already implements Org/Company/Branch/Department CRUD. Roadmap items 5.B.4–5.B.7 will refine and align these to Identity Platform standards rather than rebuild from scratch.
 

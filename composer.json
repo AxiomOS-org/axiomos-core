@@ -29,7 +29,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Modules\\": "modules/"
+            "Modules\\": "modules/",
+            "Plugins\\SamplePlugin\\": "plugins/SamplePlugin/src/"
         }
     },
     "autoload-dev": {
@@ -55,6 +56,7 @@
         "quality:gate": "powershell -ExecutionPolicy Bypass -File bin/quality-gate.ps1",
         "migrate": "powershell -ExecutionPolicy Bypass -File bin/migrate.ps1",
         "make-module": "php artisan axiomos:make-module",
+        "release-check": "php artisan axiomos:release-check",
         "postgres:up": "docker compose up -d postgres",
         "postgres:down": "docker compose down"
     }

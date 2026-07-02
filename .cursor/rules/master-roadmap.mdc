@@ -8,9 +8,9 @@ alwaysApply: true
 Follow `docs/MASTER_ROADMAP.md` as the single source of truth.
 
 ## Current Sprint Focus
-- **Active:** 5.A.5 ADT Generator Engine (in progress)
-- **Next:** 5.A.6 ADT Certification
-- **Blocked until 5.A.15:** Phase 5B Identity Platform business modules
+- **Completed:** Phase 5A (5.A.1–5.A.15) — Platform Production Freeze PF-1.0
+- **Next:** 5.B.1 Identity
+- **Mode:** Code-first business module delivery
 
 ## Every Sprint Must Deliver
 Design → Code → Tests → Browser Demo → APIs → Doc Updates → Review → Next

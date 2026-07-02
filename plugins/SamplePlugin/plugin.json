@@ -1,0 +1,7 @@
+{
+    "name": "SamplePlugin",
+    "version": "1.0.0",
+    "provider": "Plugins\\SamplePlugin\\SamplePluginProvider",
+    "minimumCoreVersion": "1.0.0",
+    "capabilities": ["templates", "validation", "transform"]
+}

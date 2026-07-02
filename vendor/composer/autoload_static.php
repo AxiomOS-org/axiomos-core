@@ -76,6 +76,7 @@ class ComposerStaticInit98e81a7659924e826bf2c3f9af2869c5
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Psr\\Clock\\' => 10,
+            'Plugins\\SamplePlugin\\' => 21,
             'PhpParser\\' => 10,
         ),
         'M' => 
@@ -259,6 +260,10 @@ class ComposerStaticInit98e81a7659924e826bf2c3f9af2869c5
         'Psr\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
+        'Plugins\\SamplePlugin\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/plugins/SamplePlugin/src',
         ),
         'PhpParser\\' => 
         array (
