@@ -3,6 +3,8 @@
 ## Mandatory Rule
 Generators must **never** modify files directly without simulation and approval.
 
+This rule implements **ADT Rule 0** (`ADT_RULE_ZERO.md`): no AI or generator writes production code without developer approval.
+
 ## Pipeline
 1. **Generate** — build artifact plan in memory
 2. **Preview** — show diff/preview of proposed changes

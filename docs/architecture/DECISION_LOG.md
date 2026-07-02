@@ -12,4 +12,5 @@
 | ADR-008 | 2026-07-02 | Adopt AxiomOS Manifest Specification (AMS) as universal package contract | Installer, marketplace, ADT, upgrade engine, and orchestrator need one schema | Per-package custom metadata | Unified extensibility and lifecycle governance | Accepted |
 | ADR-009 | 2026-07-02 | Lock AI Orchestrator architecture with strict Developer AI vs Business AI separation | Prevent unsafe context mixing and governance bypass | Single shared AI runtime | Safer autonomous engineering and ERP AI features | Accepted |
 | ADR-010 | 2026-07-02 | Enforce simulation-first generator pipeline (preview + approval before writes) | Prevent accidental destructive generation | Direct write generators | Predictable, auditable ADT operations | Accepted |
+| ADR-011 | 2026-07-02 | Rule 0: No AI generates production code directly | AI speed must not bypass governance pipeline | Direct AI-to-file coding | Long-term quality and auditability across all modules | Accepted |
 

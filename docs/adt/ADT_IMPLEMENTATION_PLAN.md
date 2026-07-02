@@ -15,14 +15,25 @@ Implement only:
 php artisan axiomos:make-module Accounting
 ```
 
-### Mandatory Flow
+### Mandatory Flow (Rule 0)
 1. Simulation
 2. Preview
-3. Approval
-4. File generation
-5. Tests
-6. Documentation
-7. Quality gates
+3. Developer approval
+4. Module blueprint file generation
+5. Quality gates
+6. Tests
+7. Documentation bundle verification
+
+### Blueprint Deliverables
+- AMS `module.json`
+- Mandatory docs: README, ARCHITECTURE, CHANGELOG, TESTING
+- Recommended docs: ROADMAP, TODO
+- Standard module directories per `MODULE_BLUEPRINT_SPEC.md`
+
+## Phase 5.A.4C (Self-Validation)
+- Generate `Demo` module via ADT
+- Validate structure, standards, tests, docs, quality gates
+- Declare ADT production-ready before Sprint 5.B
 
 ### Constraints
 - No direct file writes before approval.
