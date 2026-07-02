@@ -14,6 +14,10 @@ final class ApiToken extends PlatformEntityModel
     /** @var list<string> */
     protected $fillable = [
         'identity_id',
+        'organization_id',
+        'company_id',
+        'branch_id',
+        'department_id',
         'name',
         'token_hash',
         'scopes',

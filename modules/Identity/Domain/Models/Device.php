@@ -14,6 +14,10 @@ final class Device extends PlatformEntityModel
     /** @var list<string> */
     protected $fillable = [
         'identity_id',
+        'organization_id',
+        'company_id',
+        'branch_id',
+        'department_id',
         'device_type',
         'fingerprint',
         'user_agent',

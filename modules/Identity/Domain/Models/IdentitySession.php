@@ -14,6 +14,10 @@ final class IdentitySession extends PlatformEntityModel
     /** @var list<string> */
     protected $fillable = [
         'identity_id',
+        'organization_id',
+        'company_id',
+        'branch_id',
+        'department_id',
         'session_token_hash',
         'ip_address',
         'user_agent',

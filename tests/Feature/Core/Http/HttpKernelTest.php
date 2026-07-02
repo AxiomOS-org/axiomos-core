@@ -45,7 +45,7 @@ final class HttpKernelTest extends PostgresFeatureTestCase
         self::assertSame('AxiomOS', $payload['kernel']);
         self::assertSame('ready', $payload['status']);
         self::assertSame('1.0.0', $payload['version']);
-        self::assertSame(5, $payload['modules']);
+        self::assertSame(8, $payload['modules']);
         self::assertMatchesRegularExpression('/^\d+\.\d{2} ms$/', $payload['bootTime']);
         self::assertMatchesRegularExpression('/^\d+\.\d{2} MB$/', $payload['memory']);
     }
@@ -76,7 +76,7 @@ final class HttpKernelTest extends PostgresFeatureTestCase
         $payload = $this->json($response->getContent());
 
         self::assertSame('AxiomOS', $payload['kernel']);
-        self::assertCount(5, $payload['metrics']['loadedModules']);
+        self::assertCount(8, $payload['metrics']['loadedModules']);
         self::assertSame(1, $payload['metrics']['bootCount']);
     }
 

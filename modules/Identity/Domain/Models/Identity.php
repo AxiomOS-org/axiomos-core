@@ -14,6 +14,8 @@ final class Identity extends PlatformEntityModel
     /** @var list<string> */
     protected $fillable = [
         'organization_id',
+        'company_id',
+        'branch_id',
         'identity_type',
         'code',
         'display_name',

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Users\Http\Requests;
 
+use Modules\Identity\Http\Support\EnterpriseScopeRequestRules;
+
 final class UserRequestRules
 {
     /**
@@ -11,7 +13,7 @@ final class UserRequestRules
      */
     public static function create(): array
     {
-        return [
+        return array_merge([
             'identity_id' => ['required', 'uuid'],
             'username' => ['required', 'string', 'max:100'],
             'email' => ['required', 'email', 'max:255'],
@@ -19,7 +21,7 @@ final class UserRequestRules
             'status' => ['nullable', 'string', 'max:32'],
             'settings' => ['nullable', 'array'],
             'created_by' => ['nullable', 'uuid'],
-        ];
+        ], EnterpriseScopeRequestRules::create());
     }
 
     /**
@@ -27,7 +29,7 @@ final class UserRequestRules
      */
     public static function update(): array
     {
-        return [
+        return array_merge([
             'identity_id' => ['sometimes', 'uuid'],
             'username' => ['sometimes', 'string', 'max:100'],
             'email' => ['sometimes', 'email', 'max:255'],
@@ -35,6 +37,6 @@ final class UserRequestRules
             'status' => ['sometimes', 'string', 'max:32'],
             'settings' => ['nullable', 'array'],
             'updated_by' => ['nullable', 'uuid'],
-        ];
+        ], EnterpriseScopeRequestRules::update());
     }
 }

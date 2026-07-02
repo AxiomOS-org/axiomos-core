@@ -3,7 +3,7 @@
     @{ Name='Static Analysis'; Command='composer static-analysis' },
     @{ Name='Architecture Rules'; Command='composer architecture-rules' },
     @{ Name='Unit Tests'; Command='composer test:unit' },
-    @{ Name='Module Tests'; Command='composer test:module Organization' },
+    @{ Name='Module Tests'; Command='composer test:module' },
     @{ Name='Integration Tests'; Command='composer test:integration' },
     @{ Name='Performance Smoke'; Command='composer test:performance' },
     @{ Name='Security Scan'; Command='composer test:security' }

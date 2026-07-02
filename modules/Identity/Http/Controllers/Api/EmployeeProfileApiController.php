@@ -62,7 +62,11 @@ final class EmployeeProfileApiController extends ApiController
             return $this->validationError($exception);
         }
 
-        $profile = $this->service->create($validated);
+        try {
+            $profile = $this->service->create($validated);
+        } catch (ValidationException $exception) {
+            return $this->validationError($exception);
+        }
 
         return $this->item($profile, Response::HTTP_CREATED);
     }
@@ -85,7 +89,13 @@ final class EmployeeProfileApiController extends ApiController
             return $this->validationError($exception);
         }
 
-        return $this->item($this->service->update($id, $validated));
+        try {
+            $updated = $this->service->update($id, $validated);
+        } catch (ValidationException $exception) {
+            return $this->validationError($exception);
+        }
+
+        return $this->item($updated);
     }
 
     public function destroy(Request $request, string $id): JsonResponse

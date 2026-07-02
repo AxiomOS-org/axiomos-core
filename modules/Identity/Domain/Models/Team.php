@@ -15,6 +15,9 @@ final class Team extends PlatformEntityModel
     /** @var list<string> */
     protected $fillable = [
         'organization_id',
+        'company_id',
+        'branch_id',
+        'department_id',
         'code',
         'name',
         'description',

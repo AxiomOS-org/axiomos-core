@@ -8,7 +8,8 @@
     "priority": 100,
     "minimumCoreVersion": "1.0.0",
     "dependencies": [
-        "Core"
+        "Core",
+        "Organization"
     ],
     "permissions": [],
     "events": [],

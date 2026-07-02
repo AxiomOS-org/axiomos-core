@@ -1,17 +1,34 @@
 {
-    "name":  "Authorization",
-    "version":  "1.0.0",
-    "description":  "Authorization Module",
-    "provider":  "Modules\\Authorization\\Providers\\AuthorizationServiceProvider",
-    "enabled":  true,
-    "priority":  1,
-    "dependencies":  [
-
-                     ],
-    "authors":  [
-                    {
-                        "name":  "AxiomOS Team"
-                    }
-                ],
-    "minimumCoreVersion":  "1.0.0"
+    "name": "Authorization",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Authorization and RBAC module for security platform",
+    "provider": "Modules\\Authorization\\Providers\\AuthorizationServiceProvider",
+    "enabled": true,
+    "priority": 100,
+    "minimumCoreVersion": "1.0.0",
+    "dependencies": [
+        "Core",
+        "Authentication",
+        "Identity",
+        "Users",
+        "Membership",
+        "Organization"
+    ],
+    "permissions": [],
+    "events": [],
+    "routes": [],
+    "providers": [
+        "Modules\\Authorization\\Providers\\AuthorizationServiceProvider"
+    ],
+    "migrations": [],
+    "seeders": [],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "ai": {},
+    "marketplace": {},
+    "upgrade": {}
 }

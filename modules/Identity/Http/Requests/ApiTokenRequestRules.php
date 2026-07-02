@@ -14,7 +14,6 @@ final class ApiTokenRequestRules
         return [
             'identity_id' => ['required', 'uuid'],
             'name' => ['required', 'string', 'max:120'],
-            'token_hash' => ['required', 'string', 'max:255'],
             'scopes' => ['nullable', 'array'],
             'expires_at' => ['nullable', 'date'],
             'last_used_at' => ['nullable', 'date'],
@@ -31,7 +30,6 @@ final class ApiTokenRequestRules
         return [
             'identity_id' => ['sometimes', 'uuid'],
             'name' => ['sometimes', 'string', 'max:120'],
-            'token_hash' => ['sometimes', 'string', 'max:255'],
             'scopes' => ['nullable', 'array'],
             'expires_at' => ['nullable', 'date'],
             'last_used_at' => ['nullable', 'date'],

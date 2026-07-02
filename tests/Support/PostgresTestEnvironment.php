@@ -56,9 +56,11 @@ final class PostgresTestEnvironment
         $connection = $capsule->getConnection();
 
         if ($schema !== 'public') {
+            // Prevent stale public.migrations from skipping module migrations in the isolated schema.
+            $connection->statement('DROP TABLE IF EXISTS public.migrations CASCADE');
             $connection->statement(sprintf('DROP SCHEMA IF EXISTS "%s" CASCADE', $schema));
             $connection->statement(sprintf('CREATE SCHEMA "%s"', $schema));
-            $connection->statement(sprintf('SET search_path TO "%s", public', $schema));
+            $connection->statement(sprintf('SET search_path TO "%s"', $schema));
 
             return;
         }

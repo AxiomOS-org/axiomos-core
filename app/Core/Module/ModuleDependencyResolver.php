@@ -54,7 +54,18 @@ final class ModuleDependencyResolver
             }
         }
 
-        sort($queue);
+        $sortQueue = static function () use (&$queue, $byName): void {
+            usort(
+                $queue,
+                static function (string $a, string $b) use ($byName): int {
+                    $priority = $byName[$a]->priority <=> $byName[$b]->priority;
+
+                    return $priority !== 0 ? $priority : strcmp($a, $b);
+                },
+            );
+        };
+
+        $sortQueue();
 
         $orderedNames = [];
 
@@ -69,34 +80,17 @@ final class ModuleDependencyResolver
                 }
             }
 
-            sort($queue);
+            $sortQueue();
         }
 
         if (count($orderedNames) !== count($byName)) {
             throw new RuntimeException('Circular module dependency detected.');
         }
 
-        // Map manifests by name for fast lookup.
-        $priorityBuckets = [];
-
-        foreach ($orderedNames as $name) {
-            $manifest = $byName[$name];
-            $priorityBuckets[$manifest->priority][] = $manifest;
-        }
-
-        ksort($priorityBuckets);
-
         $result = new Collection();
 
-        foreach ($priorityBuckets as $bucket) {
-            usort(
-                $bucket,
-                static fn (ModuleManifest $a, ModuleManifest $b): int => strcmp($a->name, $b->name),
-            );
-
-            foreach ($bucket as $manifest) {
-                $result->push($manifest);
-            }
+        foreach ($orderedNames as $name) {
+            $result->push($byName[$name]);
         }
 
         return $result->values();

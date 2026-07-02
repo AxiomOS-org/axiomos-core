@@ -13,6 +13,10 @@ final class User extends PlatformEntityModel
     /** @var list<string> */
     protected $fillable = [
         'identity_id',
+        'organization_id',
+        'company_id',
+        'branch_id',
+        'department_id',
         'username',
         'email',
         'display_name',

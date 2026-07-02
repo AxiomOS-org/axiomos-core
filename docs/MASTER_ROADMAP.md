@@ -34,26 +34,18 @@ No new 30-page documentation sprints. Each sprint delivers:
 
 ## Current Position
 
-| Sprint | Status | Notes |
-|--------|--------|-------|
-| 5.A.1 Architecture Hardening | ✅ Done | |
-| 5.A.2 Engineering Standards | ✅ Done | |
-| 5.A.3 Architecture Freeze | ✅ Done | |
-| 5.A.4 ADT Specification | ✅ Done | |
-| 5.A.5 ADT Generator Engine | ✅ Done | `axiomos:make-module` |
-| 5.A.6 ADT Certification | ✅ Done | Demo module + release check |
-| 5.A.7 Marketplace SDK | ✅ Done | `app/ADT/Marketplace/` |
-| 5.A.8 Plugin SDK | ✅ Done | `app/ADT/Extension/` + SamplePlugin |
-| 5.A.9 Theme SDK | ✅ Done | `app/Platform/Theme/` |
-| 5.A.10 AI SDK | ✅ Done | `app/Platform/AI/AiSdk.php` |
-| 5.A.11 Workflow SDK | ✅ Done | `app/Platform/Workflow/` |
-| 5.A.12 Automation SDK | ✅ Done | `app/Platform/Automation/` |
-| 5.A.13 Integration SDK | ✅ Done | `app/Platform/Integration/` |
-| 5.A.14 Release Manager | ✅ Done | `axiomos:release-check` |
-| 5.A.15 Production Freeze | ✅ Done | `PLATFORM_PRODUCTION_FREEZE.md` |
-| 5.B.1 Identity | ⏭ Next | First business sprint |
+| Phase | Status |
+|-------|--------|
+| 5A Platform | ✅ FROZEN |
+| 5B Identity Platform | ✅ COMPLETE |
+| 5C Security Platform | ✅ COMPLETE |
+| 5D Platform Services | ⏭ NEXT |
+| 5E AI Platform | Planned |
+| 6+ Business ERP | Planned |
 
-**Existing code note:** `Organization` module already implements Org/Company/Branch/Department CRUD. Roadmap items 5.B.4–5.B.7 will refine and align these to Identity Platform standards rather than rebuild from scratch.
+**Next run:** 5.D Shared Platform Services (Notifications, Workflow, Automation, Scheduler, Queue, Mail, SMS, Webhooks)
+
+**Strategic note:** Accounting Core (6.A) should follow Security — before Sales, Inventory, Purchase modules. ERP transactions post to General Ledger.
 
 ---
 

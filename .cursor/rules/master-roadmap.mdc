@@ -8,9 +8,9 @@ alwaysApply: true
 Follow `docs/MASTER_ROADMAP.md` as the single source of truth.
 
 ## Current Sprint Focus
-- **Completed:** Phase 5A (5.A.1–5.A.15) — Platform Production Freeze PF-1.0
-- **Next:** 5.B.1 Identity
-- **Mode:** Code-first business module delivery
+- **Completed:** Phase 5B Identity Platform
+- **Next:** Phase 5C Security Platform (5.C.1 Authentication)
+- **Frozen:** Phase 5A Platform — do not modify unless critical bug
 
 ## Every Sprint Must Deliver
 Design → Code → Tests → Browser Demo → APIs → Doc Updates → Review → Next

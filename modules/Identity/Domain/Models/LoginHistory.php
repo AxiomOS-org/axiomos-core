@@ -15,6 +15,10 @@ final class LoginHistory extends PlatformEntityModel
     protected $fillable = [
         'identity_id',
         'user_id',
+        'organization_id',
+        'company_id',
+        'branch_id',
+        'department_id',
         'ip_address',
         'user_agent',
         'success',

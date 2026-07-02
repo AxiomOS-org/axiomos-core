@@ -6,9 +6,11 @@ namespace Modules\Identity\Application\Services;
 
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 use Modules\Identity\Application\Support\ListQuery;
 use Modules\Identity\Domain\Models\EmployeeProfile;
 use Modules\Identity\Domain\Repositories\Contracts\EmployeeProfileRepositoryInterface;
+use Illuminate\Validation\ValidationException;
 use RuntimeException;
 
 final class EmployeeProfileService
@@ -41,6 +43,7 @@ final class EmployeeProfileService
      */
     public function create(array $attributes): EmployeeProfile
     {
+        $this->validateDepartment($attributes['department_id'] ?? null);
         $profile = $this->repository->create($attributes);
         $this->platform->onCreated($profile);
 
@@ -52,6 +55,7 @@ final class EmployeeProfileService
      */
     public function update(string $id, array $attributes): EmployeeProfile
     {
+        $this->validateDepartment($attributes['department_id'] ?? null);
         $profile = $this->get($id);
         $before = $profile->toAuditSnapshot();
         $updated = $this->repository->update($profile, $attributes);
@@ -65,5 +69,22 @@ final class EmployeeProfileService
         $profile = $this->get($id);
         $this->platform->onDeleted($profile);
         $this->repository->delete($profile);
+    }
+
+    private function validateDepartment(mixed $departmentId): void
+    {
+        if (! is_string($departmentId) || $departmentId === '') {
+            return;
+        }
+
+        $exists = DB::table('departments')
+            ->where('id', $departmentId)
+            ->exists();
+
+        if (! $exists) {
+            throw ValidationException::withMessages([
+                'department_id' => ['Selected department does not exist in departments table.'],
+            ]);
+        }
     }
 }

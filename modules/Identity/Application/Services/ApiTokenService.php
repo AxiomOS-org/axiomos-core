@@ -6,6 +6,7 @@ namespace Modules\Identity\Application\Services;
 
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Modules\Identity\Application\Support\ListQuery;
 use Modules\Identity\Domain\Models\ApiToken;
 use Modules\Identity\Domain\Repositories\Contracts\ApiTokenRepositoryInterface;
@@ -45,6 +46,25 @@ final class ApiTokenService
         $this->platform->onCreated($token);
 
         return $token;
+    }
+
+    /**
+     * @param array<string, mixed> $attributes
+     *
+     * @return array{token: ApiToken, plain_text_token: string}
+     */
+    public function issueToken(array $attributes): array
+    {
+        $plainTextToken = sprintf('%s.%s', Str::lower(Str::random(8)), bin2hex(random_bytes(32)));
+        $token = $this->create([
+            ...$attributes,
+            'token_hash' => hash('sha256', $plainTextToken),
+        ]);
+
+        return [
+            'token' => $token,
+            'plain_text_token' => $plainTextToken,
+        ];
     }
 
     /**

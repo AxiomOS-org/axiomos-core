@@ -10,6 +10,7 @@ use Illuminate\Validation\ValidationException;
 use Modules\Identity\Application\Services\ApiTokenService;
 use Modules\Identity\Application\Support\ListQuery;
 use Modules\Identity\Http\Requests\ApiTokenRequestRules;
+use Modules\Identity\Http\Resources\IdentityResource;
 use Modules\Identity\Policies\ApiTokenPolicy;
 use RuntimeException;
 use Symfony\Component\HttpFoundation\Response;
@@ -62,9 +63,11 @@ final class ApiTokenApiController extends ApiController
             return $this->validationError($exception);
         }
 
-        $token = $this->service->create($validated);
+        $issued = $this->service->issueToken($validated);
 
-        return $this->item($token, Response::HTTP_CREATED);
+        return new JsonResponse([
+            'data' => IdentityResource::base($issued['token']) + ['plain_text_token' => $issued['plain_text_token']],
+        ], Response::HTTP_CREATED);
     }
 
     public function update(Request $request, string $id): JsonResponse

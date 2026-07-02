@@ -24,5 +24,11 @@ final class Attachment extends PlatformRecord
         'metadata',
         'uploaded_by',
     ];
+
+    /** @var array<string, string> */
+    protected $casts = [
+        'metadata' => 'array',
+        'size_bytes' => 'integer',
+    ];
 }
 

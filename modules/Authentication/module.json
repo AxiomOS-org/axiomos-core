@@ -1,17 +1,31 @@
 {
-    "name":  "Authentication",
-    "version":  "1.0.0",
-    "description":  "Authentication Module",
-    "provider":  "Modules\\Authentication\\Providers\\AuthenticationServiceProvider",
-    "enabled":  true,
-    "priority":  1,
-    "dependencies":  [
-
-                     ],
-    "authors":  [
-                    {
-                        "name":  "AxiomOS Team"
-                    }
-                ],
-    "minimumCoreVersion":  "1.0.0"
+    "name": "Authentication",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Authentication and access services module for Phase 5.C",
+    "provider": "Modules\\Authentication\\Providers\\AuthenticationServiceProvider",
+    "enabled": true,
+    "priority": 100,
+    "minimumCoreVersion": "1.0.0",
+    "dependencies": [
+        "Core",
+        "Identity",
+        "Users"
+    ],
+    "permissions": [],
+    "events": [],
+    "routes": [],
+    "providers": [
+        "Modules\\Authentication\\Providers\\AuthenticationServiceProvider"
+    ],
+    "migrations": [],
+    "seeders": [],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "ai": {},
+    "marketplace": {},
+    "upgrade": {}
 }

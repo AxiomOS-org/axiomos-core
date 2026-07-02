@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Identity\Http\Requests;
 
+use Modules\Identity\Http\Support\EnterpriseScopeRequestRules;
+
 final class IdentityRequestRules
 {
     /**
@@ -11,7 +13,7 @@ final class IdentityRequestRules
      */
     public static function create(): array
     {
-        return [
+        return array_merge([
             'organization_id' => ['nullable', 'uuid'],
             'identity_type' => ['required', 'string', 'max:64'],
             'code' => ['required', 'string', 'max:64'],
@@ -22,7 +24,7 @@ final class IdentityRequestRules
             'status' => ['nullable', 'in:active,inactive,suspended,blocked'],
             'metadata' => ['nullable', 'array'],
             'created_by' => ['nullable', 'uuid'],
-        ];
+        ], EnterpriseScopeRequestRules::create());
     }
 
     /**
@@ -30,7 +32,7 @@ final class IdentityRequestRules
      */
     public static function update(): array
     {
-        return [
+        return array_merge([
             'organization_id' => ['nullable', 'uuid'],
             'identity_type' => ['sometimes', 'string', 'max:64'],
             'code' => ['sometimes', 'string', 'max:64'],
@@ -41,6 +43,6 @@ final class IdentityRequestRules
             'status' => ['sometimes', 'in:active,inactive,suspended,blocked'],
             'metadata' => ['nullable', 'array'],
             'updated_by' => ['nullable', 'uuid'],
-        ];
+        ], EnterpriseScopeRequestRules::update());
     }
 }

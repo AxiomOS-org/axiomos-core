@@ -15,7 +15,14 @@ final class TeamMember extends PlatformEntityModel
     protected $fillable = [
         'team_id',
         'identity_id',
+        'organization_id',
+        'company_id',
+        'branch_id',
+        'department_id',
         'role',
+        'created_by',
+        'updated_by',
+        'deleted_by',
     ];
 
     /** @var array<string, string> */

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Identity\Http\Requests;
 
+use Modules\Identity\Http\Support\EnterpriseScopeRequestRules;
+
 final class LoginHistoryRequestRules
 {
     /**
@@ -11,7 +13,7 @@ final class LoginHistoryRequestRules
      */
     public static function create(): array
     {
-        return [
+        return array_merge([
             'identity_id' => ['required', 'uuid'],
             'user_id' => ['nullable', 'uuid'],
             'ip_address' => ['nullable', 'string', 'max:64'],
@@ -20,7 +22,7 @@ final class LoginHistoryRequestRules
             'logged_at' => ['required', 'date'],
             'status' => ['nullable', 'in:success,failed'],
             'created_by' => ['nullable', 'uuid'],
-        ];
+        ], EnterpriseScopeRequestRules::create());
     }
 
     /**
@@ -28,7 +30,7 @@ final class LoginHistoryRequestRules
      */
     public static function update(): array
     {
-        return [
+        return array_merge([
             'identity_id' => ['sometimes', 'uuid'],
             'user_id' => ['nullable', 'uuid'],
             'ip_address' => ['nullable', 'string', 'max:64'],
@@ -37,6 +39,6 @@ final class LoginHistoryRequestRules
             'logged_at' => ['sometimes', 'date'],
             'status' => ['sometimes', 'in:success,failed'],
             'updated_by' => ['nullable', 'uuid'],
-        ];
+        ], EnterpriseScopeRequestRules::update());
     }
 }

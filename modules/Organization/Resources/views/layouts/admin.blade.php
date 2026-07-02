@@ -33,6 +33,11 @@
             <a class="nav-link {{ ($active ?? '') === 'companies' ? 'active' : '' }}" href="/companies"><i class="bi bi-briefcase me-2"></i>Companies</a>
             <a class="nav-link {{ ($active ?? '') === 'branches' ? 'active' : '' }}" href="/branches"><i class="bi bi-diagram-3 me-2"></i>Branches</a>
             <a class="nav-link {{ ($active ?? '') === 'departments' ? 'active' : '' }}" href="/departments"><i class="bi bi-people me-2"></i>Departments</a>
+            <hr class="border-secondary mx-3 my-2">
+            <a class="nav-link" href="/identity"><i class="bi bi-shield-lock me-2"></i>Identity Dashboard</a>
+            <a class="nav-link" href="/identity/identities"><i class="bi bi-person-badge me-2"></i>Identity Admin</a>
+            <a class="nav-link" href="/identity/teams"><i class="bi bi-diagram-2 me-2"></i>Identity Teams</a>
+            <a class="nav-link" href="/identity/employee-profiles"><i class="bi bi-file-earmark-person me-2"></i>Identity Profiles</a>
             <a class="nav-link" href="/health"><i class="bi bi-heart-pulse me-2"></i>Health</a>
         </nav>
     </aside>

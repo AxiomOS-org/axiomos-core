@@ -26,6 +26,14 @@ final class BladeBootstrap
     public static function boot(string $cachePath, array $viewPaths): Factory
     {
         if (self::$factory !== null) {
+            $finder = self::$factory->getFinder();
+
+            foreach ($viewPaths as $viewPath) {
+                if (is_dir($viewPath)) {
+                    $finder->addLocation($viewPath);
+                }
+            }
+
             return self::$factory;
         }
 

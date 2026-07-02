@@ -14,6 +14,9 @@ final class Membership extends PlatformEntityModel
     protected $fillable = [
         'user_id',
         'organization_id',
+        'company_id',
+        'branch_id',
+        'department_id',
         'membership_type',
         'status',
         'scopes',

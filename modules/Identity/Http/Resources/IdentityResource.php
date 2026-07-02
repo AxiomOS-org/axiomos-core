@@ -13,6 +13,7 @@ use Modules\Identity\Domain\Models\Identity;
 use Modules\Identity\Domain\Models\IdentitySession;
 use Modules\Identity\Domain\Models\LoginHistory;
 use Modules\Identity\Domain\Models\Team;
+use Modules\Identity\Domain\Models\TeamMember;
 
 final class IdentityResource
 {
@@ -63,6 +64,14 @@ final class IdentityResource
                 'name' => $model->name,
                 'description' => $model->description,
                 'leader_identity_id' => $model->leader_identity_id,
+            ];
+        }
+
+        if ($model instanceof TeamMember) {
+            $data += [
+                'team_id' => $model->team_id,
+                'identity_id' => $model->identity_id,
+                'role' => $model->role,
             ];
         }
 

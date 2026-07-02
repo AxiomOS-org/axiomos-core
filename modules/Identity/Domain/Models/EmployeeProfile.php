@@ -15,6 +15,8 @@ final class EmployeeProfile extends PlatformEntityModel
     protected $fillable = [
         'identity_id',
         'organization_id',
+        'company_id',
+        'branch_id',
         'employee_number',
         'job_title',
         'department_id',
