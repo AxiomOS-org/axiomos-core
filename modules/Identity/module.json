@@ -1,0 +1,29 @@
+{
+    "name": "Identity",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Identity platform module for identities, teams, sessions, and credentials",
+    "provider": "Modules\\Identity\\Providers\\IdentityServiceProvider",
+    "enabled": true,
+    "priority": 100,
+    "minimumCoreVersion": "1.0.0",
+    "dependencies": [
+        "Core"
+    ],
+    "permissions": [],
+    "events": [],
+    "routes": [],
+    "providers": [
+        "Modules\\Identity\\Providers\\IdentityServiceProvider"
+    ],
+    "migrations": [],
+    "seeders": [],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "ai": {},
+    "marketplace": {},
+    "upgrade": {}
+}

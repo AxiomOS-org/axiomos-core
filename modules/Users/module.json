@@ -1,17 +1,18 @@
 {
-    "name":  "Users",
-    "version":  "1.0.0",
-    "description":  "Users Module",
-    "provider":  "Modules\\Users\\Providers\\UsersServiceProvider",
-    "enabled":  false,
-    "priority":  1,
-    "dependencies":  [
-
-                     ],
-    "authors":  [
-                    {
-                        "name":  "AxiomOS Team"
-                    }
-                ],
-    "minimumCoreVersion":  "1.0.0"
+    "name": "Users",
+    "version": "1.0.0",
+    "description": "Identity user profile management module",
+    "provider": "Modules\\Users\\Providers\\UsersServiceProvider",
+    "enabled": true,
+    "priority": 100,
+    "dependencies": [
+        "Core",
+        "Identity"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
 }

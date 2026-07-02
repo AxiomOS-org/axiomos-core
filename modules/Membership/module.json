@@ -1,0 +1,20 @@
+{
+    "name": "Membership",
+    "version": "1.0.0",
+    "description": "User organization membership management module",
+    "provider": "Modules\\Membership\\Providers\\MembershipServiceProvider",
+    "enabled": true,
+    "priority": 100,
+    "dependencies": [
+        "Core",
+        "Identity",
+        "Users",
+        "Organization"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}
