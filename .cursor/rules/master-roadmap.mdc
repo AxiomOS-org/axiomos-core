@@ -1,0 +1,34 @@
+---
+description: AxiomOS Enterprise Master Roadmap — code-first execution, no docs-only sprints
+alwaysApply: true
+---
+
+# AxiomOS Development Mode
+
+Follow `docs/MASTER_ROADMAP.md` as the single source of truth.
+
+## Current Sprint Focus
+- **Active:** 5.A.5 ADT Generator Engine (in progress)
+- **Next:** 5.A.6 ADT Certification
+- **Blocked until 5.A.15:** Phase 5B Identity Platform business modules
+
+## Every Sprint Must Deliver
+Design → Code → Tests → Browser Demo → APIs → Doc Updates → Review → Next
+
+## Do NOT
+- Create documentation-only sprints or new 30-page spec documents
+- Re-debate locked architecture (see ARCHITECTURE_FREEZE.md)
+- Skip simulation/approval for ADT generators (Rule 0)
+- Start Identity/business modules before ADT certification (5.A.6)
+
+## Do
+- Ship working code with tests and browser demo every 2–4 days
+- Update module README/CHANGELOG only (no new doc frameworks)
+- Run `composer quality:gate` before closing a sprint
+- Reference ADRs only when core architecture changes
+
+## Existing Code
+`modules/Organization` already has Org/Company/Branch/Department — align in 5.B.4–5.B.7, do not duplicate.
+
+## Human Architect Role
+User reviews, approves ADRs, solves blockers. AI implements per roadmap.
