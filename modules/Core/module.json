@@ -1,0 +1,17 @@
+{
+    "name":  "Core",
+    "version":  "1.0.0",
+    "description":  "Core Module",
+    "provider":  "Modules\\Core\\Providers\\CoreServiceProvider",
+    "enabled":  true,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

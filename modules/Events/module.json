@@ -1,0 +1,17 @@
+{
+    "name":  "Events",
+    "version":  "1.0.0",
+    "description":  "Events Module",
+    "provider":  "Modules\\Events\\Providers\\EventsServiceProvider",
+    "enabled":  false,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

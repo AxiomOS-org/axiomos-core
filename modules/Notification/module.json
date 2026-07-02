@@ -1,0 +1,17 @@
+{
+    "name":  "Notification",
+    "version":  "1.0.0",
+    "description":  "Notification Module",
+    "provider":  "Modules\\Notification\\Providers\\NotificationServiceProvider",
+    "enabled":  false,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

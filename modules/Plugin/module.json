@@ -1,0 +1,17 @@
+{
+    "name":  "Plugin",
+    "version":  "1.0.0",
+    "description":  "Plugin Module",
+    "provider":  "Modules\\Plugin\\Providers\\PluginServiceProvider",
+    "enabled":  false,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

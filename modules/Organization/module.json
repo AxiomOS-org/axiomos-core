@@ -1,0 +1,17 @@
+{
+    "name":  "Organization",
+    "version":  "1.0.0",
+    "description":  "Organization foundation module â€” Organization, Company, Branch, Department hierarchy",
+    "provider":  "Modules\\Organization\\Providers\\OrganizationServiceProvider",
+    "enabled":  true,
+    "priority":  100,
+    "dependencies":  [
+                         "Core"
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

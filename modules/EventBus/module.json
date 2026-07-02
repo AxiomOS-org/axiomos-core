@@ -1,0 +1,17 @@
+{
+    "name":  "EventBus",
+    "version":  "1.0.0",
+    "description":  "EventBus Module",
+    "provider":  "Modules\\EventBus\\Providers\\EventBusServiceProvider",
+    "enabled":  false,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

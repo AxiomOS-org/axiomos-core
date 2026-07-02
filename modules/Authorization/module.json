@@ -1,0 +1,17 @@
+{
+    "name":  "Authorization",
+    "version":  "1.0.0",
+    "description":  "Authorization Module",
+    "provider":  "Modules\\Authorization\\Providers\\AuthorizationServiceProvider",
+    "enabled":  true,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

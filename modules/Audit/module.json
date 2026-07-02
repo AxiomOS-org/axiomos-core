@@ -1,0 +1,17 @@
+{
+    "name":  "Audit",
+    "version":  "1.0.0",
+    "description":  "Audit Module",
+    "provider":  "Modules\\Audit\\Providers\\AuditServiceProvider",
+    "enabled":  false,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

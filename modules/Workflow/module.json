@@ -1,0 +1,17 @@
+{
+    "name":  "Workflow",
+    "version":  "1.0.0",
+    "description":  "Workflow Module",
+    "provider":  "Modules\\Workflow\\Providers\\WorkflowServiceProvider",
+    "enabled":  false,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

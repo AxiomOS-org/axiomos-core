@@ -1,0 +1,60 @@
+name: Quality Gates
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: pdo_pgsql, pgsql
+          tools: composer
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Start PostgreSQL
+        run: docker compose up -d postgres
+
+      - name: Lint
+        shell: pwsh
+        run: ./bin/lint.ps1
+
+      - name: Static Analysis
+        shell: pwsh
+        run: ./bin/static-analysis.ps1
+
+      - name: Architecture Rules
+        shell: pwsh
+        run: ./bin/architecture-rules.ps1
+
+      - name: Unit Tests
+        shell: pwsh
+        run: ./bin/test.ps1 --testsuite Unit
+
+      - name: Module Tests
+        shell: pwsh
+        run: ./bin/test-module.ps1 Organization
+
+      - name: Integration Tests
+        shell: pwsh
+        run: ./bin/test.ps1 --testsuite Integration
+
+      - name: Performance Smoke Tests
+        shell: pwsh
+        run: ./bin/test.ps1 --testsuite Performance
+
+      - name: Security Tests
+        shell: pwsh
+        run: ./bin/test.ps1 --testsuite Security
+

@@ -1,0 +1,17 @@
+{
+    "name":  "Companies",
+    "version":  "1.0.0",
+    "description":  "Companies Module",
+    "provider":  "Modules\\Companies\\Providers\\CompaniesServiceProvider",
+    "enabled":  false,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

@@ -1,0 +1,17 @@
+{
+    "name":  "Settings",
+    "version":  "1.0.0",
+    "description":  "Settings Module",
+    "provider":  "Modules\\Settings\\Providers\\SettingsServiceProvider",
+    "enabled":  true,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

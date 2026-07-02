@@ -1,0 +1,60 @@
+{
+    "name": "axiomos/core",
+    "description": "AxiomOS Core Kernel",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.3",
+        "ext-pdo_pgsql": "*",
+        "illuminate/cache": "^11.0",
+        "illuminate/contracts": "^11.0",
+        "illuminate/database": "11.0",
+        "illuminate/events": "^11.0",
+        "illuminate/filesystem": "11.0",
+        "illuminate/http": "11.0",
+        "illuminate/pagination": "11.0",
+        "illuminate/routing": "11.0",
+        "illuminate/support": "^11.0",
+        "illuminate/validation": "11.0",
+        "illuminate/view": "11.0",
+        "psr/container": "^2.0",
+        "psr/event-dispatcher": "1.0",
+        "psr/log": "^3.0",
+        "ramsey/uuid": "^4.9"
+    },
+    "require-dev": {
+        "fakerphp/faker": "1.23",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Modules\\": "modules/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "powershell -ExecutionPolicy Bypass -File bin/test.ps1",
+        "test:unit": "powershell -ExecutionPolicy Bypass -File bin/test.ps1 --testsuite Unit",
+        "test:module": "powershell -ExecutionPolicy Bypass -File bin/test-module.ps1",
+        "test:integration": "powershell -ExecutionPolicy Bypass -File bin/test.ps1 --testsuite Integration",
+        "test:e2e": "powershell -ExecutionPolicy Bypass -File bin/test.ps1 --testsuite E2E",
+        "test:performance": "powershell -ExecutionPolicy Bypass -File bin/test.ps1 --testsuite Performance",
+        "test:security": "powershell -ExecutionPolicy Bypass -File bin/test.ps1 --testsuite Security",
+        "test:all": "powershell -ExecutionPolicy Bypass -File bin/test.ps1",
+        "lint": "powershell -ExecutionPolicy Bypass -File bin/lint.ps1",
+        "static-analysis": "powershell -ExecutionPolicy Bypass -File bin/static-analysis.ps1",
+        "architecture-rules": "powershell -ExecutionPolicy Bypass -File bin/architecture-rules.ps1",
+        "quality:gate": "powershell -ExecutionPolicy Bypass -File bin/quality-gate.ps1",
+        "migrate": "powershell -ExecutionPolicy Bypass -File bin/migrate.ps1",
+        "postgres:up": "docker compose up -d postgres",
+        "postgres:down": "docker compose down"
+    }
+}

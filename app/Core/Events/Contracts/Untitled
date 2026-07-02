@@ -1,0 +1,1 @@
+New-Item -ItemType File "app/Core/Kernel/Contracts/KernelInterface.php", "app/Core/Kernel/Contracts/BootManagerInterface.php", "app/Core/Kernel/Contracts/ConfigurationManagerInterface.php", "app/Core/Container/Contracts/ContainerInterface.php", "app/Core/Container/Contracts/BindingInterface.php" -Force

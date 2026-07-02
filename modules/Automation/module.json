@@ -1,0 +1,17 @@
+{
+    "name":  "Automation",
+    "version":  "1.0.0",
+    "description":  "Automation Module",
+    "provider":  "Modules\\Automation\\Providers\\AutomationServiceProvider",
+    "enabled":  false,
+    "priority":  500,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}

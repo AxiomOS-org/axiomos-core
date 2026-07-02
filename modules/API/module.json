@@ -1,0 +1,17 @@
+{
+    "name":  "API",
+    "version":  "1.0.0",
+    "description":  "API Module",
+    "provider":  "Modules\\API\\Providers\\APIServiceProvider",
+    "enabled":  false,
+    "priority":  1,
+    "dependencies":  [
+
+                     ],
+    "authors":  [
+                    {
+                        "name":  "AxiomOS Team"
+                    }
+                ],
+    "minimumCoreVersion":  "1.0.0"
+}
