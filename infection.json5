@@ -1,0 +1,31 @@
+{
+    "$schema": "vendor/infection/infection/resources/schema.json",
+    "source": {
+        "directories": [
+            "app",
+            "modules"
+        ],
+        "excludes": [
+            "Database/Migrations",
+            "Database/Seeders",
+            "Database/Factories"
+        ]
+    },
+    "logs": {
+        "text": "storage/reports/infection.log",
+        "summary": "storage/reports/infection-summary.log",
+        "json": "storage/reports/infection.json"
+    },
+    "mutators": {
+        "@default": true
+    },
+    "minMsi": 45,
+    "minCoveredMsi": 40,
+    "testFramework": "phpunit",
+    "bootstrap": "tests/bootstrap.php",
+    "phpUnit": {
+        "configDir": "."
+    },
+    "timeout": 30,
+    "threads": 4
+}

@@ -24,7 +24,11 @@
     },
     "require-dev": {
         "fakerphp/faker": "1.23",
-        "phpunit/phpunit": "^11.0"
+        "infection/infection": "0.31",
+        "phpstan/phpstan": "2.1",
+        "phpunit/phpunit": "^11.0",
+        "rector/rector": "2.0",
+        "vimeo/psalm": "6.5"
     },
     "autoload": {
         "psr-4": {
@@ -39,7 +43,11 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "process-timeout": 0,
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
     },
     "scripts": {
         "test": "powershell -ExecutionPolicy Bypass -File bin/test.ps1",
@@ -49,6 +57,18 @@
         "test:e2e": "powershell -ExecutionPolicy Bypass -File bin/test.ps1 --testsuite E2E",
         "test:performance": "powershell -ExecutionPolicy Bypass -File bin/test.ps1 --testsuite Performance",
         "test:security": "powershell -ExecutionPolicy Bypass -File bin/test.ps1 --testsuite Security",
+        "runtime:test": "powershell -ExecutionPolicy Bypass -File bin/runtime-test.ps1",
+        "stability:test": "powershell -ExecutionPolicy Bypass -File bin/stability-test.ps1",
+        "browser:test": "powershell -ExecutionPolicy Bypass -File bin/browser-test.ps1",
+        "production:test": "powershell -ExecutionPolicy Bypass -File bin/production-test.ps1",
+        "architecture:test": "powershell -ExecutionPolicy Bypass -File bin/architecture-test.ps1",
+        "performance:test": "powershell -ExecutionPolicy Bypass -File bin/performance-test.ps1",
+        "security:test": "powershell -ExecutionPolicy Bypass -File bin/security-test.ps1",
+        "reliability:test": "powershell -ExecutionPolicy Bypass -File bin/reliability-test.ps1",
+        "qa:test": "powershell -ExecutionPolicy Bypass -File bin/qa-test.ps1",
+        "coverage:test": "powershell -ExecutionPolicy Bypass -File bin/coverage-test.ps1",
+        "mutation:test": "powershell -ExecutionPolicy Bypass -File bin/mutation-test.ps1",
+        "code-quality": "powershell -ExecutionPolicy Bypass -File bin/code-quality.ps1",
         "test:all": "powershell -ExecutionPolicy Bypass -File bin/test.ps1",
         "lint": "powershell -ExecutionPolicy Bypass -File bin/lint.ps1",
         "static-analysis": "powershell -ExecutionPolicy Bypass -File bin/static-analysis.ps1",

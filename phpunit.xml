@@ -20,10 +20,32 @@
             <directory>tests/E2E</directory>
         </testsuite>
         <testsuite name="Performance">
+            <directory>tests/Performance</directory>
             <directory>tests/Benchmark</directory>
+        </testsuite>
+        <testsuite name="Architecture">
+            <directory>tests/Architecture</directory>
+        </testsuite>
+        <testsuite name="Reliability">
+            <directory>tests/Reliability</directory>
+        </testsuite>
+        <testsuite name="QA">
+            <directory>tests/QA</directory>
         </testsuite>
         <testsuite name="Security">
             <directory>tests/Security</directory>
+        </testsuite>
+        <testsuite name="Runtime">
+            <directory>tests/Runtime</directory>
+        </testsuite>
+        <testsuite name="Stability">
+            <directory>tests/Stability</directory>
+        </testsuite>
+        <testsuite name="Browser">
+            <directory>tests/Browser</directory>
+        </testsuite>
+        <testsuite name="Production">
+            <directory>tests/Production</directory>
         </testsuite>
         <testsuite name="Feature">
             <directory>tests/Feature</directory>
@@ -47,6 +69,12 @@
     <source>
         <include>
             <directory>app</directory>
+            <directory>modules</directory>
         </include>
+        <exclude>
+            <directory>modules/*/Database/Migrations</directory>
+            <directory>modules/*/Database/Seeders</directory>
+            <directory>modules/*/Database/Factories</directory>
+        </exclude>
     </source>
 </phpunit>

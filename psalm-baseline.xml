@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="6.5.0@38fc8444edf0cebc9205296ee6e30e906ade783b">
+  <file src="app/Core/Boot/BootManager.php">
+    <InvalidArgument>
+      <code><![CDATA[$sorted]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="app/Core/Boot/BootReport.php">
+    <FalsableReturnStatement>
+      <code><![CDATA[json_encode($this->toArray(), $flags)]]></code>
+    </FalsableReturnStatement>
+  </file>
+  <file src="app/Core/Container/Container.php">
+    <TypeDoesNotContainType>
+      <code><![CDATA[$binding?->lazy]]></code>
+    </TypeDoesNotContainType>
+  </file>
+  <file src="app/Core/Event/EventBus.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$this->dispatchNow($event)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[object]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="app/Core/Http/HttpKernelFactory.php">
+    <RedundantCast>
+      <code><![CDATA[(string) (getenv('APP_ENV') ?: 'production')]]></code>
+    </RedundantCast>
+  </file>
+  <file src="app/Core/Module/ModuleDependencyResolver.php">
+    <InvalidArgument>
+      <code><![CDATA[$byName[$name]]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="app/Core/Module/ModuleLoader.php">
+    <InvalidArgument>
+      <code><![CDATA[$this->loadModule($manifestPath, $directory)]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="app/Core/Module/ModuleRegistry.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[new Collection(array_values($this->modules))]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[Collection<int, ModuleManifest>]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="app/Infrastructure/View/BladeBootstrap.php">
+    <TooFewArguments>
+      <code><![CDATA[new \Illuminate\View\Engines\PhpEngine()]]></code>
+    </TooFewArguments>
+  </file>
+  <file src="app/Platform/AI/AiContextService.php">
+    <UndefinedPropertyAssignment>
+      <code><![CDATA[$ai->context]]></code>
+      <code><![CDATA[$ai->metadata]]></code>
+      <code><![CDATA[$ai->updated_by]]></code>
+    </UndefinedPropertyAssignment>
+  </file>
+  <file src="app/Platform/Workflow/WorkflowEngine.php">
+    <InvalidArgument>
+      <code><![CDATA[$workflow]]></code>
+    </InvalidArgument>
+    <InvalidReturnStatement>
+      <code><![CDATA[$request]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[\App\Platform\Approval\ApprovalRequest]]></code>
+    </InvalidReturnType>
+    <UndefinedFunction>
+      <code><![CDATA[now()]]></code>
+      <code><![CDATA[now()]]></code>
+    </UndefinedFunction>
+  </file>
+  <file src="modules/Authentication/Application/Services/SecurityEventService.php">
+    <InvalidArgument>
+      <code><![CDATA[$event]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Authentication/Domain/Models/AuthCredential.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function user(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php">
+    <InvalidArgument>
+      <code><![CDATA[$user]]></code>
+    </InvalidArgument>
+    <InvalidPropertyFetch>
+      <code><![CDATA[$user->identity_id]]></code>
+    </InvalidPropertyFetch>
+  </file>
+  <file src="modules/Authentication/Providers/AuthenticationServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Authorization/Application/Services/PermissionService.php">
+    <InvalidArgument>
+      <code><![CDATA[$permission]]></code>
+    </InvalidArgument>
+    <InvalidReturnStatement>
+      <code><![CDATA[AuthorizationPermission::query()->find($id)
+            ?? throw new RuntimeException(sprintf('Permission "%s" not found.', $id))]]></code>
+      <code><![CDATA[AuthorizationPermission::query()->orderBy('module')->orderBy('action')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[AuthorizationPermission]]></code>
+      <code><![CDATA[Collection<int, AuthorizationPermission>]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Authorization/Application/Services/RoleService.php">
+    <InvalidArgument>
+      <code><![CDATA[$role]]></code>
+    </InvalidArgument>
+    <InvalidReturnStatement>
+      <code><![CDATA[AuthorizationRole::query()->find($id)
+            ?? throw new RuntimeException(sprintf('Role "%s" not found.', $id))]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[AuthorizationRole]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Authorization/Application/Support/ListQuery.php">
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Authorization/Domain/Models/AuthorizationPermission.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function roles(): BelongsToMany]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Authorization/Domain/Models/AuthorizationRole.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function assignments(): HasMany]]></code>
+      <code><![CDATA[public function permissions(): BelongsToMany]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Authorization/Domain/Models/AuthorizationRoleAssignment.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function assignable(): MorphTo]]></code>
+      <code><![CDATA[public function role(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Authorization/Domain/Models/AuthorizationRolePermission.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function permission(): BelongsTo]]></code>
+      <code><![CDATA[public function role(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Authorization/Providers/AuthorizationServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Identity/Application/Support/ListQuery.php">
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Identity/Domain/Models/ApiToken.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function identity(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Domain/Models/Contact.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function identity(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Domain/Models/Device.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function identity(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Domain/Models/EmployeeProfile.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function identity(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Domain/Models/Identity.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function teamsLed(): HasMany]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Domain/Models/IdentitySession.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function identity(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Domain/Models/LoginHistory.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function identity(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Domain/Models/Team.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function leader(): BelongsTo]]></code>
+      <code><![CDATA[public function members(): HasMany]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Domain/Models/TeamMember.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function identity(): BelongsTo]]></code>
+      <code><![CDATA[public function team(): BelongsTo]]></code>
+    </InvalidDocblock>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/Concerns/AppliesListQuery.php">
+    <TooManyTemplateParams>
+      <code><![CDATA[$query->orderBy($listQuery->sort, $listQuery->direction)]]></code>
+      <code><![CDATA[$query->where('status', $listQuery->status)]]></code>
+      <code><![CDATA[Builder<\Illuminate\Database\Eloquent\Model>]]></code>
+    </TooManyTemplateParams>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentApiTokenRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[ApiToken::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?ApiToken]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentContactRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[Contact::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Contact]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentDeviceRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[Device::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Device]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentEmployeeProfileRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[EmployeeProfile::query()->with('identity')->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?EmployeeProfile]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentIdentityRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[Identity::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Identity]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentIdentitySessionRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[IdentitySession::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?IdentitySession]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentLoginHistoryRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[LoginHistory::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?LoginHistory]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentTeamMemberRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[TeamMember::query()->with(['team', 'identity'])->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?TeamMember]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Infrastructure/Persistence/EloquentTeamRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[Team::query()->with('leader')->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Team]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Identity/Providers/IdentityServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Membership/Application/Support/ListQuery.php">
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Membership/Infrastructure/Persistence/Concerns/AppliesListQuery.php">
+    <TooManyTemplateParams>
+      <code><![CDATA[$query->orderBy($listQuery->sort, $listQuery->direction)]]></code>
+      <code><![CDATA[$query->where('membership_type', $listQuery->membershipType)]]></code>
+      <code><![CDATA[$query->where('organization_id', $listQuery->organizationId)]]></code>
+      <code><![CDATA[$query->where('user_id', $listQuery->userId)]]></code>
+      <code><![CDATA[$query->where(static function (Builder $builder) use ($needle): void {
+                $builder
+                    ->where('membership_type', 'ilike', $needle)
+                    ->orWhere('status', 'ilike', $needle);
+            })]]></code>
+      <code><![CDATA[Builder<\Illuminate\Database\Eloquent\Model>]]></code>
+    </TooManyTemplateParams>
+  </file>
+  <file src="modules/Membership/Infrastructure/Persistence/EloquentMembershipRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Membership::query()->find($id)]]></code>
+      <code><![CDATA[Membership::query()->orderByDesc('created_at')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Membership]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Membership/Providers/MembershipServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Organization/Application/Services/BranchService.php">
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$branch->code]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="modules/Organization/Application/Services/CompanyService.php">
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$company->code]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="modules/Organization/Application/Services/DepartmentService.php">
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$department->code]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="modules/Organization/Application/Services/OrganizationService.php">
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$organization->code]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="modules/Organization/Application/Support/ListQuery.php">
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Organization/Domain/Models/Branch.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function company(): BelongsTo]]></code>
+      <code><![CDATA[public function departments(): HasMany]]></code>
+    </InvalidDocblock>
+    <TooManyTemplateParams>
+      <code><![CDATA[HasFactory]]></code>
+    </TooManyTemplateParams>
+  </file>
+  <file src="modules/Organization/Domain/Models/Company.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function branches(): HasMany]]></code>
+      <code><![CDATA[public function organization(): BelongsTo]]></code>
+    </InvalidDocblock>
+    <TooManyTemplateParams>
+      <code><![CDATA[HasFactory]]></code>
+    </TooManyTemplateParams>
+  </file>
+  <file src="modules/Organization/Domain/Models/Department.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function branch(): BelongsTo]]></code>
+      <code><![CDATA[public function children(): HasMany]]></code>
+      <code><![CDATA[public function parent(): BelongsTo]]></code>
+    </InvalidDocblock>
+    <TooManyTemplateParams>
+      <code><![CDATA[HasFactory]]></code>
+    </TooManyTemplateParams>
+  </file>
+  <file src="modules/Organization/Domain/Models/Organization.php">
+    <InvalidDocblock>
+      <code><![CDATA[public function companies(): HasMany]]></code>
+    </InvalidDocblock>
+    <TooManyTemplateParams>
+      <code><![CDATA[HasFactory]]></code>
+    </TooManyTemplateParams>
+  </file>
+  <file src="modules/Organization/Infrastructure/Persistence/Concerns/AppliesListQuery.php">
+    <TooManyTemplateParams>
+      <code><![CDATA[$query->orderBy($listQuery->sort, $listQuery->direction)]]></code>
+      <code><![CDATA[$query->where('status', $listQuery->status)]]></code>
+      <code><![CDATA[Builder<\Illuminate\Database\Eloquent\Model>]]></code>
+    </TooManyTemplateParams>
+  </file>
+  <file src="modules/Organization/Infrastructure/Persistence/EloquentBranchRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[Branch::query()->with('company')->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Branch]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Organization/Infrastructure/Persistence/EloquentCompanyRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[Company::query()->with('organization')->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Company]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Organization/Infrastructure/Persistence/EloquentDepartmentRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$query->get()]]></code>
+      <code><![CDATA[Department::query()->with(['branch', 'parent'])->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Department]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Organization/Infrastructure/Persistence/EloquentOrganizationRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Organization::query()->find($id)]]></code>
+      <code><![CDATA[Organization::query()->orderBy('name')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Organization]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Organization/Providers/OrganizationServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Organization/Resources/views/layout.php">
+    <RedundantCondition>
+      <code><![CDATA[$content]]></code>
+    </RedundantCondition>
+    <TypeDoesNotContainNull>
+      <code><![CDATA['']]></code>
+    </TypeDoesNotContainNull>
+  </file>
+  <file src="modules/Users/Application/Support/ListQuery.php">
+    <InvalidArgument>
+      <code><![CDATA[1]]></code>
+      <code><![CDATA[15]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Users/Infrastructure/Persistence/Concerns/AppliesListQuery.php">
+    <TooManyTemplateParams>
+      <code><![CDATA[$query->orderBy($listQuery->sort, $listQuery->direction)]]></code>
+      <code><![CDATA[$query->where('status', $listQuery->status)]]></code>
+      <code><![CDATA[Builder<\Illuminate\Database\Eloquent\Model>]]></code>
+    </TooManyTemplateParams>
+  </file>
+  <file src="modules/Users/Infrastructure/Persistence/EloquentUserRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[User::query()->find($id)]]></code>
+      <code><![CDATA[User::query()->orderBy('display_name')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?User]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Users/Providers/UsersServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+</files>

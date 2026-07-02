@@ -39,11 +39,17 @@ No new 30-page documentation sprints. Each sprint delivers:
 | 5A Platform | ✅ FROZEN |
 | 5B Identity Platform | ✅ COMPLETE |
 | 5C Security Platform | ✅ COMPLETE |
-| 5D Platform Services | ⏭ NEXT |
-| 5E AI Platform | Planned |
-| 6+ Business ERP | Planned |
+| 5C.5 Enterprise Stability & Runtime Validation | ✅ COMPLETE |
+| 5C.6 Enterprise QA Platform | ✅ COMPLETE |
+| 5D Platform Services | ⏸ DEFERRED (platform frozen) |
+| 5E AI Platform | ⏸ DEFERRED |
+| 6.A Accounting Foundation | ⏭ NEXT |
 
-**Next run:** 5.D Shared Platform Services (Notifications, Workflow, Automation, Scheduler, Queue, Mail, SMS, Webhooks)
+**Platform freeze (5.C.6):** Core + Platform + Identity + Security + QA are frozen — bug fixes only. See `docs/architecture/PLATFORM_FREEZE.md`.
+
+**Next run:** **6.A Accounting Foundation** — General Ledger first; all ERP transactions post to GL.
+
+**Quality gate rule (mandatory per business module):** `composer runtime:test`, `stability:test`, `browser:test`, `production:test`, `architecture:test`, `performance:test`, `security:test`, `quality:gate`. Any failure = not production ready.
 
 **Strategic note:** Accounting Core (6.A) should follow Security — before Sales, Inventory, Purchase modules. ERP transactions post to General Ledger.
 
@@ -112,6 +118,52 @@ No new 30-page documentation sprints. Each sprint delivers:
 | 5.C.13 | OAuth |
 | 5.C.14 | SSO |
 | 5.C.15 | Security Center |
+
+---
+
+## Phase 5.C.5 — Enterprise Stability & Runtime Validation
+
+**Goal:** No new features. Harden the existing platform before Platform Services (5.D).
+
+| Area | Validation |
+|------|------------|
+| Runtime | PHP parse errors, kernel boot, module load |
+| HTTP | Route integrity, no 500 on GET probes, 404 handling |
+| Views | Blade compile for all module templates |
+| Container | Singleton/controller DI resolution |
+| Database | Foreign keys, orphan checks, transaction rollback |
+| Browser | All catalogued pages return 200/302/401/403/404 — never 500 |
+| Production | No stack traces, no password hash leakage |
+
+**Composer commands (mandatory per phase):**
+
+- `composer runtime:test` — project fail if red
+- `composer stability:test` — sprint reject if red
+- `composer browser:test` — sprint reject if red
+- `composer production:test` — release reject if red
+- `composer quality:gate` — includes all above
+
+Report: `docs/reports/PHASE_5C5_STABILITY_REPORT.md`
+
+---
+
+## Phase 5.C.6 — Enterprise Quality Assurance Platform
+
+**Goal:** Zero business features. Full QA toolchain + platform freeze.
+
+| Area | Tooling |
+|------|---------|
+| Static Analysis | PHPStan L6, Psalm L4, Rector dry-run |
+| Architecture | DDD/hexagonal scans, module dependency graph |
+| Performance | FK indexes, EXPLAIN, N+1, memory, latency |
+| Security | OWASP-style probes, IDOR, XSS, SQLi, session |
+| Reliability | Failure simulation, concurrent requests |
+| QA | HTTP method matrix, API contract validation |
+
+**Mandatory gates:** `runtime:test`, `stability:test`, `browser:test`, `production:test`, `architecture:test`, `performance:test`, `security:test`, `quality:gate`
+
+Report: `docs/reports/PHASE_5C6_QA_REPORT.md`  
+Freeze: `docs/architecture/PLATFORM_FREEZE.md`
 
 ---
 

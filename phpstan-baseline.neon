@@ -1,0 +1,2275 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Method App\\ADT\\Extension\\Contracts\\TemplatePackInterface\:\:render\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/ADT/Extension/Contracts/TemplatePackInterface.php
+
+		-
+			message: '#^Method App\\ADT\\Extension\\PluginSdk\:\:negotiateCapabilities\(\) has parameter \$required with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/ADT/Extension/PluginSdk.php
+
+		-
+			message: '#^Method App\\ADT\\MakeModule\\SimulationReport\:\:fromArtifacts\(\) has parameter \$conflicts with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/ADT/MakeModule/SimulationReport.php
+
+		-
+			message: '#^Method App\\ADT\\Release\\ChangelogGenerator\:\:compile\(\) has parameter \$entries with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/ADT/Release/ChangelogGenerator.php
+
+		-
+			message: '#^Method App\\Core\\Boot\\BootManager\:\:finalize\(\) has parameter \$manifests with generic class Illuminate\\Support\\Collection but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: app/Core/Boot/BootManager.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Container\:\:build\(\) has parameter \$parameters with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Container.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Container\:\:cachePath\(\) never returns string so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: app/Core/Container/Container.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Container\:\:call\(\) has parameter \$callback with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Container.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Container\:\:call\(\) has parameter \$parameters with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Container.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Container\:\:make\(\) has parameter \$parameters with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Container.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Container\:\:resolve\(\) has parameter \$parameters with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Container.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>concrete" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Core/Container/Container.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Contracts\\ContainerInterface\:\:call\(\) has parameter \$callback with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Contracts/ContainerInterface.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Contracts\\ContainerInterface\:\:call\(\) has parameter \$parameters with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Contracts/ContainerInterface.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Contracts\\ContainerInterface\:\:make\(\) has parameter \$parameters with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Contracts/ContainerInterface.php
+
+		-
+			message: '#^Method App\\Core\\Container\\Events\\ContainerResolving\:\:__construct\(\) has parameter \$parameters with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Core/Container/Events/ContainerResolving.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>executionTime" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 3
+			path: app/Core/Kernel/Kernel.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>failedModules" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Core/Kernel/Kernel.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>loadedModules" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: app/Core/Kernel/Kernel.php
+
+		-
+			message: '#^Parameter \#1 \$app of static method Illuminate\\Support\\Facades\\Facade\:\:setFacadeApplication\(\) expects Illuminate\\Contracts\\Foundation\\Application\|null, Illuminate\\Contracts\\Container\\Container given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Infrastructure/Database/DatabaseBootstrap.php
+
+		-
+			message: '#^Class Illuminate\\View\\Engines\\PhpEngine constructor invoked with 0 parameters, 1 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: app/Infrastructure/View/BladeBootstrap.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$context\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/AI/AiContextService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$metadata\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/AI/AiContextService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$updated_by\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/AI/AiContextService.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\AiContextService\:\:upsert\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/AI/AiContextService.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\AiContextService\:\:upsert\(\) has parameter \$metadata with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/AI/AiContextService.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\AiContextService\:\:upsert\(\) should return App\\Platform\\AI\\AiContext but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Platform/AI/AiContextService.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\AiSdk\:\:buildPrompt\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/AI/AiSdk.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\AiSdk\:\:storeContext\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/AI/AiSdk.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\AiSdk\:\:storeContext\(\) has parameter \$metadata with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/AI/AiSdk.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\Contracts\\AiSdkInterface\:\:buildPrompt\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/AI/Contracts/AiSdkInterface.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\Contracts\\AiSdkInterface\:\:storeContext\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/AI/Contracts/AiSdkInterface.php
+
+		-
+			message: '#^Method App\\Platform\\AI\\Contracts\\AiSdkInterface\:\:storeContext\(\) has parameter \$metadata with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/AI/Contracts/AiSdkInterface.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Activity\\Activity\:\:\$actor_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Activity\\Activity\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Activity\\Activity\:\:\$entity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Activity\\Activity\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Activity\\Activity\:\:\$metadata\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Activity\\Activity\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Activity\\Activity\:\:\$type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Method App\\Platform\\Activity\\ActivityService\:\:record\(\) has parameter \$metadata with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Method App\\Platform\\Activity\\ActivityService\:\:timeline\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Activity/ActivityService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalRequest\:\:\$current_step\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalRequest\:\:\$entity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalRequest\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalRequest\:\:\$requested_by\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalRequest\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalRequest\:\:\$workflow_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalWorkflow\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalWorkflow\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalWorkflow\:\:\$slug\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalWorkflow\:\:\$steps\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Method App\\Platform\\Approval\\ApprovalWorkflowService\:\:createWorkflow\(\) has parameter \$steps with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Approval/ApprovalWorkflowService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$disk\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$entity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$filename\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$metadata\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$mime_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$path\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$size_bytes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Attachments\\Attachment\:\:\$uploaded_by\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Attachments/AttachmentService.php
+
+		-
+			message: '#^PHPDoc tag  has invalid value \(Unexpected token "", expected ''\*/'' at offset 3 on line 1\)\: Unexpected token "", expected ''\*/'' at offset 3 on line 1$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Platform/Audit/AuditLog.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$action\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$actor_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$entity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$ip_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$metadata\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$new_values\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$occurred_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$old_values\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Audit\\AuditLog\:\:\$user_agent\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Method App\\Platform\\Audit\\AuditTrailService\:\:record\(\) has parameter \$metadata with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Method App\\Platform\\Audit\\AuditTrailService\:\:record\(\) has parameter \$newValues with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Method App\\Platform\\Audit\\AuditTrailService\:\:record\(\) has parameter \$oldValues with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Audit/AuditTrailService.php
+
+		-
+			message: '#^Method App\\Platform\\Automation\\AutomationEngine\:\:dispatch\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Automation/AutomationEngine.php
+
+		-
+			message: '#^Property App\\Platform\\Automation\\AutomationEngine\:\:\$triggers is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: app/Platform/Automation/AutomationEngine.php
+
+		-
+			message: '#^Method App\\Platform\\Automation\\AutomationSdk\:\:run\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Automation/AutomationSdk.php
+
+		-
+			message: '#^Method App\\Platform\\Automation\\Contracts\\AutomationActionInterface\:\:execute\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Automation/Contracts/AutomationActionInterface.php
+
+		-
+			message: '#^Method App\\Platform\\Automation\\Contracts\\AutomationTriggerInterface\:\:matches\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Automation/Contracts/AutomationTriggerInterface.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Comments\\Comment\:\:\$body\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Comments/CommentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Comments\\Comment\:\:\$created_by\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Comments/CommentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Comments\\Comment\:\:\$entity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Comments/CommentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Comments\\Comment\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Comments/CommentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Comments\\Comment\:\:\$parent_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Comments/CommentService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Comments\\Comment\:\:\$updated_by\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Comments/CommentService.php
+
+		-
+			message: '#^Method App\\Platform\\Integration\\Contracts\\ConnectorInterface\:\:connect\(\) has parameter \$config with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Integration/Contracts/ConnectorInterface.php
+
+		-
+			message: '#^Method App\\Platform\\Integration\\Contracts\\ConnectorInterface\:\:send\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Integration/Contracts/ConnectorInterface.php
+
+		-
+			message: '#^Method App\\Platform\\Integration\\Contracts\\ConnectorInterface\:\:send\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Integration/Contracts/ConnectorInterface.php
+
+		-
+			message: '#^Method App\\Platform\\Integration\\Contracts\\WebhookHandlerInterface\:\:handle\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Integration/Contracts/WebhookHandlerInterface.php
+
+		-
+			message: '#^Method App\\Platform\\Integration\\IntegrationRegistry\:\:handleWebhook\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Integration/IntegrationRegistry.php
+
+		-
+			message: '#^Method App\\Platform\\Integration\\IntegrationSdk\:\:receive\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Integration/IntegrationSdk.php
+
+		-
+			message: '#^Method App\\Platform\\Integration\\IntegrationSdk\:\:send\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Integration/IntegrationSdk.php
+
+		-
+			message: '#^Method App\\Platform\\Integration\\IntegrationSdk\:\:send\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Integration/IntegrationSdk.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notes\\Note\:\:\$body\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notes/NoteService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notes\\Note\:\:\$created_by\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notes/NoteService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notes\\Note\:\:\$entity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notes/NoteService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notes\\Note\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notes/NoteService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notes\\Note\:\:\$is_pinned\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notes/NoteService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notes\\Note\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notes/NoteService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notes\\Note\:\:\$updated_by\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notes/NoteService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notifications\\Notification\:\:\$body\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notifications/NotificationService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notifications\\Notification\:\:\$channel\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notifications/NotificationService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notifications\\Notification\:\:\$entity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notifications/NotificationService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notifications\\Notification\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notifications/NotificationService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notifications\\Notification\:\:\$payload\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notifications/NotificationService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notifications\\Notification\:\:\$title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notifications/NotificationService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Notifications\\Notification\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Notifications/NotificationService.php
+
+		-
+			message: '#^Method App\\Platform\\Notifications\\NotificationService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Notifications/NotificationService.php
+
+		-
+			message: '#^Method App\\Platform\\Tags\\TagService\:\:attach\(\) should return App\\Platform\\Tags\\Tag but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Platform/Tags/TagService.php
+
+		-
+			message: '#^Method App\\Platform\\Theme\\ThemeSdk\:\:renderLayout\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Theme/ThemeSdk.php
+
+		-
+			message: '#^Method App\\Platform\\Timeline\\TimelineService\:\:timeline\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Timeline/TimelineService.php
+
+		-
+			message: '#^PHPDoc tag  has invalid value \(Unexpected token "", expected ''\*/'' at offset 3 on line 1\)\: Unexpected token "", expected ''\*/'' at offset 3 on line 1$#'
+			identifier: phpDoc.parseError
+			count: 2
+			path: app/Platform/Versioning/EntityVersion.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Versioning\\EntityVersion\:\:\$created_by\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Versioning/VersionHistoryService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Versioning\\EntityVersion\:\:\$entity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Versioning/VersionHistoryService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Versioning\\EntityVersion\:\:\$entity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Versioning/VersionHistoryService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Versioning\\EntityVersion\:\:\$snapshot\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Versioning/VersionHistoryService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Versioning\\EntityVersion\:\:\$version_number\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/Platform/Versioning/VersionHistoryService.php
+
+		-
+			message: '#^Method App\\Platform\\Versioning\\VersionHistoryService\:\:recordVersion\(\) has parameter \$snapshot with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: app/Platform/Versioning/VersionHistoryService.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalRequest\:\:\$resolved_at\.$#'
+			identifier: property.notFound
+			count: 2
+			path: app/Platform/Workflow/WorkflowEngine.php
+
+		-
+			message: '#^Access to an undefined property App\\Platform\\Approval\\ApprovalRequest\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 3
+			path: app/Platform/Workflow/WorkflowEngine.php
+
+		-
+			message: '#^Function now not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/Platform/Workflow/WorkflowEngine.php
+
+		-
+			message: '#^Method App\\Platform\\Workflow\\WorkflowEngine\:\:findRequest\(\) should return App\\Platform\\Approval\\ApprovalRequest but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: app/Platform/Workflow/WorkflowEngine.php
+
+		-
+			message: '#^Parameter \#2 \$workflow of method App\\Platform\\Approval\\ApprovalWorkflowService\:\:requestApproval\(\) expects App\\Platform\\Approval\\ApprovalWorkflow, array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Platform/Workflow/WorkflowEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthCredential\:\:\$email_verified_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/AuthenticationService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthCredential\:\:\$failed_attempts\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/AuthenticationService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthCredential\:\:\$locked_until\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/AuthenticationService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthCredential\:\:\$must_change_password\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/AuthenticationService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthCredential\:\:\$password_hash\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/AuthenticationService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$expires_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/AuthenticationService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/AuthenticationService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Users\\Domain\\Models\\User\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/LoginHistoryService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Users\\Domain\\Models\\User\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/LoginHistoryService.php
+
+		-
+			message: '#^Method Modules\\Authentication\\Application\\Services\\LoginHistoryService\:\:record\(\) should return Modules\\Identity\\Domain\\Models\\LoginHistory but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authentication/Application/Services/LoginHistoryService.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/OAuthService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthCredential\:\:\$password_hash\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Authentication/Application/Services/PasswordService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthPasswordPolicy\:\:\$history_count\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/PasswordService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthPasswordPolicy\:\:\$min_length\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Application/Services/PasswordService.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>history_count" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: modules/Authentication/Application/Services/PasswordService.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>min_length" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: modules/Authentication/Application/Services/PasswordService.php
+
+		-
+			message: '#^Method Modules\\Authentication\\Application\\Services\\SecurityEventService\:\:record\(\) should return Modules\\Authentication\\Domain\\Models\\AuthSecurityEvent but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authentication/Application/Services/SecurityEventService.php
+
+		-
+			message: '#^Parameter \#1 \$entity of method Modules\\Authentication\\Application\\Services\\AuthenticationPlatformHooks\:\:onCreated\(\) expects App\\Platform\\Support\\PlatformEntityInterface, Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Authentication/Application/Services/SecurityEventService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Users\\Domain\\Models\\User\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Authentication/Application/Services/SessionManagerService.php
+
+		-
+			message: '#^Method Modules\\Authentication\\Application\\Services\\SessionManagerService\:\:create\(\) should return array\{session\: Modules\\Identity\\Domain\\Models\\IdentitySession, plain_token\: string\} but returns array\{session\: Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model, plain_token\: non\-empty\-string\}\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authentication/Application/Services/SessionManagerService.php
+
+		-
+			message: '#^Method Modules\\Authentication\\Application\\Services\\TrustedDeviceService\:\:remember\(\) should return Modules\\Authentication\\Domain\\Models\\AuthTrustedDevice but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authentication/Application/Services/TrustedDeviceService.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Users\\Domain\\Models\\User, \$this\(Modules\\Authentication\\Domain\\Models\\AuthCredential\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Authentication/Domain/Models/AuthCredential.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$scopes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$expires_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$ip_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$started_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$user_agent\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Cannot access property \$identity_id on array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Parameter \#1 \$user of method Modules\\Authentication\\Application\\Services\\SessionManagerService\:\:listByUser\(\) expects Modules\\Users\\Domain\\Models\\User, array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Authentication/Http/Controllers/Api/AuthenticationApiController.php
+
+		-
+			message: '#^Method Modules\\Authentication\\Infrastructure\\Persistence\\EloquentCredentialRepository\:\:create\(\) should return Modules\\Authentication\\Domain\\Models\\AuthCredential but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authentication/Infrastructure/Persistence/EloquentCredentialRepository.php
+
+		-
+			message: '#^Method Modules\\Authentication\\Infrastructure\\Persistence\\EloquentPasswordPolicyRepository\:\:create\(\) should return Modules\\Authentication\\Domain\\Models\\AuthPasswordPolicy but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authentication/Infrastructure/Persistence/EloquentPasswordPolicyRepository.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\:\:\$role\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Authorization/Application/Services/AuthorizationService.php
+
+		-
+			message: '#^Method Modules\\Authorization\\Application\\Services\\AuthorizationService\:\:assignRole\(\) should return Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authorization/Application/Services/AuthorizationService.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Database\\Eloquent\\Collection\<\(int\|string\),Illuminate\\Database\\Eloquent\\Model\>\:\:map\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model, int\|string\)\: \(string\|null\), Closure\(Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\)\: \(string\|null\) given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Authorization/Application/Services/AuthorizationService.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<\(int\|string\),Illuminate\\Database\\Eloquent\\Model\>\:\:flatMap\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model, int\|string\)\: \(array\<mixed\>\|Illuminate\\Support\\Collection\<int\|string, mixed\>\), Closure\(Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\)\: mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Authorization/Application/Services/AuthorizationService.php
+
+		-
+			message: '#^Unable to resolve the template type TFlatMapKey in call to method Illuminate\\Support\\Collection\<\(int\|string\),Illuminate\\Database\\Eloquent\\Model\>\:\:flatMap\(\)$#'
+			identifier: argument.templateType
+			count: 1
+			path: modules/Authorization/Application/Services/AuthorizationService.php
+
+		-
+			message: '#^Unable to resolve the template type TFlatMapValue in call to method Illuminate\\Support\\Collection\<\(int\|string\),Illuminate\\Database\\Eloquent\\Model\>\:\:flatMap\(\)$#'
+			identifier: argument.templateType
+			count: 1
+			path: modules/Authorization/Application/Services/AuthorizationService.php
+
+		-
+			message: '#^Method Modules\\Authorization\\Application\\Services\\PermissionService\:\:create\(\) should return Modules\\Authorization\\Domain\\Models\\AuthorizationPermission but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authorization/Application/Services/PermissionService.php
+
+		-
+			message: '#^Method Modules\\Authorization\\Application\\Services\\PermissionService\:\:get\(\) should return Modules\\Authorization\\Domain\\Models\\AuthorizationPermission but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authorization/Application/Services/PermissionService.php
+
+		-
+			message: '#^Method Modules\\Authorization\\Application\\Services\\PermissionService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Authorization/Application/Services/PermissionService.php
+
+		-
+			message: '#^Parameter \#1 \$entity of method Modules\\Authorization\\Application\\Services\\AuthorizationPlatformHooks\:\:onCreated\(\) expects App\\Platform\\Support\\PlatformEntityInterface, Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Authorization/Application/Services/PermissionService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRole\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Authorization/Application/Services/RoleService.php
+
+		-
+			message: '#^Method Modules\\Authorization\\Application\\Services\\RoleService\:\:create\(\) should return Modules\\Authorization\\Domain\\Models\\AuthorizationRole but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authorization/Application/Services/RoleService.php
+
+		-
+			message: '#^Method Modules\\Authorization\\Application\\Services\\RoleService\:\:get\(\) should return Modules\\Authorization\\Domain\\Models\\AuthorizationRole but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Authorization/Application/Services/RoleService.php
+
+		-
+			message: '#^Method Modules\\Authorization\\Application\\Services\\RoleService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Authorization/Application/Services/RoleService.php
+
+		-
+			message: '#^Parameter \#1 \$entity of method Modules\\Authorization\\Application\\Services\\AuthorizationPlatformHooks\:\:onCreated\(\) expects App\\Platform\\Support\\PlatformEntityInterface, Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Authorization/Application/Services/RoleService.php
+
+		-
+			message: '#^Parameter \#2 \$default of method Illuminate\\Http\\Request\:\:query\(\) expects array\|string\|null, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: modules/Authorization/Application/Support/ListQuery.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany\<Modules\\Authorization\\Domain\\Models\\AuthorizationRole, \$this\(Modules\\Authorization\\Domain\\Models\\AuthorizationPermission\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Authorization/Domain/Models/AuthorizationPermission.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany\<Modules\\Authorization\\Domain\\Models\\AuthorizationPermission, \$this\(Modules\\Authorization\\Domain\\Models\\AuthorizationRole\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Authorization/Domain/Models/AuthorizationRole.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany\<Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment, \$this\(Modules\\Authorization\\Domain\\Models\\AuthorizationRole\)\> but class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Authorization/Domain/Models/AuthorizationRole.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Authorization\\Domain\\Models\\AuthorizationRole, \$this\(Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Authorization/Domain/Models/AuthorizationRoleAssignment.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\MorphTo\<Illuminate\\Database\\Eloquent\\Model, \$this\(Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\)\> but class Illuminate\\Database\\Eloquent\\Relations\\MorphTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Authorization/Domain/Models/AuthorizationRoleAssignment.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Authorization\\Domain\\Models\\AuthorizationPermission, \$this\(Modules\\Authorization\\Domain\\Models\\AuthorizationRolePermission\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Authorization/Domain/Models/AuthorizationRolePermission.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Authorization\\Domain\\Models\\AuthorizationRole, \$this\(Modules\\Authorization\\Domain\\Models\\AuthorizationRolePermission\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Authorization/Domain/Models/AuthorizationRolePermission.php
+
+		-
+			message: '#^Method Modules\\Authorization\\Http\\Controllers\\Api\\ApiController\:\:paginated\(\) has parameter \$paginator with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Authorization/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRole\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Authorization/Http/Controllers/Api/RoleApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationPermission\:\:\$action\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationPermission\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationPermission\:\:\$is_system\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationPermission\:\:\$module\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationPermission\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationPermission\:\:\$slug\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRole\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRole\:\:\$is_system\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRole\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRole\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRole\:\:\$slug\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\:\:\$assignable_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\:\:\$assignable_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Authorization\\Domain\\Models\\AuthorizationRoleAssignment\:\:\$role_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\ApiTokenService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/ApiTokenService.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\ContactService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/ContactService.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\DeviceService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/DeviceService.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\EmployeeProfileService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/EmployeeProfileService.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\IdentityService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/IdentityService.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\IdentitySessionService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/IdentitySessionService.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\LoginHistoryService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/LoginHistoryService.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\TeamMemberService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/TeamMemberService.php
+
+		-
+			message: '#^Method Modules\\Identity\\Application\\Services\\TeamService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Application/Services/TeamService.php
+
+		-
+			message: '#^Parameter \#2 \$default of method Illuminate\\Http\\Request\:\:query\(\) expects array\|string\|null, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: modules/Identity/Application/Support/ListQuery.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Identity, \$this\(Modules\\Identity\\Domain\\Models\\ApiToken\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/ApiToken.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Identity, \$this\(Modules\\Identity\\Domain\\Models\\Contact\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/Contact.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Identity, \$this\(Modules\\Identity\\Domain\\Models\\Device\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/Device.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Identity, \$this\(Modules\\Identity\\Domain\\Models\\EmployeeProfile\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/EmployeeProfile.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany\<Modules\\Identity\\Domain\\Models\\Team, \$this\(Modules\\Identity\\Domain\\Models\\Identity\)\> but class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/Identity.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Identity, \$this\(Modules\\Identity\\Domain\\Models\\IdentitySession\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/IdentitySession.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Identity, \$this\(Modules\\Identity\\Domain\\Models\\LoginHistory\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/LoginHistory.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Identity, \$this\(Modules\\Identity\\Domain\\Models\\Team\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/Team.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany\<Modules\\Identity\\Domain\\Models\\TeamMember, \$this\(Modules\\Identity\\Domain\\Models\\Team\)\> but class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/Team.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Identity, \$this\(Modules\\Identity\\Domain\\Models\\TeamMember\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/TeamMember.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Identity\\Domain\\Models\\Team, \$this\(Modules\\Identity\\Domain\\Models\\TeamMember\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Domain/Models/TeamMember.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\ApiTokenRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/ApiTokenRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\ContactRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/ContactRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\DeviceRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/DeviceRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\EmployeeProfileRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/EmployeeProfileRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\IdentityRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/IdentityRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\IdentitySessionRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/IdentitySessionRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\LoginHistoryRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/LoginHistoryRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\TeamMemberRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/TeamMemberRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Domain\\Repositories\\Contracts\\TeamRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Domain/Repositories/Contracts/TeamRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Identity\\Http\\Controllers\\Api\\ApiController\:\:paginated\(\) has parameter \$paginator with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$expires_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$last_used_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$scopes\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\ApiToken\:\:\$token_hash\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Contact\:\:\$contact_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Contact\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Contact\:\:\$is_primary\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Contact\:\:\$value\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Device\:\:\$device_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Device\:\:\$fingerprint\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Device\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Device\:\:\$last_seen_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Device\:\:\$user_agent\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\EmployeeProfile\:\:\$department_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\EmployeeProfile\:\:\$employee_number\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\EmployeeProfile\:\:\$hire_date\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\EmployeeProfile\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\EmployeeProfile\:\:\$job_title\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\EmployeeProfile\:\:\$metadata\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\EmployeeProfile\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Identity\:\:\$code\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Identity\:\:\$display_name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Identity\:\:\$email\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Identity\:\:\$identity_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Identity\:\:\$legal_name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Identity\:\:\$metadata\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Identity\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Identity\:\:\$phone\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$expires_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$ip_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$session_token_hash\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$started_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\IdentitySession\:\:\$user_agent\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\LoginHistory\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\LoginHistory\:\:\$ip_address\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\LoginHistory\:\:\$logged_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\LoginHistory\:\:\$success\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\LoginHistory\:\:\$user_agent\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\LoginHistory\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Team\:\:\$code\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Team\:\:\$description\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Team\:\:\$leader_identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Team\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\Team\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\TeamMember\:\:\$identity_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\TeamMember\:\:\$role\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Identity\\Domain\\Models\\TeamMember\:\:\$team_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Identity/Http/Resources/IdentityResource.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentApiTokenRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\ApiToken but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentApiTokenRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentApiTokenRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\ApiToken\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentApiTokenRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentApiTokenRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentApiTokenRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentApiTokenRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentContactRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\Contact but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentContactRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentContactRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\Contact\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentContactRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentContactRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentContactRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentContactRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentDeviceRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\Device but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentDeviceRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentDeviceRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\Device\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentDeviceRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentDeviceRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentDeviceRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentDeviceRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentEmployeeProfileRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\EmployeeProfile but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentEmployeeProfileRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentEmployeeProfileRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\EmployeeProfile\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentEmployeeProfileRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentEmployeeProfileRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentEmployeeProfileRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentEmployeeProfileRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentIdentityRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\Identity but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentIdentityRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentIdentityRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\Identity\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentIdentityRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentIdentityRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentIdentityRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentIdentityRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentIdentitySessionRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\IdentitySession but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentIdentitySessionRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentIdentitySessionRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\IdentitySession\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentIdentitySessionRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentIdentitySessionRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentIdentitySessionRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentIdentitySessionRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentLoginHistoryRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\LoginHistory but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentLoginHistoryRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentLoginHistoryRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\LoginHistory\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentLoginHistoryRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentLoginHistoryRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentLoginHistoryRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentLoginHistoryRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentTeamMemberRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\TeamMember but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentTeamMemberRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentTeamMemberRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\TeamMember\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentTeamMemberRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentTeamMemberRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentTeamMemberRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentTeamMemberRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentTeamRepository\:\:create\(\) should return Modules\\Identity\\Domain\\Models\\Team but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentTeamRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentTeamRepository\:\:find\(\) should return Modules\\Identity\\Domain\\Models\\Team\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentTeamRepository.php
+
+		-
+			message: '#^Method Modules\\Identity\\Infrastructure\\Persistence\\EloquentTeamRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentTeamRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Identity/Infrastructure/Persistence/EloquentTeamRepository.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Membership\\Domain\\Models\\Membership\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Membership/Application/Services/MembershipService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Membership\\Domain\\Models\\Membership\:\:\$user_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Membership/Application/Services/MembershipService.php
+
+		-
+			message: '#^Method Modules\\Membership\\Application\\Services\\MembershipService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Membership/Application/Services/MembershipService.php
+
+		-
+			message: '#^Parameter \#2 \$default of method Illuminate\\Http\\Request\:\:query\(\) expects array\|string\|null, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: modules/Membership/Application/Support/ListQuery.php
+
+		-
+			message: '#^Method Modules\\Membership\\Domain\\Repositories\\Contracts\\MembershipRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Membership/Domain/Repositories/Contracts/MembershipRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Membership\\Http\\Controllers\\Api\\ApiController\:\:paginated\(\) has parameter \$paginator with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Membership/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Membership\\Infrastructure\\Persistence\\EloquentMembershipRepository\:\:create\(\) should return Modules\\Membership\\Domain\\Models\\Membership but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Membership/Infrastructure/Persistence/EloquentMembershipRepository.php
+
+		-
+			message: '#^Method Modules\\Membership\\Infrastructure\\Persistence\\EloquentMembershipRepository\:\:find\(\) should return Modules\\Membership\\Domain\\Models\\Membership\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Membership/Infrastructure/Persistence/EloquentMembershipRepository.php
+
+		-
+			message: '#^Method Modules\\Membership\\Infrastructure\\Persistence\\EloquentMembershipRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Membership/Infrastructure/Persistence/EloquentMembershipRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Membership/Infrastructure/Persistence/EloquentMembershipRepository.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Organization\\Domain\\Models\\Branch\:\:\$code\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Organization/Application/Services/BranchService.php
+
+		-
+			message: '#^Method Modules\\Organization\\Application\\Services\\BranchService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Application/Services/BranchService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Organization\\Domain\\Models\\Company\:\:\$code\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Organization/Application/Services/CompanyService.php
+
+		-
+			message: '#^Method Modules\\Organization\\Application\\Services\\CompanyService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Application/Services/CompanyService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Organization\\Domain\\Models\\Department\:\:\$code\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Organization/Application/Services/DepartmentService.php
+
+		-
+			message: '#^Method Modules\\Organization\\Application\\Services\\DepartmentService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Application/Services/DepartmentService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Organization\\Domain\\Models\\Organization\:\:\$code\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Organization/Application/Services/OrganizationService.php
+
+		-
+			message: '#^Method Modules\\Organization\\Application\\Services\\OrganizationService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Application/Services/OrganizationService.php
+
+		-
+			message: '#^Parameter \#2 \$default of method Illuminate\\Http\\Request\:\:query\(\) expects array\|string\|null, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: modules/Organization/Application/Support/ListQuery.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Organization\\Domain\\Models\\Company, \$this\(Modules\\Organization\\Domain\\Models\\Branch\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Branch.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany\<Modules\\Organization\\Domain\\Models\\Department, \$this\(Modules\\Organization\\Domain\\Models\\Branch\)\> but class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Branch.php
+
+		-
+			message: '#^PHPDoc tag @use contains generic type Illuminate\\Database\\Eloquent\\Factories\\HasFactory\<Modules\\Organization\\Database\\Factories\\BranchFactory\> but trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Branch.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Organization\\Domain\\Models\\Organization, \$this\(Modules\\Organization\\Domain\\Models\\Company\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Company.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany\<Modules\\Organization\\Domain\\Models\\Branch, \$this\(Modules\\Organization\\Domain\\Models\\Company\)\> but class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Company.php
+
+		-
+			message: '#^PHPDoc tag @use contains generic type Illuminate\\Database\\Eloquent\\Factories\\HasFactory\<Modules\\Organization\\Database\\Factories\\CompanyFactory\> but trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Company.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Organization\\Domain\\Models\\Branch, \$this\(Modules\\Organization\\Domain\\Models\\Department\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Department.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<Modules\\Organization\\Domain\\Models\\Department, \$this\(Modules\\Organization\\Domain\\Models\\Department\)\> but class Illuminate\\Database\\Eloquent\\Relations\\BelongsTo is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Department.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany\<Modules\\Organization\\Domain\\Models\\Department, \$this\(Modules\\Organization\\Domain\\Models\\Department\)\> but class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Department.php
+
+		-
+			message: '#^PHPDoc tag @use contains generic type Illuminate\\Database\\Eloquent\\Factories\\HasFactory\<Modules\\Organization\\Database\\Factories\\DepartmentFactory\> but trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Department.php
+
+		-
+			message: '#^PHPDoc tag @return contains generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany\<Modules\\Organization\\Domain\\Models\\Company, \$this\(Modules\\Organization\\Domain\\Models\\Organization\)\> but class Illuminate\\Database\\Eloquent\\Relations\\HasMany is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Organization.php
+
+		-
+			message: '#^PHPDoc tag @use contains generic type Illuminate\\Database\\Eloquent\\Factories\\HasFactory\<Modules\\Organization\\Database\\Factories\\OrganizationFactory\> but trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Domain/Models/Organization.php
+
+		-
+			message: '#^Method Modules\\Organization\\Domain\\Repositories\\Contracts\\BranchRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Domain/Repositories/Contracts/BranchRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Organization\\Domain\\Repositories\\Contracts\\CompanyRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Domain/Repositories/Contracts/CompanyRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Organization\\Domain\\Repositories\\Contracts\\DepartmentRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Domain/Repositories/Contracts/DepartmentRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Organization\\Domain\\Repositories\\Contracts\\OrganizationRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Domain/Repositories/Contracts/OrganizationRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Organization\\Http\\Controllers\\Api\\ApiController\:\:paginated\(\) has parameter \$paginator with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>value" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: modules/Organization/Http/Resources/OrganizationResource.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentBranchRepository\:\:create\(\) should return Modules\\Organization\\Domain\\Models\\Branch but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentBranchRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentBranchRepository\:\:find\(\) should return Modules\\Organization\\Domain\\Models\\Branch\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentBranchRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentBranchRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentBranchRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentBranchRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentCompanyRepository\:\:create\(\) should return Modules\\Organization\\Domain\\Models\\Company but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentCompanyRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentCompanyRepository\:\:find\(\) should return Modules\\Organization\\Domain\\Models\\Company\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentCompanyRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentCompanyRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentCompanyRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentCompanyRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentDepartmentRepository\:\:create\(\) should return Modules\\Organization\\Domain\\Models\\Department but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentDepartmentRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentDepartmentRepository\:\:find\(\) should return Modules\\Organization\\Domain\\Models\\Department\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentDepartmentRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentDepartmentRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentDepartmentRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentDepartmentRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentOrganizationRepository\:\:create\(\) should return Modules\\Organization\\Domain\\Models\\Organization but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentOrganizationRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentOrganizationRepository\:\:find\(\) should return Modules\\Organization\\Domain\\Models\\Organization\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentOrganizationRepository.php
+
+		-
+			message: '#^Method Modules\\Organization\\Infrastructure\\Persistence\\EloquentOrganizationRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentOrganizationRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Organization/Infrastructure/Persistence/EloquentOrganizationRepository.php
+
+		-
+			message: '#^Method Modules\\Users\\Application\\Services\\UserService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Users/Application/Services/UserService.php
+
+		-
+			message: '#^Parameter \#2 \$default of method Illuminate\\Http\\Request\:\:query\(\) expects array\|string\|null, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: modules/Users/Application/Support/ListQuery.php
+
+		-
+			message: '#^Method Modules\\Users\\Domain\\Repositories\\Contracts\\UserRepositoryInterface\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Users/Domain/Repositories/Contracts/UserRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Users\\Http\\Controllers\\Api\\ApiController\:\:paginated\(\) has parameter \$paginator with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Users/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Users\\Infrastructure\\Persistence\\EloquentUserRepository\:\:create\(\) should return Modules\\Users\\Domain\\Models\\User but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Users/Infrastructure/Persistence/EloquentUserRepository.php
+
+		-
+			message: '#^Method Modules\\Users\\Infrastructure\\Persistence\\EloquentUserRepository\:\:find\(\) should return Modules\\Users\\Domain\\Models\\User\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Users/Infrastructure/Persistence/EloquentUserRepository.php
+
+		-
+			message: '#^Method Modules\\Users\\Infrastructure\\Persistence\\EloquentUserRepository\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Users/Infrastructure/Persistence/EloquentUserRepository.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$query contains generic type Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\> but class Illuminate\\Database\\Eloquent\\Builder is not generic\.$#'
+			identifier: generics.notGeneric
+			count: 1
+			path: modules/Users/Infrastructure/Persistence/EloquentUserRepository.php
