@@ -1,0 +1,19 @@
+{
+    "name": "Budgeting",
+    "version": "1.0.0",
+    "description": "Budgeting \u2014 budget versions and lines",
+    "provider": "Modules\\Budgeting\\Providers\\BudgetingServiceProvider",
+    "enabled": true,
+    "priority": 290,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Accounting"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

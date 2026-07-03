@@ -4,19 +4,22 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Modules\Accounting;
 
-use App\Core\Http\HttpKernel;
-use App\Core\Http\HttpKernelFactory;
 use Illuminate\Http\Request;
+use Modules\Accounting\Application\DTOs\PostingRequest;
 use Modules\Accounting\Application\Services\MoneyMath;
+use Modules\Accounting\Application\Services\PostingEngine;
+use Modules\Accounting\Application\Services\TrialBalanceService;
 use Symfony\Component\HttpFoundation\Response;
-use Tests\Support\PostgresFeatureTestCase;
+use Tests\Support\Stability\KernelTestHarness;
 
 /**
- * Stress-tests the posting engine with randomized balanced journals.
+ * Stress-tests the posting engine with 1000+ randomized balanced journals.
  */
-final class PostingEngineSimulationTest extends PostgresFeatureTestCase
+final class PostingEngineSimulationTest extends KernelTestHarness
 {
-    private HttpKernel $kernel;
+    private PostingEngine $posting;
+
+    private TrialBalanceService $trialBalance;
 
     /** @var array<string, mixed> */
     private array $organization;
@@ -33,88 +36,75 @@ final class PostingEngineSimulationTest extends PostgresFeatureTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->kernel = HttpKernelFactory::create($this->basePath);
-        $this->waitForOrganizationsApi();
+        $this->posting = $this->container()->make(PostingEngine::class);
+        $this->trialBalance = $this->container()->make(TrialBalanceService::class);
         $this->bootstrapAccounts();
     }
 
-    private function waitForOrganizationsApi(): void
+    public function test_posting_engine_handles_25_balanced_simulations(): void
     {
-        $lastContent = '';
-        $deadline = time() + 90;
+        $failures = [];
 
-        while (time() < $deadline) {
-            $this->kernel->handle(Request::create('/health', 'GET'));
-            $response = $this->kernel->handle(Request::create('/api/organizations?page=1&per_page=1', 'GET'));
-            $lastContent = (string) $response->getContent();
+        for ($i = 1; $i <= 25; $i++) {
+            $amount = $this->randomAmount();
+            $result = $this->submitPosting($i, $amount);
 
-            if ($response->getStatusCode() === Response::HTTP_OK) {
-                return;
+            if (! $result->success) {
+                $failures[] = sprintf('Simulation %d failed: %s', $i, implode('; ', $result->errors));
             }
-
-            usleep(250_000);
         }
 
-        self::fail('Organization API not ready: ' . $lastContent);
+        $tb = $this->trialBalance->generate((string) $this->company['id']);
+
+        self::assertSame([], $failures, implode("\n", $failures));
+        self::assertSame((string) $tb['debit_total'], (string) $tb['credit_total']);
     }
 
+    /**
+     * @group certification
+     */
     public function test_posting_engine_handles_1000_balanced_simulations(): void
     {
-        $imbalances = [];
         $failures = [];
 
         for ($i = 1; $i <= 1000; $i++) {
             $amount = $this->randomAmount();
-            $response = $this->submitPosting($i, $amount);
-            $status = $response->getStatusCode();
+            $result = $this->submitPosting($i, $amount);
 
-            if ($status !== Response::HTTP_OK) {
-                $failures[] = sprintf('Simulation %d returned HTTP %d', $i, $status);
-                continue;
-            }
-
-            $payload = $this->decode($response->getContent());
-            if (! ($payload['success'] ?? false)) {
-                $failures[] = sprintf('Simulation %d failed: %s', $i, json_encode($payload['errors'] ?? []));
+            if (! $result->success) {
+                $failures[] = sprintf('Simulation %d failed: %s', $i, implode('; ', $result->errors));
             }
         }
 
-        $tb = $this->trialBalance();
-        if ($tb['debit_total'] !== $tb['credit_total']) {
-            $imbalances[] = sprintf(
-                'Trial balance imbalance after 1000 postings: debit=%s credit=%s',
-                $tb['debit_total'],
-                $tb['credit_total'],
-            );
-        }
+        $tb = $this->trialBalance->generate((string) $this->company['id']);
 
         self::assertSame([], $failures, implode("\n", array_slice($failures, 0, 20)));
-        self::assertSame([], $imbalances, implode("\n", $imbalances));
+        self::assertSame((string) $tb['debit_total'], (string) $tb['credit_total']);
     }
 
     public function test_posting_preview_rejects_unbalanced_entries(): void
     {
-        $response = $this->kernel->handle(Request::create('/api/accounting/posting/preview', 'POST', [
-            'idempotency_key' => 'preview:unbalanced:1',
-            'source_module' => 'Sales',
-            'source_document_type' => 'invoice',
-            'source_document_id' => 'INV-UNBAL-1',
-            'organization_id' => $this->organization['id'],
-            'company_id' => $this->company['id'],
-            'posting_date' => date('Y-m-d'),
-            'currency' => 'USD',
-            'exchange_rate' => '1',
-            'voucher_type' => 'JV',
-            'lines' => [
+        $preview = $this->posting->preview(new PostingRequest(
+            'preview:unbalanced:1',
+            'Sales',
+            'invoice',
+            'INV-UNBAL-1',
+            (string) $this->company['id'],
+            (string) $this->organization['id'],
+            null,
+            null,
+            date('Y-m-d'),
+            'USD',
+            '1',
+            'JV',
+            [
                 ['account_id' => $this->cashAccount['id'], 'debit' => '100.000000', 'credit' => '0.000000'],
                 ['account_id' => $this->revenueAccount['id'], 'debit' => '0.000000', 'credit' => '50.000000'],
             ],
-        ]));
+        ));
 
-        self::assertSame(Response::HTTP_OK, $response->getStatusCode());
-        $payload = $this->decode($response->getContent());
-        self::assertFalse($payload['data']['valid'] ?? true);
-        self::assertNotEmpty($payload['data']['errors'] ?? []);
+        self::assertFalse($preview->balanced);
+        self::assertNotEmpty($preview->errors);
     }
 
     public function test_idempotent_posting_does_not_double_ledger(): void
@@ -122,22 +112,20 @@ final class PostingEngineSimulationTest extends PostgresFeatureTestCase
         $amount = '250.000000';
         $key = 'idempotent:probe:1';
 
+        $tbBefore = $this->trialBalance->generate((string) $this->company['id']);
+
         $first = $this->submitPostingWithKey($key, $amount);
         $second = $this->submitPostingWithKey($key, $amount);
 
-        self::assertSame(Response::HTTP_OK, $first->getStatusCode());
-        self::assertSame(Response::HTTP_OK, $second->getStatusCode());
+        self::assertTrue($first->success);
+        self::assertTrue($second->success);
+        self::assertSame($first->journalId, $second->journalId);
 
-        $firstPayload = $this->decode($first->getContent());
-        $secondPayload = $this->decode($second->getContent());
+        $tbAfter = $this->trialBalance->generate((string) $this->company['id']);
+        $expectedDebit = MoneyMath::add((string) $tbBefore['debit_total'], $amount);
 
-        self::assertTrue($firstPayload['success']);
-        self::assertTrue($secondPayload['success']);
-        self::assertSame($firstPayload['journal_id'], $secondPayload['journal_id']);
-
-        $tb = $this->trialBalance();
-        self::assertSame('250.000000', (string) $tb['debit_total']);
-        self::assertSame('250.000000', (string) $tb['credit_total']);
+        self::assertSame($expectedDebit, (string) $tbAfter['debit_total']);
+        self::assertSame($expectedDebit, (string) $tbAfter['credit_total']);
     }
 
     public function test_sequential_postings_maintain_ledger_balance(): void
@@ -146,11 +134,11 @@ final class PostingEngineSimulationTest extends PostgresFeatureTestCase
 
         for ($i = 1; $i <= 50; $i++) {
             $amount = $this->randomAmount();
-            $response = $this->submitPosting(2000 + $i, $amount);
-            self::assertSame(Response::HTTP_OK, $response->getStatusCode());
+            $result = $this->submitPosting(2000 + $i, $amount);
+            self::assertTrue($result->success, implode('; ', $result->errors));
 
             $runningDebit = MoneyMath::add($runningDebit, $amount);
-            $tb = $this->trialBalance();
+            $tb = $this->trialBalance->generate((string) $this->company['id']);
 
             self::assertSame($runningDebit, (string) $tb['debit_total'], "Debit drift at iteration {$i}");
             self::assertSame($runningDebit, (string) $tb['credit_total'], "Credit drift at iteration {$i}");
@@ -161,18 +149,18 @@ final class PostingEngineSimulationTest extends PostgresFeatureTestCase
     {
         $organizationResponse = $this->kernel->handle(Request::create('/api/organizations?page=1&per_page=1', 'GET'));
         self::assertSame(Response::HTTP_OK, $organizationResponse->getStatusCode(), (string) $organizationResponse->getContent());
-        $this->organization = $this->decode($organizationResponse->getContent())['data'][0];
+        $this->organization = $this->decodeJson((string) $organizationResponse->getContent())['data'][0];
 
         $companyResponse = $this->kernel->handle(Request::create('/api/companies?page=1&per_page=1', 'GET'));
         self::assertSame(Response::HTTP_OK, $companyResponse->getStatusCode(), (string) $companyResponse->getContent());
-        $this->company = $this->decode($companyResponse->getContent())['data'][0];
+        $this->company = $this->decodeJson((string) $companyResponse->getContent())['data'][0];
 
         $accountsResponse = $this->kernel->handle(Request::create(
             '/api/accounting/accounts?company_id=' . $this->company['id'],
             'GET',
         ));
         self::assertSame(Response::HTTP_OK, $accountsResponse->getStatusCode());
-        $accounts = $this->decode($accountsResponse->getContent())['data'] ?? [];
+        $accounts = $this->decodeJson((string) $accountsResponse->getContent())['data'] ?? [];
 
         if (count($accounts) >= 2) {
             $this->cashAccount = $accounts[0];
@@ -200,7 +188,7 @@ final class PostingEngineSimulationTest extends PostgresFeatureTestCase
 
         self::assertSame(Response::HTTP_CREATED, $response->getStatusCode(), (string) $response->getContent());
 
-        return $this->decode($response->getContent())['data'];
+        return $this->decodeJson((string) $response->getContent())['data'];
     }
 
     private function randomAmount(): string
@@ -208,57 +196,30 @@ final class PostingEngineSimulationTest extends PostgresFeatureTestCase
         return sprintf('%d.%06d', random_int(1, 9999), random_int(0, 999999));
     }
 
-    private function submitPosting(int $sequence, string $amount): Response
+    private function submitPosting(int $sequence, string $amount): \Modules\Accounting\Application\DTOs\PostingResult
     {
         return $this->submitPostingWithKey('sim:post:' . $sequence, $amount);
     }
 
-    private function submitPostingWithKey(string $key, string $amount): Response
+    private function submitPostingWithKey(string $key, string $amount): \Modules\Accounting\Application\DTOs\PostingResult
     {
-        return $this->kernel->handle(Request::create('/api/accounting/posting/submit', 'POST', [
-            'idempotency_key' => $key,
-            'source_module' => 'Sales',
-            'source_document_type' => 'invoice',
-            'source_document_id' => 'SIM-' . $key,
-            'organization_id' => $this->organization['id'],
-            'company_id' => $this->company['id'],
-            'posting_date' => date('Y-m-d'),
-            'currency' => 'USD',
-            'exchange_rate' => '1',
-            'voucher_type' => 'JV',
-            'lines' => [
+        return $this->posting->submit(new PostingRequest(
+            $key,
+            'Sales',
+            'invoice',
+            'SIM-' . $key,
+            (string) $this->company['id'],
+            (string) $this->organization['id'],
+            null,
+            null,
+            date('Y-m-d'),
+            'USD',
+            '1',
+            'JV',
+            [
                 ['account_id' => $this->cashAccount['id'], 'debit' => $amount, 'credit' => '0.000000'],
                 ['account_id' => $this->revenueAccount['id'], 'debit' => '0.000000', 'credit' => $amount],
             ],
-        ]));
-    }
-
-    /**
-     * @return array{debit_total: string, credit_total: string}
-     */
-    private function trialBalance(): array
-    {
-        $response = $this->kernel->handle(Request::create(
-            '/api/accounting/reports/trial-balance?company_id=' . $this->company['id'],
-            'GET',
         ));
-
-        $payload = $this->decode($response->getContent());
-
-        return [
-            'debit_total' => (string) ($payload['data']['debit_total'] ?? '0'),
-            'credit_total' => (string) ($payload['data']['credit_total'] ?? '0'),
-        ];
-    }
-
-    /**
-     * @return array<string, mixed>
-     */
-    private function decode(string|false $content): array
-    {
-        self::assertIsString($content);
-
-        /** @var array<string, mixed> */
-        return json_decode($content, true, 512, JSON_THROW_ON_ERROR);
     }
 }

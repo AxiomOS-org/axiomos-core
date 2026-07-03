@@ -8,6 +8,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Migrations\DatabaseMigrationRepository;
 use Illuminate\Database\Migrations\MigrationRepositoryInterface;
 use Illuminate\Database\Migrations\Migrator;
+use Illuminate\Database\QueryException;
 use Illuminate\Filesystem\Filesystem;
 
 /**
@@ -26,11 +27,56 @@ final class MigrationRunner
      */
     public function run(array $paths): void
     {
-        if (! $this->repository->repositoryExists()) {
+        $this->ensureRepository();
+
+        try {
+            $this->migrator->run($paths);
+        } catch (QueryException $exception) {
+            if (! self::isMissingMigrationsTable($exception)) {
+                throw $exception;
+            }
+
             $this->repository->createRepository();
+            $this->migrator->run($paths);
+        }
+    }
+
+    private function ensureRepository(): void
+    {
+        if ($this->repository->repositoryExists()) {
+            return;
         }
 
-        $this->migrator->run($paths);
+        try {
+            $this->repository->createRepository();
+        } catch (QueryException $exception) {
+            if ($this->repository->repositoryExists()) {
+                return;
+            }
+
+            if (! self::isRecoverableRepositoryError($exception)) {
+                throw $exception;
+            }
+
+            $this->repository->createRepository();
+        }
+    }
+
+    private static function isRecoverableRepositoryError(QueryException $exception): bool
+    {
+        $message = $exception->getMessage();
+
+        return self::isMissingMigrationsTable($exception)
+            || str_contains($message, 'no schema has been selected')
+            || str_contains($message, 'pg_type_typname_nsp_index');
+    }
+
+    private static function isMissingMigrationsTable(QueryException $exception): bool
+    {
+        $message = $exception->getMessage();
+
+        return str_contains($message, 'relation "migrations" does not exist')
+            || str_contains($message, 'relation "axiomos_test_suite.migrations" does not exist');
     }
 
     /**

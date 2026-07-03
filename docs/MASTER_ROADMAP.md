@@ -43,11 +43,15 @@ No new 30-page documentation sprints. Each sprint delivers:
 | 5C.6 Enterprise QA Platform | ✅ COMPLETE |
 | 5D Platform Services | ⏸ DEFERRED (platform frozen) |
 | 5E AI Platform | ⏸ DEFERRED |
-| 6.A Accounting Foundation | ✅ IMPLEMENTED (Run 1) — `docs/reports/PHASE_6A_RELEASE_REPORT.md` |
+| 6.A Accounting Foundation | ✅ IMPLEMENTED (Run 1) |
+| 6.B Sales + 6.C Purchase | ✅ IMPLEMENTED (Run 2) |
+| 6.D Inventory | ✅ IMPLEMENTED (Run 3) |
+| 6.E CRM + 6.I Projects | ✅ IMPLEMENTED (Run 5) |
+| 6.F HR & Payroll | ✅ IMPLEMENTED (Run 4) |
+| 6.G Manufacturing + 6.H POS | ✅ IMPLEMENTED (Run 6) |
+| 6.J Assets + 6.K Budget + 6.L Reporting | ✅ IMPLEMENTED (Run 7) |
 
-**Platform freeze (5.C.6):** Core + Platform + Identity + Security + QA are frozen — bug fixes only. See `docs/architecture/PLATFORM_FREEZE.md`.
-
-**Next run:** Manual browser QA on Accounting (2–3h), sequential `composer quality:gate`, then **Run 2: 6.B + 6.C** (Sales + Purchase).
+**Next:** Level 3 `composer quality:gate` for full ERP certification (all 7 runs complete).
 
 **Accounting rule (LOCKED):** `NO ERP MODULE IS ALLOWED TO WRITE TO LEDGER TABLES DIRECTLY. ALL FINANCIAL POSTINGS MUST PASS THROUGH THE ACCOUNTING POSTING ENGINE. NO EXCEPTIONS.`
 

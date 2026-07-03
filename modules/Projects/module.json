@@ -1,0 +1,19 @@
+{
+    "name": "Projects",
+    "version": "1.0.0",
+    "description": "Projects \u2014 projects, tasks, timesheets",
+    "provider": "Modules\\Projects\\Providers\\ProjectsServiceProvider",
+    "enabled": true,
+    "priority": 250,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "HR"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

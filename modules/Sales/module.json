@@ -1,0 +1,19 @@
+{
+    "name": "Sales",
+    "version": "1.0.0",
+    "description": "Sales \u2014 customers, orders, invoices, posting via Accounting engine",
+    "provider": "Modules\\Sales\\Providers\\SalesServiceProvider",
+    "enabled": true,
+    "priority": 200,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Accounting"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

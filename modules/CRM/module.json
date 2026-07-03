@@ -1,0 +1,19 @@
+{
+    "name": "CRM",
+    "version": "1.0.0",
+    "description": "CRM \u2014 leads, opportunities, activities",
+    "provider": "Modules\\CRM\\Providers\\CRMServiceProvider",
+    "enabled": true,
+    "priority": 240,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Sales"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

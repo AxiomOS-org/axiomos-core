@@ -3,10 +3,10 @@
 <?php $__env->startSection('content'); ?>
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
-        <h1 class="h3 mb-1"><?php echo e($entityLabel); ?></h1>
-        <p class="text-muted mb-0">Administer <?php echo e(strtolower($entityLabel)); ?> through the Identity REST APIs.</p>
+        <h1 class="h3 mb-1"><?php echo e($entityLabel ?? 'Entity'); ?></h1>
+        <p class="text-muted mb-0">Administer <?php echo e(strtolower($entityLabel ?? 'entity')); ?> through the Identity REST APIs.</p>
     </div>
-    <button class="btn btn-primary" id="btn-create"><i class="bi bi-plus-lg me-1"></i> New <?php echo e(rtrim($entityLabel, 's')); ?></button>
+    <button class="btn btn-primary" id="btn-create"><i class="bi bi-plus-lg me-1"></i> New <?php echo e(rtrim($entityLabel ?? 'Entity', 's')); ?></button>
 </div>
 
 <div class="card mb-3">
@@ -32,7 +32,7 @@
                 <select class="form-select" name="sort">
                     <option value="created_at">Created</option>
                     <option value="updated_at">Updated</option>
-                    <?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php $__currentLoopData = $columns ?? []; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <option value="<?php echo e($column); ?>"><?php echo e($column); ?></option>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </select>
@@ -57,7 +57,7 @@
             <table class="table table-hover align-middle mb-0" id="data-table">
                 <thead class="table-light">
                 <tr>
-                    <?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php $__currentLoopData = $columns ?? []; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <th><?php echo e(ucwords(str_replace('_', ' ', $column))); ?></th>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     <th class="text-end">Actions</th>
@@ -79,7 +79,7 @@
     <div class="modal-dialog modal-lg">
         <form class="modal-content" id="entity-form">
             <div class="modal-header">
-                <h5 class="modal-title" id="modal-title"><?php echo e($entityLabel); ?></h5>
+                <h5 class="modal-title" id="modal-title"><?php echo e($entityLabel ?? 'Entity'); ?></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body row g-3" id="form-fields">
@@ -97,11 +97,11 @@
 <?php $__env->startPush('scripts'); ?>
 <script>
 (() => {
-    const apiBase = <?php echo json_encode($apiBase, 15, 512) ?>;
-    const entityLabel = <?php echo json_encode($entityLabel, 15, 512) ?>;
+    const apiBase = <?php echo json_encode($apiBase ?? '', 15, 512) ?>;
+    const entityLabel = <?php echo json_encode($entityLabel ?? 'Entity', 15, 512) ?>;
     const singularLabel = entityLabel.endsWith('s') ? entityLabel.slice(0, -1) : entityLabel;
-    const columns = <?php echo json_encode($columns, 15, 512) ?>;
-    const fields = <?php echo json_encode($fields, 15, 512) ?>;
+    const columns = <?php echo json_encode($columns ?? [], 15, 512) ?>;
+    const fields = <?php echo json_encode($fields ?? [], 15, 512) ?>;
     const boolFields = new Set(['is_primary', 'success']);
     const jsonFields = new Set(['scopes', 'metadata']);
     const state = { page: 1, search: '', status: '', sort: 'created_at', direction: 'desc' };

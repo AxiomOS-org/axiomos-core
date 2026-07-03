@@ -1,0 +1,98 @@
+---
+description: Development Speed Policy v3.0 — minimal tests during dev; gate at module completion
+alwaysApply: true
+---
+
+# Development Speed Policy v3.0
+
+**Speed First · Feature First · Business First · Enterprise Quality at Module End**
+
+Documentation = minimal. Testing = at module completion, not after every CRUD.
+
+## During Active Development (Every Commit)
+
+Run **only**:
+
+```bash
+# PHP (backend touch)
+php -l <changed-files>
+
+# Targeted unit tests for the module you are editing
+composer test:module <ModuleName>
+
+# Frontend (React touch)
+npm run lint && npm run typecheck
+```
+
+**Do NOT run** during daily sprints:
+
+```
+composer quality:gate
+composer runtime:test
+composer browser:test
+composer production:test
+composer stability:test
+composer architecture:test
+composer performance:test
+```
+
+If `php -l` + targeted tests + `npm run typecheck` pass → **keep building**.
+
+## At COMPLETE Business Module Finish (Once)
+
+Example: Accounting fully done (all features in that phase), then:
+
+```
+composer quality:gate
+```
+
+Fix failures → **Freeze module** → move to next module.
+
+**NOT** after every CRUD page. **NOT** after every small change.
+
+## Automated Browser Test (Module Completion)
+
+When a module is marked complete, run **Playwright** (frontend) or **Laravel Dusk** (API flows):
+
+- Login
+- Navigate module menus
+- CRUD + forms
+- Reports + dashboard
+- Posting workflows (where applicable)
+
+No manual clicking as the acceptance gate. Record failures; fix; re-run once.
+
+## Delivery Rule — One Run = One FULL Module
+
+Do **not** deliver one screen per run. Deliver the **entire business module** in one run.
+
+Example **Sales (6.B)** in a single run:
+
+Quotation → Sales Order → Delivery → Invoice → Customer Portal → Price Lists → Discounts → Taxes → Reports → Dashboard → REST APIs → React UI → Tests → **Freeze**
+
+Same pattern for Purchase, Inventory, HR, CRM, Manufacturing, etc.
+
+## Build Order (Locked)
+
+```
+6.A  Accounting
+6.B  Sales
+6.C  Purchase
+6.D  Inventory
+6.E  CRM
+6.F  HR
+6.G  Payroll
+6.H  Manufacturing
+6.I  POS
+6.J  Assets
+6.K  Projects
+6.L  Reporting & BI
+─── then ───
+7    React Enterprise Frontend polish (production UX)
+8    Electron Desktop + Cloud SaaS + Marketplace
+     Release v1.0
+```
+
+## Identity Reminder
+
+You are **Product Engineers** shipping an ERP users can demo — not Framework Engineers improving infrastructure.

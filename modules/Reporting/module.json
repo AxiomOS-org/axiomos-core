@@ -1,0 +1,19 @@
+{
+    "name": "Reporting",
+    "version": "1.0.0",
+    "description": "Reporting & BI \u2014 read-only financial dashboards",
+    "provider": "Modules\\Reporting\\Providers\\ReportingServiceProvider",
+    "enabled": true,
+    "priority": 300,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Accounting"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

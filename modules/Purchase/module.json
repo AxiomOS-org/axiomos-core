@@ -1,0 +1,19 @@
+{
+    "name": "Purchase",
+    "version": "1.0.0",
+    "description": "Purchase \u2014 vendors, POs, GRN, bills, posting via Accounting engine",
+    "provider": "Modules\\Purchase\\Providers\\PurchaseServiceProvider",
+    "enabled": true,
+    "priority": 210,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Accounting"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

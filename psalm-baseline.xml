@@ -73,6 +73,126 @@
       <code><![CDATA[now()]]></code>
     </UndefinedFunction>
   </file>
+  <file src="modules/Accounting/Application/Services/AccountingPeriodService.php">
+    <InvalidArgument>
+      <code><![CDATA[$period]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Accounting/Application/Services/CostCenterService.php">
+    <InvalidArgument>
+      <code><![CDATA[$dimension]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Accounting/Application/Services/FiscalYearService.php">
+    <InvalidArgument>
+      <code><![CDATA[$year]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Accounting/Application/Services/JournalEngine.php">
+    <RedundantCast>
+      <code><![CDATA[(string)$request->exchangeRate]]></code>
+    </RedundantCast>
+  </file>
+  <file src="modules/Accounting/Application/Services/MultiCurrencyService.php">
+    <InvalidArgument>
+      <code><![CDATA[$rate]]></code>
+    </InvalidArgument>
+  </file>
+  <file src="modules/Accounting/Application/Services/PostingEngine.php">
+    <InvalidOperand>
+      <code><![CDATA[$i]]></code>
+      <code><![CDATA[$i]]></code>
+    </InvalidOperand>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentAccountRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Account::query()->find($id)]]></code>
+      <code><![CDATA[Account::query()->where('company_id',$companyId)->orderBy('account_code')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Account]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentDimensionRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Dimension::query()->where('company_id',$companyId)->where('dimension_type',$type)->orderBy('code')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentDocumentRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Document::query()->find($id)]]></code>
+      <code><![CDATA[Document::query()->where('company_id',$companyId)->latest('document_date')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Document]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentExchangeRateRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[ExchangeRate::query()->where('company_id',$companyId)->orderByDesc('rate_date')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentFiscalYearRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[FiscalYear::query()->where('company_id',$companyId)->orderBy('start_date')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentJournalLineRepository.php">
+    <InvalidTemplateParam>
+      <code><![CDATA[JournalLine::query()->where('journal_id',$journalId)->get()->map(static fn($x): array => $x->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentJournalRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Journal::query()->find($id)]]></code>
+      <code><![CDATA[Journal::query()->where('company_id',$companyId)->latest('posting_date')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Journal]]></code>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php">
+    <InvalidTemplateParam>
+      <code><![CDATA[LedgerBalance::query()->where('company_id',$companyId)->get()->map(static fn($x): array => $x->toArray())]]></code>
+    </InvalidTemplateParam>
+    <UndefinedPropertyAssignment>
+      <code><![CDATA[$b->closing_credit]]></code>
+      <code><![CDATA[$b->closing_debit]]></code>
+    </UndefinedPropertyAssignment>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentPeriodRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[AccountingPeriod::query()->where('company_id',$companyId)->orderBy('start_date')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Accounting/Infrastructure/Persistence/EloquentVoucherTypeRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[VoucherType::query()->where('company_id',$companyId)->orderBy('code')->get()]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[Collection]]></code>
+    </InvalidReturnType>
+  </file>
+  <file src="modules/Accounting/Providers/AccountingServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
   <file src="modules/Authentication/Application/Services/SecurityEventService.php">
     <InvalidArgument>
       <code><![CDATA[$event]]></code>
@@ -152,6 +272,136 @@
     </InvalidDocblock>
   </file>
   <file src="modules/Authorization/Providers/AuthorizationServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Budgeting/Infrastructure/Persistence/EloquentBudgetLineRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[BudgetLine::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?BudgetLine]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[BudgetLine::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (BudgetLine $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Budgeting/Infrastructure/Persistence/EloquentBudgetVersionRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[BudgetVersion::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?BudgetVersion]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[BudgetVersion::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (BudgetVersion $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Budgeting/Providers/BudgetingServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/CRM/Infrastructure/Persistence/EloquentCrmActivityRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[CrmActivity::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?CrmActivity]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[CrmActivity::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (CrmActivity $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/CRM/Infrastructure/Persistence/EloquentLeadRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Lead::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Lead]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Lead::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Lead $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/CRM/Infrastructure/Persistence/EloquentOpportunityRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Opportunity::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Opportunity]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Opportunity::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Opportunity $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/CRM/Providers/CRMServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/FixedAssets/Infrastructure/Persistence/EloquentDepreciationRunRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[DepreciationRun::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?DepreciationRun]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[DepreciationRun::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (DepreciationRun $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/FixedAssets/Infrastructure/Persistence/EloquentFixedAssetRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[FixedAsset::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?FixedAsset]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[FixedAsset::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (FixedAsset $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/FixedAssets/Providers/FixedAssetsServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/HR/Infrastructure/Persistence/EloquentAttendanceRecordRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[AttendanceRecord::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?AttendanceRecord]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[AttendanceRecord::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (AttendanceRecord $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/HR/Infrastructure/Persistence/EloquentEmployeeRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Employee::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Employee]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Employee::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Employee $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/HR/Infrastructure/Persistence/EloquentPayrollRunRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[PayrollRun::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?PayrollRun]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[PayrollRun::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (PayrollRun $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/HR/Providers/HRServiceProvider.php">
     <RedundantCondition>
       <code><![CDATA[is_callable($registrar)]]></code>
     </RedundantCondition>
@@ -307,6 +557,82 @@
     </InvalidReturnType>
   </file>
   <file src="modules/Identity/Providers/IdentityServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Inventory/Infrastructure/Persistence/EloquentItemRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Item::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Item]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Item::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Item $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Inventory/Infrastructure/Persistence/EloquentStockMovementRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[StockMovement::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?StockMovement]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[StockMovement::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (StockMovement $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Inventory/Infrastructure/Persistence/EloquentWarehouseRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Warehouse::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Warehouse]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Warehouse::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Warehouse $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Inventory/Providers/InventoryServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Manufacturing/Infrastructure/Persistence/EloquentBillOfMaterialRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[BillOfMaterial::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?BillOfMaterial]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[BillOfMaterial::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (BillOfMaterial $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Manufacturing/Infrastructure/Persistence/EloquentProductionRunRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[ProductionRun::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?ProductionRun]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[ProductionRun::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (ProductionRun $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Manufacturing/Infrastructure/Persistence/EloquentWorkOrderRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[WorkOrder::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?WorkOrder]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[WorkOrder::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (WorkOrder $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Manufacturing/Providers/ManufacturingServiceProvider.php">
     <RedundantCondition>
       <code><![CDATA[is_callable($registrar)]]></code>
     </RedundantCondition>
@@ -467,6 +793,185 @@
     <TypeDoesNotContainNull>
       <code><![CDATA['']]></code>
     </TypeDoesNotContainNull>
+  </file>
+  <file src="modules/POS/Infrastructure/Persistence/EloquentPosOrderRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[PosOrder::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?PosOrder]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[PosOrder::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (PosOrder $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/POS/Infrastructure/Persistence/EloquentPosSessionRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[PosSession::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?PosSession]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[PosSession::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (PosSession $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/POS/Infrastructure/Persistence/EloquentPosTerminalRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[PosTerminal::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?PosTerminal]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[PosTerminal::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (PosTerminal $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/POS/Providers/POSServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Projects/Infrastructure/Persistence/EloquentProjectRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Project::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Project]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Project::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Project $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Projects/Infrastructure/Persistence/EloquentProjectTaskRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[ProjectTask::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?ProjectTask]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[ProjectTask::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (ProjectTask $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Projects/Infrastructure/Persistence/EloquentTimesheetRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Timesheet::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Timesheet]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Timesheet::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Timesheet $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Projects/Providers/ProjectsServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Purchase/Infrastructure/Persistence/EloquentPurchaseBillRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[PurchaseBill::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?PurchaseBill]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[PurchaseBill::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (PurchaseBill $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Purchase/Infrastructure/Persistence/EloquentPurchaseOrderRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[PurchaseOrder::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?PurchaseOrder]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[PurchaseOrder::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (PurchaseOrder $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Purchase/Infrastructure/Persistence/EloquentVendorRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Vendor::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Vendor]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Vendor::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Vendor $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Purchase/Providers/PurchaseServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Reporting/Infrastructure/Persistence/EloquentReportDefinitionRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[ReportDefinition::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?ReportDefinition]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[ReportDefinition::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (ReportDefinition $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Reporting/Infrastructure/Persistence/EloquentReportSnapshotRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[ReportSnapshot::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?ReportSnapshot]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[ReportSnapshot::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (ReportSnapshot $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Reporting/Providers/ReportingServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
+  </file>
+  <file src="modules/Sales/Infrastructure/Persistence/EloquentCustomerRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[Customer::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?Customer]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[Customer::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (Customer $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Sales/Infrastructure/Persistence/EloquentSalesInvoiceRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[SalesInvoice::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?SalesInvoice]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[SalesInvoice::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (SalesInvoice $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Sales/Infrastructure/Persistence/EloquentSalesOrderRepository.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[SalesOrder::query()->find($id)]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[?SalesOrder]]></code>
+    </InvalidReturnType>
+    <InvalidTemplateParam>
+      <code><![CDATA[SalesOrder::query()->where('company_id', $companyId)->orderBy('created_at', 'desc')->get()->map(static fn (SalesOrder $m): array => $m->toArray())]]></code>
+    </InvalidTemplateParam>
+  </file>
+  <file src="modules/Sales/Providers/SalesServiceProvider.php">
+    <RedundantCondition>
+      <code><![CDATA[is_callable($registrar)]]></code>
+    </RedundantCondition>
   </file>
   <file src="modules/Users/Application/Support/ListQuery.php">
     <InvalidArgument>

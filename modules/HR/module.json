@@ -1,0 +1,20 @@
+{
+    "name": "HR",
+    "version": "1.0.0",
+    "description": "HR & Payroll \u2014 employees, attendance, leave, payroll runs",
+    "provider": "Modules\\HR\\Providers\\HRServiceProvider",
+    "enabled": true,
+    "priority": 230,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Accounting",
+        "Identity"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

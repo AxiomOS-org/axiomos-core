@@ -1,0 +1,21 @@
+{
+    "name": "POS",
+    "version": "1.0.0",
+    "description": "POS \u2014 terminals, sessions, orders",
+    "provider": "Modules\\POS\\Providers\\POSServiceProvider",
+    "enabled": true,
+    "priority": 270,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Sales",
+        "Inventory",
+        "Accounting"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

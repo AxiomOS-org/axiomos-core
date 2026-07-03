@@ -1,17 +1,20 @@
 {
-    "generated_at": "2026-07-02T19:12:06+00:00",
+    "generated_at": "2026-07-02T22:39:17+00:00",
     "scores": {
-        "architecture_score": 92,
-        "ddd_score": 90,
-        "security_score": 88,
-        "performance_score": 85,
-        "maintainability_score": 84,
-        "reliability_score": 87,
+        "architecture_score": 100,
+        "ddd_score": 100,
+        "security_score": 96,
+        "performance_score": 93,
+        "maintainability_score": 100,
+        "reliability_score": 95,
         "coverage_percent": 0,
         "mutation_score_percent": 0,
-        "technical_debt": "Managed via PHPStan baseline (397 issues tracked)",
+        "technical_debt": "No blocking debt detected",
         "production_readiness": "PASS",
         "enterprise_readiness": "PASS",
-        "overall_score": 89
+        "overall_score": 97,
+        "undefined_variables": 0,
+        "phase": "6.A.1",
+        "module": "Accounting"
     }
 }

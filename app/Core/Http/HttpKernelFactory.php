@@ -8,6 +8,7 @@ use App\Core\Boot\BootManager;
 use App\Core\Boot\Support\ProviderModuleBootstrapper;
 use App\Core\Configuration\ConfigurationBuilder;
 use App\Core\Container\Container;
+use App\Core\Container\Contracts\ContainerInterface;
 use App\Core\Event\EventBusBuilder;
 use App\Core\Http\Controllers\HealthController;
 use App\Core\Http\Controllers\HomeController;
@@ -16,6 +17,9 @@ use App\Core\Http\Health\Checks\KernelReadyCheck;
 use App\Core\Http\Health\Checks\MemoryCheck;
 use App\Core\Http\Health\Checks\ModulesBootedCheck;
 use App\Core\Http\Health\HealthChecker;
+use App\Core\Http\Middleware\CorsMiddleware;
+use App\Platform\Http\Controllers\PlatformPluginsController;
+use App\Platform\Services\PluginManifestReader;
 use App\Core\Kernel\Kernel;
 use App\Core\Kernel\KernelManager;
 use App\Core\Module\ModuleLoader;
@@ -81,18 +85,27 @@ final class HttpKernelFactory
         );
 
         $container->instance(HealthChecker::class, $health);
+        $container->instance(ModuleRegistry::class, $registry);
+        $container->singleton(PluginManifestReader::class, PluginManifestReader::class);
+        $container->singleton(PlatformPluginsController::class, static function (ContainerInterface $c): PlatformPluginsController {
+            return new PlatformPluginsController(
+                $c->make(ModuleRegistry::class),
+                $c->make(PluginManifestReader::class),
+            );
+        });
         PlatformBootstrap::boot($container, $basePath);
 
         $router = self::buildRouter();
         $container->instance(Router::class, $router);
 
-        self::registerRoutes($basePath, $router, $manager, $health);
+        self::registerRoutes($basePath, $router, $manager, $health, $container);
 
         return new HttpKernel(
             kernel: $manager,
             router: $router,
             events: (new EventBusBuilder())->withLogger($logger)->build(),
             logger: $logger,
+            cors: new CorsMiddleware(),
         );
     }
 
@@ -120,6 +133,7 @@ final class HttpKernelFactory
         Router $router,
         KernelManager $manager,
         HealthChecker $health,
+        Container $container,
     ): void {
         $registrar = require $basePath . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php';
 
@@ -132,6 +146,7 @@ final class HttpKernelFactory
             new HomeController(),
             new HealthController($manager, $health),
             new MetricsController($manager),
+            $container->make(PlatformPluginsController::class),
         );
     }
 

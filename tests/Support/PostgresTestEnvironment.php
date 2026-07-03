@@ -64,6 +64,7 @@ final class PostgresTestEnvironment
                 $connection->statement('DROP TABLE IF EXISTS public.migrations CASCADE');
                 $connection->statement(sprintf('DROP SCHEMA IF EXISTS "%s" CASCADE', $schema));
                 self::createSchema($connection, $schema);
+                $connection->statement(sprintf('DROP TABLE IF EXISTS "%s".migrations CASCADE', $schema));
                 $connection->statement(sprintf('SET search_path TO "%s"', $schema));
 
                 return;

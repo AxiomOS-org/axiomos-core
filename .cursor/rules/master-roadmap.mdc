@@ -1,35 +1,79 @@
 ---
-description: AxiomOS Enterprise Master Roadmap — platform frozen, Accounting design locked
+description: AxiomOS Execution Lock — Platform frozen; Phase 6.A–6.L business modules only
 alwaysApply: true
 ---
 
-# AxiomOS Development Mode
+# AxiomOS — Execution Lock (Active)
 
-Follow `docs/MASTER_ROADMAP.md` as the single source of truth.
+**Authority:** `docs/V2_MASTER_ROADMAP.md` + `docs/EXECUTION_LOCK.md`
 
-## Current Sprint Focus
-- **Frozen:** Platform (5.A–5.C.6) — bug fixes only
-- **Design locked:** Phase 6.A Accounting (`docs/architecture/ACCOUNTING_BLUEPRINT_LOCK.md`)
-- **Next (after sign-off):** 6.A implementation — Posting Engine, Ledger, COA (no premature UI)
+Platform rules: `platform-freeze-policy.mdc` · Speed rules: `development-speed-policy.mdc`
 
-## Accounting Rules (NON-NEGOTIABLE)
+## You Are
+
+**Product Engineering Team** building an **Odoo Killer ERP** — not Infrastructure/Architecture.
+
+## Platform = FROZEN
+
+No new platform, SDK, ADT, QA framework, architecture docs, or governance sprints.
+
+Fix only: fatal errors, SQL errors, broken routes, security-critical bugs.
+
+## Current Mission
+
+Ship **complete business modules** (backend REST + React UI) in build order **6.A → 6.L**.
+
+| Phase | Module | Deliver complete |
+|-------|--------|------------------|
+| 6.A | Accounting | CoA, journals, periods, reports, posting, audit |
+| 6.B | Sales | Quote → order → delivery → invoice → taxes → dashboard |
+| 6.C | Purchase | Vendor → PO → GRN → bill → payment → posting |
+| 6.D | Inventory | Warehouses, stock, transfers, valuation → GL |
+| 6.E | CRM | Leads, pipeline, activities |
+| 6.F | HR | Employees, attendance, leave |
+| 6.G | Payroll | Payroll runs → PostingEngine |
+| 6.H | Manufacturing | BOM, work orders, production |
+| 6.I | POS | Register, sessions, touch UI |
+| 6.J | Assets | Register, depreciation |
+| 6.K | Projects | Projects, tasks, timesheets |
+| 6.L | Reporting BI | Dashboards, snapshots |
+
+After 6.L → Phase 7 (UX polish) → Phase 8 (Electron + Cloud + Marketplace) → **v1.0**.
+
+## Every Module Must Ship
+
+1. **REST API** (extend existing `*ApiController` — no new Blade)
+2. **React plugin** (`axiomos-web/src/plugins/<module>/`) — lazy loaded
+3. **Dynamic menu + permission routes** via PluginManager
+4. **Workflow depth** — not generic CRUD lists
+5. **Playwright smoke** at module freeze
+6. **`composer quality:gate` once** at module freeze
+
+## Stack
+
+- **Product UI:** React 19 + TS + Vite + TanStack Query + Tailwind + AG Grid (`axiomos-web/`)
+- **API:** Laravel modules (`axiomos-core/`) — PostingEngine for all financial writes
+- **Dev:** API `:8000`, Vite `:5173`
+
+## Do NOT
+
+- Run full quality gate mid-module
+- Write architecture/report sprints
+- Build Blade-first features
+- Improve ADT/SDK/Marketplace before 6.L complete
+- Debate PostingEngine rules (`ACCOUNTING_BLUEPRINT_LOCK.md` is locked)
+
+## Do
+
+- Ship demoable flows at `localhost:5173` every few days within the **current** module
+- Backend API first, React immediately after
+- Ask: **"Would Odoo's PM ship this?"** — if no, keep building business depth
+
+## Repo
+
 ```
-NO ERP MODULE IS ALLOWED TO WRITE TO LEDGER TABLES DIRECTLY.
-ALL FINANCIAL POSTINGS MUST PASS THROUGH THE ACCOUNTING POSTING ENGINE.
-NO EXCEPTIONS.
+AxiomOS/
+├── axiomos-core/     # API only
+├── axiomos-web/      # React ERP (the product)
+└── axiomos-desktop/  # Electron (Phase 8)
 ```
-See `.cursor/rules/accounting-posting-engine.mdc`
-
-## Do NOT (Phase 6.A design phase)
-- Build journal entry screens, voucher UI, or COA CRUD before implementation sprint
-- Write to `accounting_*` ledger tables from Sales/Inventory/Purchase/etc.
-- Skip Posting Engine for any financial transaction
-
-## ERP Build Order
-6.A Accounting → 6.B Sales → 6.C Purchase → 6.D Inventory → 6.E CRM → 6.F HR → 6.G MRP → 6.H POS → 6.I Projects → 6.J Assets → 6.K Budgeting → 6.L Reporting
-
-## Every Implementation Sprint Must Deliver
-Design → Code → Tests → Browser Demo → APIs → Doc Updates → `composer quality:gate`
-
-## Human Architect Role
-User approves ACC-BP-1.0 sign-off before 6.A code sprint.

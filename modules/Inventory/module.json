@@ -1,0 +1,19 @@
+{
+    "name": "Inventory",
+    "version": "1.0.0",
+    "description": "Inventory \u2014 warehouses, items, stock movements and balances",
+    "provider": "Modules\\Inventory\\Providers\\InventoryServiceProvider",
+    "enabled": true,
+    "priority": 220,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Accounting"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

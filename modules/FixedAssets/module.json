@@ -1,0 +1,19 @@
+{
+    "name": "FixedAssets",
+    "version": "1.0.0",
+    "description": "Fixed Assets \u2014 asset register and depreciation",
+    "provider": "Modules\\FixedAssets\\Providers\\FixedAssetsServiceProvider",
+    "enabled": true,
+    "priority": 280,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Accounting"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

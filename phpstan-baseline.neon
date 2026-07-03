@@ -121,6 +121,12 @@ parameters:
 			path: app/Infrastructure/Database/DatabaseBootstrap.php
 
 		-
+			message: '#^If condition is always false\.$#'
+			identifier: if.alwaysFalse
+			count: 1
+			path: app/Infrastructure/Database/MigrationRunner.php
+
+		-
 			message: '#^Class Illuminate\\View\\Engines\\PhpEngine constructor invoked with 0 parameters, 1 required\.$#'
 			identifier: arguments.count
 			count: 1
@@ -751,6 +757,648 @@ parameters:
 			path: app/Platform/Workflow/WorkflowEngine.php
 
 		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingPreview\:\:__construct\(\) has parameter \$errors with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingPreview.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingPreview\:\:__construct\(\) has parameter \$lines with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingPreview.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingPreview\:\:toArray\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingPreview.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingRequest\:\:__construct\(\) has parameter \$lines with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingRequest.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingRequest\:\:fromArray\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingRequest.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingRequest\:\:toArray\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingRequest.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingResult\:\:__construct\(\) has parameter \$errors with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingResult.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingResult\:\:__construct\(\) has parameter \$meta with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingResult.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingResult\:\:failed\(\) has parameter \$errors with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingResult.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingResult\:\:failed\(\) has parameter \$meta with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingResult.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingResult\:\:ok\(\) has parameter \$meta with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingResult.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\DTOs\\PostingResult\:\:toArray\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/DTOs/PostingResult.php
+
+		-
+			message: '#^Parameter \#1 \$entity of method Modules\\Accounting\\Application\\Services\\AccountingPlatformHooks\:\:onCreated\(\) expects App\\Platform\\Support\\PlatformEntityInterface, Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Accounting/Application/Services/AccountingPeriodService.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\AccountingPlatformHooks\:\:onUpdated\(\) has parameter \$before with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/AccountingPlatformHooks.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\BalanceSheetService\:\:generate\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/BalanceSheetService.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\CashFlowService\:\:generate\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/CashFlowService.php
+
+		-
+			message: '#^Parameter \#1 \$entity of method Modules\\Accounting\\Application\\Services\\AccountingPlatformHooks\:\:onCreated\(\) expects App\\Platform\\Support\\PlatformEntityInterface, Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Accounting/Application/Services/CostCenterService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Document\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Accounting/Application/Services/DocumentEngine.php
+
+		-
+			message: '#^Parameter \#1 \$entity of method Modules\\Accounting\\Application\\Services\\AccountingPlatformHooks\:\:onCreated\(\) expects App\\Platform\\Support\\PlatformEntityInterface, Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Accounting/Application/Services/FiscalYearService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Journal\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Accounting/Application/Services/JournalEngine.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\JournalEngine\:\:createPostedJournal\(\) has parameter \$lines with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/JournalEngine.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\LedgerEngine\:\:applyJournal\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/LedgerEngine.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\LedgerEngine\:\:applyJournal\(\) has parameter \$lines with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/LedgerEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\ExchangeRate\:\:\$base_currency\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Accounting/Application/Services/MultiCurrencyService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\ExchangeRate\:\:\$quote_currency\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/MultiCurrencyService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\ExchangeRate\:\:\$rate\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/MultiCurrencyService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\ExchangeRate\:\:\$rate_date\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/MultiCurrencyService.php
+
+		-
+			message: '#^Parameter \#1 \$entity of method Modules\\Accounting\\Application\\Services\\AccountingPlatformHooks\:\:onCreated\(\) expects App\\Platform\\Support\\PlatformEntityInterface, Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: modules/Accounting/Application/Services/MultiCurrencyService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\AccountingPeriod\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Document\:\:\$document_number\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Document\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Document\:\:\$status\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Journal\:\:\$currency\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Journal\:\:\$document_id\.$#'
+			identifier: property.notFound
+			count: 2
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Journal\:\:\$exchange_rate\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\PostingLog\:\:\$journal_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\PostingLog\:\:\$response_payload\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\PostingEngine\:\:recordFailure\(\) has parameter \$errors with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/PostingEngine.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\ProfitAndLossService\:\:generate\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/ProfitAndLossService.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Application\\Services\\TrialBalanceService\:\:generate\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Application/Services/TrialBalanceService.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\VoucherType\:\:\$code\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Application/Services/VoucherEngine.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>series_pattern" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: modules/Accounting/Application/Services/VoucherEngine.php
+
+		-
+			message: '#^Property Modules\\Accounting\\Domain\\Models\\Document\:\:\$casts type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Models/Document.php
+
+		-
+			message: '#^Property Modules\\Accounting\\Domain\\Models\\Journal\:\:\$casts type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Models/Journal.php
+
+		-
+			message: '#^Property Modules\\Accounting\\Domain\\Models\\JournalLine\:\:\$casts type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Models/JournalLine.php
+
+		-
+			message: '#^Property Modules\\Accounting\\Domain\\Models\\LedgerBalance\:\:\$casts type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Models/LedgerBalance.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\AccountRepositoryInterface\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/AccountRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\AccountRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/AccountRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\DimensionRepositoryInterface\:\:byCompanyAndType\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/DimensionRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\DocumentRepositoryInterface\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/DocumentRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\DocumentRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/DocumentRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\DocumentRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/DocumentRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\ExchangeRateRepositoryInterface\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/ExchangeRateRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\FiscalYearRepositoryInterface\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/FiscalYearRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\JournalLineRepositoryInterface\:\:byJournal\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/JournalLineRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\JournalLineRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/JournalLineRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\JournalRepositoryInterface\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/JournalRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\JournalRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/JournalRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\LedgerBalanceRepositoryInterface\:\:trialBalance\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/LedgerBalanceRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\LedgerBalanceRepositoryInterface\:\:upsertLineBalance\(\) has parameter \$scope with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/LedgerBalanceRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\PeriodRepositoryInterface\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/PeriodRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\PostingLogRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/PostingLogRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\PostingLogRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/PostingLogRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Domain\\Repositories\\Contracts\\VoucherTypeRepositoryInterface\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Domain/Repositories/Contracts/VoucherTypeRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$account_code\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$account_name\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$account_type\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$company_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$created_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$metadata\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$organization_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$parent_account_id\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Access to an undefined property Modules\\Accounting\\Domain\\Models\\Account\:\:\$updated_at\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Http/Resources/AccountResource.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentAccountRepository\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentAccountRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentAccountRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentAccountRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentAccountRepository\:\:create\(\) should return Modules\\Accounting\\Domain\\Models\\Account but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentAccountRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentAccountRepository\:\:find\(\) should return Modules\\Accounting\\Domain\\Models\\Account\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentAccountRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentDimensionRepository\:\:byCompanyAndType\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentDimensionRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentDocumentRepository\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentDocumentRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentDocumentRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentDocumentRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentDocumentRepository\:\:create\(\) should return Modules\\Accounting\\Domain\\Models\\Document but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentDocumentRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentDocumentRepository\:\:find\(\) should return Modules\\Accounting\\Domain\\Models\\Document\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentDocumentRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentDocumentRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentDocumentRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentExchangeRateRepository\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentExchangeRateRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentFiscalYearRepository\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentFiscalYearRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentJournalLineRepository\:\:byJournal\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentJournalLineRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentJournalLineRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentJournalLineRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentJournalRepository\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentJournalRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentJournalRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentJournalRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentJournalRepository\:\:create\(\) should return Modules\\Accounting\\Domain\\Models\\Journal but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentJournalRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentJournalRepository\:\:find\(\) should return Modules\\Accounting\\Domain\\Models\\Journal\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentJournalRepository.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$closing_credit\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$closing_debit\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$opening_credit\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$opening_debit\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$period_credit\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php
+
+		-
+			message: '#^Access to an undefined property Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\:\:\$period_debit\.$#'
+			identifier: property.notFound
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentLedgerBalanceRepository\:\:trialBalance\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentLedgerBalanceRepository\:\:upsertLineBalance\(\) has parameter \$scope with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentLedgerBalanceRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentPeriodRepository\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentPeriodRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentPostingLogRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentPostingLogRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentPostingLogRepository\:\:create\(\) should return Modules\\Accounting\\Domain\\Models\\PostingLog but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentPostingLogRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentPostingLogRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentPostingLogRepository.php
+
+		-
+			message: '#^Method Modules\\Accounting\\Infrastructure\\Persistence\\EloquentVoucherTypeRepository\:\:byCompany\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: modules/Accounting/Infrastructure/Persistence/EloquentVoucherTypeRepository.php
+
+		-
 			message: '#^Access to an undefined property Modules\\Authentication\\Domain\\Models\\AuthCredential\:\:\$email_verified_at\.$#'
 			identifier: property.notFound
 			count: 1
@@ -1205,6 +1853,618 @@ parameters:
 			identifier: property.notFound
 			count: 1
 			path: modules/Authorization/Http/Resources/AuthorizationResource.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Application\\Services\\BudgetLineService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Application/Services/BudgetLineService.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Application\\Services\\BudgetLineService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Application/Services/BudgetLineService.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Application\\Services\\BudgetLineService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Application/Services/BudgetLineService.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Application\\Services\\BudgetVersionService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Application/Services/BudgetVersionService.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Application\\Services\\BudgetVersionService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Application/Services/BudgetVersionService.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Application\\Services\\BudgetVersionService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Application/Services/BudgetVersionService.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Domain\\Repositories\\Contracts\\BudgetLineRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Domain/Repositories/Contracts/BudgetLineRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Domain\\Repositories\\Contracts\\BudgetLineRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Domain/Repositories/Contracts/BudgetLineRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Domain\\Repositories\\Contracts\\BudgetVersionRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Domain/Repositories/Contracts/BudgetVersionRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Domain\\Repositories\\Contracts\\BudgetVersionRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Domain/Repositories/Contracts/BudgetVersionRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Infrastructure\\Persistence\\EloquentBudgetLineRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Infrastructure/Persistence/EloquentBudgetLineRepository.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Infrastructure\\Persistence\\EloquentBudgetLineRepository\:\:create\(\) should return Modules\\Budgeting\\Domain\\Models\\BudgetLine but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Budgeting/Infrastructure/Persistence/EloquentBudgetLineRepository.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Infrastructure\\Persistence\\EloquentBudgetLineRepository\:\:find\(\) should return Modules\\Budgeting\\Domain\\Models\\BudgetLine\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Budgeting/Infrastructure/Persistence/EloquentBudgetLineRepository.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Infrastructure\\Persistence\\EloquentBudgetLineRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Infrastructure/Persistence/EloquentBudgetLineRepository.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Infrastructure\\Persistence\\EloquentBudgetVersionRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Infrastructure/Persistence/EloquentBudgetVersionRepository.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Infrastructure\\Persistence\\EloquentBudgetVersionRepository\:\:create\(\) should return Modules\\Budgeting\\Domain\\Models\\BudgetVersion but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Budgeting/Infrastructure/Persistence/EloquentBudgetVersionRepository.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Infrastructure\\Persistence\\EloquentBudgetVersionRepository\:\:find\(\) should return Modules\\Budgeting\\Domain\\Models\\BudgetVersion\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Budgeting/Infrastructure/Persistence/EloquentBudgetVersionRepository.php
+
+		-
+			message: '#^Method Modules\\Budgeting\\Infrastructure\\Persistence\\EloquentBudgetVersionRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Budgeting/Infrastructure/Persistence/EloquentBudgetVersionRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\CrmActivityService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/CrmActivityService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\CrmActivityService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/CrmActivityService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\CrmActivityService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/CrmActivityService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\LeadService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/LeadService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\LeadService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/LeadService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\LeadService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/LeadService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\OpportunityService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/OpportunityService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\OpportunityService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/OpportunityService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Application\\Services\\OpportunityService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Application/Services/OpportunityService.php
+
+		-
+			message: '#^Method Modules\\CRM\\Domain\\Repositories\\Contracts\\CrmActivityRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Domain/Repositories/Contracts/CrmActivityRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\CRM\\Domain\\Repositories\\Contracts\\CrmActivityRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Domain/Repositories/Contracts/CrmActivityRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\CRM\\Domain\\Repositories\\Contracts\\LeadRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Domain/Repositories/Contracts/LeadRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\CRM\\Domain\\Repositories\\Contracts\\LeadRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Domain/Repositories/Contracts/LeadRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\CRM\\Domain\\Repositories\\Contracts\\OpportunityRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Domain/Repositories/Contracts/OpportunityRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\CRM\\Domain\\Repositories\\Contracts\\OpportunityRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Domain/Repositories/Contracts/OpportunityRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\CRM\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\CRM\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentCrmActivityRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentCrmActivityRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentCrmActivityRepository\:\:create\(\) should return Modules\\CRM\\Domain\\Models\\CrmActivity but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentCrmActivityRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentCrmActivityRepository\:\:find\(\) should return Modules\\CRM\\Domain\\Models\\CrmActivity\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentCrmActivityRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentCrmActivityRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentCrmActivityRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentLeadRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentLeadRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentLeadRepository\:\:create\(\) should return Modules\\CRM\\Domain\\Models\\Lead but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentLeadRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentLeadRepository\:\:find\(\) should return Modules\\CRM\\Domain\\Models\\Lead\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentLeadRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentLeadRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentLeadRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentOpportunityRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentOpportunityRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentOpportunityRepository\:\:create\(\) should return Modules\\CRM\\Domain\\Models\\Opportunity but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentOpportunityRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentOpportunityRepository\:\:find\(\) should return Modules\\CRM\\Domain\\Models\\Opportunity\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentOpportunityRepository.php
+
+		-
+			message: '#^Method Modules\\CRM\\Infrastructure\\Persistence\\EloquentOpportunityRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/CRM/Infrastructure/Persistence/EloquentOpportunityRepository.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Application\\Services\\DepreciationRunService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Application/Services/DepreciationRunService.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Application\\Services\\DepreciationRunService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Application/Services/DepreciationRunService.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Application\\Services\\DepreciationRunService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Application/Services/DepreciationRunService.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Application\\Services\\FixedAssetService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Application/Services/FixedAssetService.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Application\\Services\\FixedAssetService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Application/Services/FixedAssetService.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Application\\Services\\FixedAssetService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Application/Services/FixedAssetService.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Application\\Services\\FixedAssetsPostingService\:\:submit\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Application/Services/FixedAssetsPostingService.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Application\\Services\\FixedAssetsPostingService\:\:submit\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Application/Services/FixedAssetsPostingService.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Domain\\Repositories\\Contracts\\DepreciationRunRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Domain/Repositories/Contracts/DepreciationRunRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Domain\\Repositories\\Contracts\\DepreciationRunRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Domain/Repositories/Contracts/DepreciationRunRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Domain\\Repositories\\Contracts\\FixedAssetRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Domain/Repositories/Contracts/FixedAssetRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Domain\\Repositories\\Contracts\\FixedAssetRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Domain/Repositories/Contracts/FixedAssetRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Infrastructure\\Persistence\\EloquentDepreciationRunRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Infrastructure/Persistence/EloquentDepreciationRunRepository.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Infrastructure\\Persistence\\EloquentDepreciationRunRepository\:\:create\(\) should return Modules\\FixedAssets\\Domain\\Models\\DepreciationRun but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/FixedAssets/Infrastructure/Persistence/EloquentDepreciationRunRepository.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Infrastructure\\Persistence\\EloquentDepreciationRunRepository\:\:find\(\) should return Modules\\FixedAssets\\Domain\\Models\\DepreciationRun\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/FixedAssets/Infrastructure/Persistence/EloquentDepreciationRunRepository.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Infrastructure\\Persistence\\EloquentDepreciationRunRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Infrastructure/Persistence/EloquentDepreciationRunRepository.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Infrastructure\\Persistence\\EloquentFixedAssetRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Infrastructure/Persistence/EloquentFixedAssetRepository.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Infrastructure\\Persistence\\EloquentFixedAssetRepository\:\:create\(\) should return Modules\\FixedAssets\\Domain\\Models\\FixedAsset but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/FixedAssets/Infrastructure/Persistence/EloquentFixedAssetRepository.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Infrastructure\\Persistence\\EloquentFixedAssetRepository\:\:find\(\) should return Modules\\FixedAssets\\Domain\\Models\\FixedAsset\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/FixedAssets/Infrastructure/Persistence/EloquentFixedAssetRepository.php
+
+		-
+			message: '#^Method Modules\\FixedAssets\\Infrastructure\\Persistence\\EloquentFixedAssetRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/FixedAssets/Infrastructure/Persistence/EloquentFixedAssetRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\AttendanceRecordService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/AttendanceRecordService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\AttendanceRecordService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/AttendanceRecordService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\AttendanceRecordService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/AttendanceRecordService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\EmployeeService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/EmployeeService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\EmployeeService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/EmployeeService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\EmployeeService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/EmployeeService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\HRPostingService\:\:submit\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/HRPostingService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\HRPostingService\:\:submit\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/HRPostingService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\PayrollRunService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/PayrollRunService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\PayrollRunService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/PayrollRunService.php
+
+		-
+			message: '#^Method Modules\\HR\\Application\\Services\\PayrollRunService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Application/Services/PayrollRunService.php
+
+		-
+			message: '#^Method Modules\\HR\\Domain\\Repositories\\Contracts\\AttendanceRecordRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Domain/Repositories/Contracts/AttendanceRecordRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\HR\\Domain\\Repositories\\Contracts\\AttendanceRecordRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Domain/Repositories/Contracts/AttendanceRecordRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\HR\\Domain\\Repositories\\Contracts\\EmployeeRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Domain/Repositories/Contracts/EmployeeRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\HR\\Domain\\Repositories\\Contracts\\EmployeeRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Domain/Repositories/Contracts/EmployeeRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\HR\\Domain\\Repositories\\Contracts\\PayrollRunRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Domain/Repositories/Contracts/PayrollRunRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\HR\\Domain\\Repositories\\Contracts\\PayrollRunRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Domain/Repositories/Contracts/PayrollRunRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\HR\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\HR\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentAttendanceRecordRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentAttendanceRecordRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentAttendanceRecordRepository\:\:create\(\) should return Modules\\HR\\Domain\\Models\\AttendanceRecord but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentAttendanceRecordRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentAttendanceRecordRepository\:\:find\(\) should return Modules\\HR\\Domain\\Models\\AttendanceRecord\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentAttendanceRecordRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentAttendanceRecordRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentAttendanceRecordRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentEmployeeRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentEmployeeRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentEmployeeRepository\:\:create\(\) should return Modules\\HR\\Domain\\Models\\Employee but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentEmployeeRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentEmployeeRepository\:\:find\(\) should return Modules\\HR\\Domain\\Models\\Employee\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentEmployeeRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentEmployeeRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentEmployeeRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentPayrollRunRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentPayrollRunRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentPayrollRunRepository\:\:create\(\) should return Modules\\HR\\Domain\\Models\\PayrollRun but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentPayrollRunRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentPayrollRunRepository\:\:find\(\) should return Modules\\HR\\Domain\\Models\\PayrollRun\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentPayrollRunRepository.php
+
+		-
+			message: '#^Method Modules\\HR\\Infrastructure\\Persistence\\EloquentPayrollRunRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/HR/Infrastructure/Persistence/EloquentPayrollRunRepository.php
 
 		-
 			message: '#^Method Modules\\Identity\\Application\\Services\\ApiTokenService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
@@ -1909,6 +3169,366 @@ parameters:
 			path: modules/Identity/Infrastructure/Persistence/EloquentTeamRepository.php
 
 		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\ItemService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/ItemService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\ItemService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/ItemService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\ItemService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/ItemService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\StockMovementService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/StockMovementService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\StockMovementService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/StockMovementService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\StockMovementService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/StockMovementService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\WarehouseService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/WarehouseService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\WarehouseService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/WarehouseService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Application\\Services\\WarehouseService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Application/Services/WarehouseService.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Domain\\Repositories\\Contracts\\ItemRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Domain/Repositories/Contracts/ItemRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Domain\\Repositories\\Contracts\\ItemRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Domain/Repositories/Contracts/ItemRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Domain\\Repositories\\Contracts\\StockMovementRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Domain/Repositories/Contracts/StockMovementRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Domain\\Repositories\\Contracts\\StockMovementRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Domain/Repositories/Contracts/StockMovementRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Domain\\Repositories\\Contracts\\WarehouseRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Domain/Repositories/Contracts/WarehouseRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Domain\\Repositories\\Contracts\\WarehouseRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Domain/Repositories/Contracts/WarehouseRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentItemRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentItemRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentItemRepository\:\:create\(\) should return Modules\\Inventory\\Domain\\Models\\Item but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentItemRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentItemRepository\:\:find\(\) should return Modules\\Inventory\\Domain\\Models\\Item\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentItemRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentItemRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentItemRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentStockMovementRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentStockMovementRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentStockMovementRepository\:\:create\(\) should return Modules\\Inventory\\Domain\\Models\\StockMovement but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentStockMovementRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentStockMovementRepository\:\:find\(\) should return Modules\\Inventory\\Domain\\Models\\StockMovement\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentStockMovementRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentStockMovementRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentStockMovementRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentWarehouseRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentWarehouseRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentWarehouseRepository\:\:create\(\) should return Modules\\Inventory\\Domain\\Models\\Warehouse but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentWarehouseRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentWarehouseRepository\:\:find\(\) should return Modules\\Inventory\\Domain\\Models\\Warehouse\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentWarehouseRepository.php
+
+		-
+			message: '#^Method Modules\\Inventory\\Infrastructure\\Persistence\\EloquentWarehouseRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Inventory/Infrastructure/Persistence/EloquentWarehouseRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\BillOfMaterialService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/BillOfMaterialService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\BillOfMaterialService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/BillOfMaterialService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\BillOfMaterialService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/BillOfMaterialService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\ManufacturingPostingService\:\:submit\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/ManufacturingPostingService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\ManufacturingPostingService\:\:submit\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/ManufacturingPostingService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\ProductionRunService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/ProductionRunService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\ProductionRunService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/ProductionRunService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\ProductionRunService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/ProductionRunService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\WorkOrderService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/WorkOrderService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\WorkOrderService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/WorkOrderService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Application\\Services\\WorkOrderService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Application/Services/WorkOrderService.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Domain\\Repositories\\Contracts\\BillOfMaterialRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Domain/Repositories/Contracts/BillOfMaterialRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Domain\\Repositories\\Contracts\\BillOfMaterialRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Domain/Repositories/Contracts/BillOfMaterialRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Domain\\Repositories\\Contracts\\ProductionRunRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Domain/Repositories/Contracts/ProductionRunRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Domain\\Repositories\\Contracts\\ProductionRunRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Domain/Repositories/Contracts/ProductionRunRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Domain\\Repositories\\Contracts\\WorkOrderRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Domain/Repositories/Contracts/WorkOrderRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Domain\\Repositories\\Contracts\\WorkOrderRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Domain/Repositories/Contracts/WorkOrderRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentBillOfMaterialRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentBillOfMaterialRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentBillOfMaterialRepository\:\:create\(\) should return Modules\\Manufacturing\\Domain\\Models\\BillOfMaterial but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentBillOfMaterialRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentBillOfMaterialRepository\:\:find\(\) should return Modules\\Manufacturing\\Domain\\Models\\BillOfMaterial\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentBillOfMaterialRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentBillOfMaterialRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentBillOfMaterialRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentProductionRunRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentProductionRunRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentProductionRunRepository\:\:create\(\) should return Modules\\Manufacturing\\Domain\\Models\\ProductionRun but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentProductionRunRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentProductionRunRepository\:\:find\(\) should return Modules\\Manufacturing\\Domain\\Models\\ProductionRun\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentProductionRunRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentProductionRunRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentProductionRunRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentWorkOrderRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentWorkOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentWorkOrderRepository\:\:create\(\) should return Modules\\Manufacturing\\Domain\\Models\\WorkOrder but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentWorkOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentWorkOrderRepository\:\:find\(\) should return Modules\\Manufacturing\\Domain\\Models\\WorkOrder\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentWorkOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Manufacturing\\Infrastructure\\Persistence\\EloquentWorkOrderRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Manufacturing/Infrastructure/Persistence/EloquentWorkOrderRepository.php
+
+		-
 			message: '#^Access to an undefined property Modules\\Membership\\Domain\\Models\\Membership\:\:\$organization_id\.$#'
 			identifier: property.notFound
 			count: 1
@@ -2225,6 +3845,864 @@ parameters:
 			identifier: generics.notGeneric
 			count: 1
 			path: modules/Organization/Infrastructure/Persistence/EloquentOrganizationRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\POSPostingService\:\:submit\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/POSPostingService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\POSPostingService\:\:submit\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/POSPostingService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosOrderService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosOrderService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosOrderService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosOrderService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosOrderService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosOrderService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosSessionService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosSessionService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosSessionService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosSessionService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosSessionService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosSessionService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosTerminalService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosTerminalService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosTerminalService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosTerminalService.php
+
+		-
+			message: '#^Method Modules\\POS\\Application\\Services\\PosTerminalService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Application/Services/PosTerminalService.php
+
+		-
+			message: '#^Method Modules\\POS\\Domain\\Repositories\\Contracts\\PosOrderRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Domain/Repositories/Contracts/PosOrderRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\POS\\Domain\\Repositories\\Contracts\\PosOrderRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Domain/Repositories/Contracts/PosOrderRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\POS\\Domain\\Repositories\\Contracts\\PosSessionRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Domain/Repositories/Contracts/PosSessionRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\POS\\Domain\\Repositories\\Contracts\\PosSessionRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Domain/Repositories/Contracts/PosSessionRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\POS\\Domain\\Repositories\\Contracts\\PosTerminalRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Domain/Repositories/Contracts/PosTerminalRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\POS\\Domain\\Repositories\\Contracts\\PosTerminalRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Domain/Repositories/Contracts/PosTerminalRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\POS\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\POS\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosOrderRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosOrderRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosOrderRepository\:\:create\(\) should return Modules\\POS\\Domain\\Models\\PosOrder but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosOrderRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosOrderRepository\:\:find\(\) should return Modules\\POS\\Domain\\Models\\PosOrder\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosOrderRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosOrderRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosOrderRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosSessionRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosSessionRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosSessionRepository\:\:create\(\) should return Modules\\POS\\Domain\\Models\\PosSession but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosSessionRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosSessionRepository\:\:find\(\) should return Modules\\POS\\Domain\\Models\\PosSession\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosSessionRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosSessionRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosSessionRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosTerminalRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosTerminalRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosTerminalRepository\:\:create\(\) should return Modules\\POS\\Domain\\Models\\PosTerminal but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosTerminalRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosTerminalRepository\:\:find\(\) should return Modules\\POS\\Domain\\Models\\PosTerminal\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosTerminalRepository.php
+
+		-
+			message: '#^Method Modules\\POS\\Infrastructure\\Persistence\\EloquentPosTerminalRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/POS/Infrastructure/Persistence/EloquentPosTerminalRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\ProjectService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/ProjectService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\ProjectService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/ProjectService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\ProjectService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/ProjectService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\ProjectTaskService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/ProjectTaskService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\ProjectTaskService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/ProjectTaskService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\ProjectTaskService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/ProjectTaskService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\TimesheetService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/TimesheetService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\TimesheetService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/TimesheetService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Application\\Services\\TimesheetService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Application/Services/TimesheetService.php
+
+		-
+			message: '#^Method Modules\\Projects\\Domain\\Repositories\\Contracts\\ProjectRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Domain/Repositories/Contracts/ProjectRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Projects\\Domain\\Repositories\\Contracts\\ProjectRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Domain/Repositories/Contracts/ProjectRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Projects\\Domain\\Repositories\\Contracts\\ProjectTaskRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Domain/Repositories/Contracts/ProjectTaskRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Projects\\Domain\\Repositories\\Contracts\\ProjectTaskRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Domain/Repositories/Contracts/ProjectTaskRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Projects\\Domain\\Repositories\\Contracts\\TimesheetRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Domain/Repositories/Contracts/TimesheetRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Projects\\Domain\\Repositories\\Contracts\\TimesheetRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Domain/Repositories/Contracts/TimesheetRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Projects\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Projects\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentProjectRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentProjectRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentProjectRepository\:\:create\(\) should return Modules\\Projects\\Domain\\Models\\Project but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentProjectRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentProjectRepository\:\:find\(\) should return Modules\\Projects\\Domain\\Models\\Project\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentProjectRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentProjectRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentProjectRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentProjectTaskRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentProjectTaskRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentProjectTaskRepository\:\:create\(\) should return Modules\\Projects\\Domain\\Models\\ProjectTask but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentProjectTaskRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentProjectTaskRepository\:\:find\(\) should return Modules\\Projects\\Domain\\Models\\ProjectTask\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentProjectTaskRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentProjectTaskRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentProjectTaskRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentTimesheetRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentTimesheetRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentTimesheetRepository\:\:create\(\) should return Modules\\Projects\\Domain\\Models\\Timesheet but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentTimesheetRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentTimesheetRepository\:\:find\(\) should return Modules\\Projects\\Domain\\Models\\Timesheet\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentTimesheetRepository.php
+
+		-
+			message: '#^Method Modules\\Projects\\Infrastructure\\Persistence\\EloquentTimesheetRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Projects/Infrastructure/Persistence/EloquentTimesheetRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\PurchaseBillService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/PurchaseBillService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\PurchaseBillService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/PurchaseBillService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\PurchaseBillService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/PurchaseBillService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\PurchaseOrderService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/PurchaseOrderService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\PurchaseOrderService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/PurchaseOrderService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\PurchaseOrderService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/PurchaseOrderService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\PurchasePostingService\:\:submit\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/PurchasePostingService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\PurchasePostingService\:\:submit\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/PurchasePostingService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\VendorService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/VendorService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\VendorService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/VendorService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Application\\Services\\VendorService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Application/Services/VendorService.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Domain\\Repositories\\Contracts\\PurchaseBillRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Domain/Repositories/Contracts/PurchaseBillRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Domain\\Repositories\\Contracts\\PurchaseBillRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Domain/Repositories/Contracts/PurchaseBillRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Domain\\Repositories\\Contracts\\PurchaseOrderRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Domain/Repositories/Contracts/PurchaseOrderRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Domain\\Repositories\\Contracts\\PurchaseOrderRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Domain/Repositories/Contracts/PurchaseOrderRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Domain\\Repositories\\Contracts\\VendorRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Domain/Repositories/Contracts/VendorRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Domain\\Repositories\\Contracts\\VendorRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Domain/Repositories/Contracts/VendorRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentPurchaseBillRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentPurchaseBillRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentPurchaseBillRepository\:\:create\(\) should return Modules\\Purchase\\Domain\\Models\\PurchaseBill but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentPurchaseBillRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentPurchaseBillRepository\:\:find\(\) should return Modules\\Purchase\\Domain\\Models\\PurchaseBill\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentPurchaseBillRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentPurchaseBillRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentPurchaseBillRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentPurchaseOrderRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentPurchaseOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentPurchaseOrderRepository\:\:create\(\) should return Modules\\Purchase\\Domain\\Models\\PurchaseOrder but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentPurchaseOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentPurchaseOrderRepository\:\:find\(\) should return Modules\\Purchase\\Domain\\Models\\PurchaseOrder\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentPurchaseOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentPurchaseOrderRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentPurchaseOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentVendorRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentVendorRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentVendorRepository\:\:create\(\) should return Modules\\Purchase\\Domain\\Models\\Vendor but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentVendorRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentVendorRepository\:\:find\(\) should return Modules\\Purchase\\Domain\\Models\\Vendor\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentVendorRepository.php
+
+		-
+			message: '#^Method Modules\\Purchase\\Infrastructure\\Persistence\\EloquentVendorRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Purchase/Infrastructure/Persistence/EloquentVendorRepository.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Application\\Services\\ReportDefinitionService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Application/Services/ReportDefinitionService.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Application\\Services\\ReportDefinitionService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Application/Services/ReportDefinitionService.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Application\\Services\\ReportDefinitionService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Application/Services/ReportDefinitionService.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Application\\Services\\ReportSnapshotService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Application/Services/ReportSnapshotService.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Application\\Services\\ReportSnapshotService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Application/Services/ReportSnapshotService.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Application\\Services\\ReportSnapshotService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Application/Services/ReportSnapshotService.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Application\\Services\\ReportingDashboardService\:\:dashboard\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Application/Services/ReportingDashboardService.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Domain\\Repositories\\Contracts\\ReportDefinitionRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Domain/Repositories/Contracts/ReportDefinitionRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Domain\\Repositories\\Contracts\\ReportDefinitionRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Domain/Repositories/Contracts/ReportDefinitionRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Domain\\Repositories\\Contracts\\ReportSnapshotRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Domain/Repositories/Contracts/ReportSnapshotRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Domain\\Repositories\\Contracts\\ReportSnapshotRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Domain/Repositories/Contracts/ReportSnapshotRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Infrastructure\\Persistence\\EloquentReportDefinitionRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Infrastructure/Persistence/EloquentReportDefinitionRepository.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Infrastructure\\Persistence\\EloquentReportDefinitionRepository\:\:create\(\) should return Modules\\Reporting\\Domain\\Models\\ReportDefinition but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Reporting/Infrastructure/Persistence/EloquentReportDefinitionRepository.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Infrastructure\\Persistence\\EloquentReportDefinitionRepository\:\:find\(\) should return Modules\\Reporting\\Domain\\Models\\ReportDefinition\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Reporting/Infrastructure/Persistence/EloquentReportDefinitionRepository.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Infrastructure\\Persistence\\EloquentReportDefinitionRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Infrastructure/Persistence/EloquentReportDefinitionRepository.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Infrastructure\\Persistence\\EloquentReportSnapshotRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Infrastructure/Persistence/EloquentReportSnapshotRepository.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Infrastructure\\Persistence\\EloquentReportSnapshotRepository\:\:create\(\) should return Modules\\Reporting\\Domain\\Models\\ReportSnapshot but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Reporting/Infrastructure/Persistence/EloquentReportSnapshotRepository.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Infrastructure\\Persistence\\EloquentReportSnapshotRepository\:\:find\(\) should return Modules\\Reporting\\Domain\\Models\\ReportSnapshot\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Reporting/Infrastructure/Persistence/EloquentReportSnapshotRepository.php
+
+		-
+			message: '#^Method Modules\\Reporting\\Infrastructure\\Persistence\\EloquentReportSnapshotRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Reporting/Infrastructure/Persistence/EloquentReportSnapshotRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\CustomerService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/CustomerService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\CustomerService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/CustomerService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\CustomerService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/CustomerService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\SalesInvoiceService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/SalesInvoiceService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\SalesInvoiceService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/SalesInvoiceService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\SalesInvoiceService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/SalesInvoiceService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\SalesOrderService\:\:create\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/SalesOrderService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\SalesOrderService\:\:create\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/SalesOrderService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\SalesOrderService\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/SalesOrderService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\SalesPostingService\:\:submit\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/SalesPostingService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Application\\Services\\SalesPostingService\:\:submit\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Application/Services/SalesPostingService.php
+
+		-
+			message: '#^Method Modules\\Sales\\Domain\\Repositories\\Contracts\\CustomerRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Domain/Repositories/Contracts/CustomerRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Sales\\Domain\\Repositories\\Contracts\\CustomerRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Domain/Repositories/Contracts/CustomerRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Sales\\Domain\\Repositories\\Contracts\\SalesInvoiceRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Domain/Repositories/Contracts/SalesInvoiceRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Sales\\Domain\\Repositories\\Contracts\\SalesInvoiceRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Domain/Repositories/Contracts/SalesInvoiceRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Sales\\Domain\\Repositories\\Contracts\\SalesOrderRepositoryInterface\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Domain/Repositories/Contracts/SalesOrderRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Sales\\Domain\\Repositories\\Contracts\\SalesOrderRepositoryInterface\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Domain/Repositories/Contracts/SalesOrderRepositoryInterface.php
+
+		-
+			message: '#^Method Modules\\Sales\\Http\\Controllers\\Api\\ApiController\:\:ok\(\) has parameter \$payload with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Http/Controllers/Api/ApiController.php
+
+		-
+			message: '#^Method Modules\\Sales\\Http\\Support\\BladeRenderer\:\:render\(\) has parameter \$data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Http/Support/BladeRenderer.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentCustomerRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentCustomerRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentCustomerRepository\:\:create\(\) should return Modules\\Sales\\Domain\\Models\\Customer but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentCustomerRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentCustomerRepository\:\:find\(\) should return Modules\\Sales\\Domain\\Models\\Customer\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentCustomerRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentCustomerRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentCustomerRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentSalesInvoiceRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentSalesInvoiceRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentSalesInvoiceRepository\:\:create\(\) should return Modules\\Sales\\Domain\\Models\\SalesInvoice but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentSalesInvoiceRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentSalesInvoiceRepository\:\:find\(\) should return Modules\\Sales\\Domain\\Models\\SalesInvoice\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentSalesInvoiceRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentSalesInvoiceRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentSalesInvoiceRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentSalesOrderRepository\:\:create\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentSalesOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentSalesOrderRepository\:\:create\(\) should return Modules\\Sales\\Domain\\Models\\SalesOrder but returns Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentSalesOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentSalesOrderRepository\:\:find\(\) should return Modules\\Sales\\Domain\\Models\\SalesOrder\|null but returns array\<Illuminate\\Database\\Eloquent\\Builder\>\|Illuminate\\Database\\Eloquent\\Builder\|Illuminate\\Database\\Eloquent\\Collection\|Illuminate\\Database\\Eloquent\\Model\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentSalesOrderRepository.php
+
+		-
+			message: '#^Method Modules\\Sales\\Infrastructure\\Persistence\\EloquentSalesOrderRepository\:\:update\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: modules/Sales/Infrastructure/Persistence/EloquentSalesOrderRepository.php
 
 		-
 			message: '#^Method Modules\\Users\\Application\\Services\\UserService\:\:paginate\(\) return type with generic interface Illuminate\\Contracts\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'

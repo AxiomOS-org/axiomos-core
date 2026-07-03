@@ -1,0 +1,20 @@
+{
+    "name": "Manufacturing",
+    "version": "1.0.0",
+    "description": "Manufacturing \u2014 BOM, work orders, production runs",
+    "provider": "Modules\\Manufacturing\\Providers\\ManufacturingServiceProvider",
+    "enabled": true,
+    "priority": 260,
+    "dependencies": [
+        "Core",
+        "Organization",
+        "Inventory",
+        "Accounting"
+    ],
+    "authors": [
+        {
+            "name": "AxiomOS Team"
+        }
+    ],
+    "minimumCoreVersion": "1.0.0"
+}

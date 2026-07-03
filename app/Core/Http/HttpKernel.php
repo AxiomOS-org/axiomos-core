@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Core\Http;
 
 use App\Core\Event\Contracts\EventBusInterface;
+use App\Core\Http\Middleware\CorsMiddleware;
 use App\Core\Http\Events\RequestReceived;
 use App\Core\Http\Events\ResponsePrepared;
 use App\Core\Kernel\KernelManager;
@@ -37,12 +38,17 @@ final class HttpKernel
         private readonly Router $router,
         private readonly EventBusInterface $events,
         ?LoggerInterface $logger = null,
+        private readonly ?CorsMiddleware $cors = null,
     ) {
         $this->logger = $logger ?? new NullLogger();
     }
 
     public function handle(Request $request): Response
     {
+        if ($this->cors !== null && $request->getMethod() === 'OPTIONS') {
+            return $this->cors->handle($request, static fn (): Response => new Response('', Response::HTTP_NO_CONTENT));
+        }
+
         $startedAt = hrtime(true);
 
         try {
@@ -63,25 +69,34 @@ final class HttpKernel
                 durationMs: (hrtime(true) - $startedAt) / 1_000_000,
             ));
 
-            return $response;
+            return $this->withCors($request, $response);
         } catch (NotFoundHttpException $exception) {
-            return new JsonResponse([
+            return $this->withCors($request, new JsonResponse([
                 'kernel' => 'AxiomOS',
                 'status' => 'not_found',
                 'message' => sprintf('No route matched "%s".', $request->getPathInfo()),
-            ], Response::HTTP_NOT_FOUND);
+            ], Response::HTTP_NOT_FOUND));
         } catch (Throwable $exception) {
             $this->logger->error('HTTP request failed.', [
                 'path' => $request->getPathInfo(),
                 'exception' => $exception->getMessage(),
             ]);
 
-            return new JsonResponse([
+            return $this->withCors($request, new JsonResponse([
                 'kernel' => 'AxiomOS',
                 'status' => 'error',
                 'message' => $exception->getMessage(),
-            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+            ], Response::HTTP_INTERNAL_SERVER_ERROR));
         }
+    }
+
+    private function withCors(Request $request, Response $response): Response
+    {
+        if ($this->cors === null) {
+            return $response;
+        }
+
+        return $this->cors->handle($request, static fn (): Response => $response);
     }
 
     /**

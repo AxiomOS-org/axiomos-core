@@ -55,8 +55,8 @@ final class QaScorecardTest extends PostgresFeatureTestCase
             'enterprise_readiness' => $overallScore >= 95 && $architectureScore >= 95 && $dddScore >= 95 ? 'PASS' : 'FAIL',
             'overall_score' => $overallScore,
             'undefined_variables' => $viewDeductions,
-            'phase' => '6.A.1',
-            'module' => 'Accounting',
+            'phase' => 'ERP Runs 1–7',
+            'module' => 'All Business Modules',
         ];
 
         QaReportWriter::write($this->basePath, $scores);

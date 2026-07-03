@@ -7,12 +7,14 @@ namespace Modules\Accounting\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use Modules\Accounting\Application\DTOs\PostingRequest;
 use Modules\Accounting\Application\DTOs\ReversalRequest;
+use Modules\Accounting\Application\Services\AuditTrailService;
 use Modules\Accounting\Application\Services\BalanceSheetService;
 use Modules\Accounting\Application\Services\CashFlowService;
 use Modules\Accounting\Application\Services\ChartOfAccountsService;
 use Modules\Accounting\Application\Services\CostCenterService;
 use Modules\Accounting\Application\Services\DocumentService;
 use Modules\Accounting\Application\Services\FiscalYearService;
+use Modules\Accounting\Application\Services\JournalListService;
 use Modules\Accounting\Application\Services\AccountingPeriodService;
 use Modules\Accounting\Application\Services\MultiCurrencyService;
 use Modules\Accounting\Application\Services\PostingEngine;
@@ -36,14 +38,16 @@ final class AccountingApiController extends ApiController
         private readonly BalanceSheetService $balanceSheet,
         private readonly ProfitAndLossService $profitAndLoss,
         private readonly CashFlowService $cashFlow,
+        private readonly AuditTrailService $auditTrail,
+        private readonly JournalListService $journalList,
     ) {
     }
 
     public function accounts(Request $request): Response
     {
         if ($request->isMethod('post')) {
-            return $this->ok(
-                ['data' => $this->chartOfAccounts->create($request->all())],
+            return $this->safe(
+                fn (): array => ['data' => $this->chartOfAccounts->create($request->all())],
                 Response::HTTP_CREATED,
             );
         }
@@ -55,6 +59,13 @@ final class AccountingApiController extends ApiController
 
     public function fiscalYears(Request $request): Response
     {
+        if ($request->isMethod('post')) {
+            return $this->safe(
+                fn (): array => ['data' => $this->fiscalYears->create($request->all())],
+                Response::HTTP_CREATED,
+            );
+        }
+
         $companyId = $this->companyId($request);
 
         return $this->ok(['data' => $companyId === '' ? [] : $this->fiscalYears->list($companyId)]);
@@ -62,6 +73,22 @@ final class AccountingApiController extends ApiController
 
     public function periods(Request $request): Response
     {
+        if ($request->isMethod('post')) {
+            return $this->safe(
+                fn (): array => ['data' => $this->periods->create($request->all())],
+                Response::HTTP_CREATED,
+            );
+        }
+
+        if ($request->isMethod('patch')) {
+            return $this->safe(fn (): array => [
+                'data' => $this->periods->setOpen(
+                    (string) $request->input('id'),
+                    (bool) $request->input('is_open', false),
+                ),
+            ]);
+        }
+
         $companyId = $this->companyId($request);
 
         return $this->ok(['data' => $companyId === '' ? [] : $this->periods->list($companyId)]);
@@ -83,14 +110,27 @@ final class AccountingApiController extends ApiController
 
     public function journals(Request $request): Response
     {
-        return $this->ok(['message' => 'Journals are created via posting submit/reverse APIs only.']);
+        $companyId = $this->companyId($request);
+
+        return $this->ok(['data' => $companyId === '' ? [] : $this->journalList->list($companyId)]);
+    }
+
+    public function postingLogs(Request $request): Response
+    {
+        $companyId = $this->companyId($request);
+
+        return $this->ok(['data' => $companyId === '' ? [] : $this->auditTrail->list($companyId)]);
     }
 
     public function postingSubmit(Request $request): Response
     {
-        $result = $this->posting->submit(PostingRequest::fromArray($request->all()));
+        try {
+            $result = $this->posting->submit(PostingRequest::fromArray($request->all()));
 
-        return $this->ok($result->toArray(), $result->success ? Response::HTTP_OK : Response::HTTP_UNPROCESSABLE_ENTITY);
+            return $this->ok($result->toArray(), $result->success ? Response::HTTP_OK : Response::HTTP_UNPROCESSABLE_ENTITY);
+        } catch (\Throwable $exception) {
+            return $this->ok(['errors' => [$exception->getMessage()]], Response::HTTP_UNPROCESSABLE_ENTITY);
+        }
     }
 
     public function postingPreview(Request $request): Response
@@ -100,21 +140,32 @@ final class AccountingApiController extends ApiController
 
     public function postingReverse(Request $request): Response
     {
-        $result = $this->posting->reverse(new ReversalRequest(
-            (string) $request->input('journal_id'),
-            (string) $request->input('reason', 'Manual reversal'),
-            (string) $request->input('idempotency_key'),
-            (string) $request->input('company_id'),
-            $request->input('organization_id'),
-            $request->input('branch_id'),
-            $request->input('department_id'),
-        ));
+        try {
+            $result = $this->posting->reverse(new ReversalRequest(
+                (string) $request->input('journal_id'),
+                (string) $request->input('reason', 'Manual reversal'),
+                (string) $request->input('idempotency_key'),
+                (string) $request->input('company_id'),
+                $request->input('organization_id'),
+                $request->input('branch_id'),
+                $request->input('department_id'),
+            ));
 
-        return $this->ok($result->toArray(), $result->success ? Response::HTTP_OK : Response::HTTP_UNPROCESSABLE_ENTITY);
+            return $this->ok($result->toArray(), $result->success ? Response::HTTP_OK : Response::HTTP_UNPROCESSABLE_ENTITY);
+        } catch (\Throwable $exception) {
+            return $this->ok(['errors' => [$exception->getMessage()]], Response::HTTP_UNPROCESSABLE_ENTITY);
+        }
     }
 
     public function costCenters(Request $request): Response
     {
+        if ($request->isMethod('post')) {
+            return $this->safe(
+                fn (): array => ['data' => $this->costCenters->create(array_merge($request->all(), ['dimension_type' => 'cost_center']))],
+                Response::HTTP_CREATED,
+            );
+        }
+
         $companyId = $this->companyId($request);
 
         return $this->ok(['data' => $companyId === '' ? [] : $this->costCenters->costCenters($companyId)]);
@@ -157,6 +208,13 @@ final class AccountingApiController extends ApiController
 
     public function exchangeRates(Request $request): Response
     {
+        if ($request->isMethod('post')) {
+            return $this->safe(
+                fn (): array => ['data' => $this->multiCurrency->storeRate($request->all())],
+                Response::HTTP_CREATED,
+            );
+        }
+
         $companyId = $this->companyId($request);
 
         return $this->ok(['data' => $companyId === '' ? [] : $this->multiCurrency->listRates($companyId)]);
@@ -164,6 +222,11 @@ final class AccountingApiController extends ApiController
 
     private function companyId(Request $request): string
     {
-        return trim((string) $request->query('company_id', ''));
+        $fromQuery = trim((string) $request->query('company_id', ''));
+        if ($fromQuery !== '') {
+            return $fromQuery;
+        }
+
+        return trim((string) $request->headers->get('X-Company-Id', ''));
     }
 }

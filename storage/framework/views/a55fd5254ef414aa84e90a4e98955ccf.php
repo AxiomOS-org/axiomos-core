@@ -12,7 +12,7 @@
 </div>
 
 <div class="row g-3 mb-4">
-    <?php $__currentLoopData = $cards; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $card): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <?php $__currentLoopData = $cards ?? []; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $card): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="col-md-6 col-xl-4">
             <a href="<?php echo e($card['path']); ?>" class="text-decoration-none">
                 <div class="card h-100">

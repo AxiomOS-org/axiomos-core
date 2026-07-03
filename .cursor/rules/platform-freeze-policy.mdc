@@ -1,0 +1,65 @@
+---
+description: Platform Freeze — no infrastructure work; critical bug fixes only
+alwaysApply: true
+---
+
+# Platform Status = FROZEN
+
+The platform is mature enough to be a **support layer**, not the center of every sprint.
+
+**95% time → Business modules. 5% time → Critical bugs.**
+
+## DO NOT (Locked)
+
+- Improve Platform core
+- Improve ADT / generators
+- Improve SDK (Plugin, Theme, AI)
+- Improve Quality Gates / test framework infrastructure
+- Improve Architecture / write new architecture reports
+- Improve Documentation sprints
+- Improve Release Reports / governance documents
+- Improve Build System / CI scaffolding
+- Create new Blade-first ERP screens
+- Treat scaffold CRUD as "module complete"
+
+## ONLY FIX (Platform exceptions)
+
+- Fatal errors / crashes
+- Undefined variables / type errors blocking runtime
+- SQL / migration errors
+- Broken routes / 404 on required APIs
+- Security-critical bugs (auth bypass, injection, data leak)
+
+Everything else on the platform is **LOCKED**.
+
+## Product Vision (North Star)
+
+Build an Odoo competitor, not a framework demo:
+
+- Better UX than Odoo
+- Better architecture than ERPNext
+- SAP-grade Accounting (PostingEngine lock)
+- Oracle-grade Security (existing RBAC/MFA)
+- Dynamics-grade Integrations (after core ERP)
+- React + PWA + Electron + Cloud + Marketplace + AI (phased)
+
+## Primary ERP UI
+
+```
+REST API (Laravel)  +  React SPA (axiomos-web)
+```
+
+Blade = legacy / admin debug only. **Never** ship new product features in Blade.
+
+## React Architecture (Required)
+
+Every new module must use:
+
+- Feature modules (plugin contract)
+- Lazy loading / code splitting
+- Plugin loader + dynamic menus
+- Theme engine (dark/light)
+- Permission-based routing
+- Real-time notifications (when API exists)
+- PWA / offline-ready shell
+- Electron desktop (Phase 8 — after web ERP stable)

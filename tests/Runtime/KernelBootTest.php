@@ -33,6 +33,6 @@ final class KernelBootTest extends PostgresFeatureTestCase
 
         $loadedModules = $payload['metrics']['loadedModules'] ?? [];
         self::assertIsArray($loadedModules);
-        self::assertGreaterThanOrEqual(8, count($loadedModules));
+        self::assertGreaterThanOrEqual(20, count($loadedModules));
     }
 }

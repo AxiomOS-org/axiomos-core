@@ -40,6 +40,8 @@ final class DatabaseBootstrap
         $capsule->setAsGlobal();
         $capsule->bootEloquent();
 
+        self::applySearchPath($capsule, $connections[$default] ?? []);
+
         $container = $capsule->getContainer();
         $container->instance('db', $capsule->getDatabaseManager());
         $container->singleton('db.schema', static fn () => $capsule->connection()->getSchemaBuilder());
@@ -70,5 +72,19 @@ final class DatabaseBootstrap
 
         self::$booted = false;
         self::$capsule = null;
+    }
+
+    /**
+     * @param array<string, mixed> $connection
+     */
+    private static function applySearchPath(Capsule $capsule, array $connection): void
+    {
+        $schema = $connection['search_path'] ?? $connection['schema'] ?? null;
+
+        if (! is_string($schema) || $schema === '') {
+            return;
+        }
+
+        $capsule->getConnection()->statement(sprintf('SET search_path TO "%s"', str_replace('"', '', $schema)));
     }
 }

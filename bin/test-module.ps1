@@ -3,7 +3,7 @@
     [string[]]$Args
 )
 
-$phpunitArgs = @('--testsuite','Module')
+$phpunitArgs = @('--testsuite', 'Module', '--exclude-group', 'certification')
 if ($Args.Count -gt 0 -and $Args[0] -ne '') {
     $phpunitArgs += @('--filter', [regex]::Escape($Args[0]))
 }
